@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
     
     <!-- Primary Meta Tags -->
-    <title>Active Mirror | The Trust Layer for the AI Era</title>
-    <meta name="title" content="Active Mirror | The Trust Layer for the AI Era" />
-    <meta name="description" content="Active Mirror is a governed AI studio. We build trust-grade platforms, data products, and AI systems for clients in finance, real estate, and institutional capital." />
-    <meta name="keywords" content="Active Mirror, governed AI studio, trust-grade platforms, regulated AI, institutional data, tokenized assets, verifiable AI" />
+    <title>Active Mirror — AI Infrastructure for Finance & Regulated Industries</title>
+    <meta name="title" content="Active Mirror — AI Infrastructure for Finance & Regulated Industries" />
+    <meta name="description" content="We build governed AI platforms, institutional data products, and compliance-grade infrastructure for finance, real estate, and regulated industries. Strategy, architecture, and production — with a delivery guarantee." />
+    <meta name="keywords" content="AI infrastructure, AI consulting, governed AI platforms, regulated fintech development, institutional data platform, AI compliance, AI strategy consulting, tokenized asset platform, AI for finance, AI for healthcare, verifiable AI systems" />
     <meta name="author" content="Active Mirror" />
     <meta name="robots" content="index, follow" />
-    <meta name="ai-summary" content="Active Mirror is a governed AI studio that builds trust-grade platforms for finance, real estate, and institutional capital. Every output verifiable. Every action governed." />
+    <meta name="ai-summary" content="Active Mirror is a technology studio that builds governed AI platforms, institutional data products, and compliance-grade infrastructure for finance, real estate, healthcare, and regulated industries. Delivery guarantee: defined deliverables, agreed upfront — if we don't deliver, you don't pay." />
     <meta name="geo.region" content="IN-GA" />
     <meta name="geo.placename" content="Goa, India" />
     <meta name="geo.position" content="15.2993;74.1240" />
@@ -24,8 +24,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://activemirror.ai/" />
-    <meta property="og:title" content="Active Mirror | The Trust Layer for the AI Era" />
-    <meta property="og:description" content="A governed AI studio that builds trust-grade platforms for finance, real estate, and institutional capital." />
+    <meta property="og:title" content="Active Mirror — AI Infrastructure for Finance & Regulated Industries" />
+    <meta property="og:description" content="We build governed AI platforms, institutional data products, and compliance-grade infrastructure. Strategy, architecture, production — with a delivery guarantee." />
     <meta property="og:image" content="https://activemirror.ai/assets/og-image.png" />
     <meta property="og:image:alt" content="Active Mirror — governed AI studio" />
     <meta property="og:image:width" content="1024" />
@@ -36,8 +36,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://activemirror.ai/" />
-    <meta name="twitter:title" content="Active Mirror | The Trust Layer for the AI Era" />
-    <meta name="twitter:description" content="A governed AI studio that builds trust-grade platforms for finance, real estate, and institutional capital." />
+    <meta name="twitter:title" content="Active Mirror — AI Infrastructure for Finance & Regulated Industries" />
+    <meta name="twitter:description" content="We build governed AI platforms, institutional data products, and compliance-grade infrastructure. Strategy, architecture, production — with a delivery guarantee." />
     <meta name="twitter:image" content="https://activemirror.ai/assets/og-image.png" />
     <meta name="twitter:image:alt" content="Active Mirror — governed AI studio" />
     <meta name="twitter:creator" content="@pauldesai123" />
@@ -255,11 +255,20 @@
             }
         }(window.location))
     </script>
-  <script type="module" crossorigin src="/assets/main-BNGRpK9m.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/vendor-react-Ce5_Qco_.js">
-  <link rel="modulepreload" crossorigin href="/assets/index-rdcNquEx.js">
-  <link rel="modulepreload" crossorigin href="/assets/vendor-motion-BD6hWH2g.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-CN0GTv39.css">
+  <!-- React SPA loads on sub-pages only; homepage serves optimized static HTML -->
+  <script>
+    (function() {
+      var p = window.location.pathname;
+      if (p !== '/' && p !== '/index.html') {
+        var m = document.createElement('script');
+        m.type = 'module'; m.crossOrigin = ''; m.src = '/assets/main-BNGRpK9m.js';
+        document.head.appendChild(m);
+        var c = document.createElement('link');
+        c.rel = 'stylesheet'; c.crossOrigin = ''; c.href = '/assets/index-CN0GTv39.css';
+        document.head.appendChild(c);
+      }
+    })();
+  </script>
 </head>
 
 <body>
@@ -277,8 +286,8 @@
         </nav>
 
         <main class="hero">
-          <h1>Governed AI for industries where trust is the product.</h1>
-          <p>We consult, architect, and build AI infrastructure for finance, government, healthcare, and defense. Strategy through production. Every output verifiable. Every action auditable.</p>
+          <h1>We build AI infrastructure for industries where being wrong is expensive.</h1>
+          <p>Active Mirror is a technology studio. We design and ship governed AI platforms, institutional data products, and compliance-grade systems — for finance, real estate, healthcare, and regulated industries.</p>
           <div>
             <a href="/about/contact/" class="btn btn-primary">Start a conversation</a>
             <a href="/products/" class="btn btn-ghost">Our work</a>
@@ -438,8 +447,8 @@
     <noscript>
         <div style="padding: 40px; max-width: 700px; margin: 0 auto; font-family: system-ui; color: #8A8F98; background: #050505; line-height: 1.7;">
             <h1 style="color: #fff; font-size: 2rem; letter-spacing: -1px;">Active Mirror</h1>
-            <p>Governed AI infrastructure for industries where being wrong is not an option.</p>
-            <p>We build trust-grade platforms, data products, and AI systems for finance, government, healthcare, defense, and regulated industries. 123 repositories. 8 published papers. 47 live services. Built in one year.</p>
+            <p>We build AI infrastructure for industries where being wrong is expensive.</p>
+            <p>Active Mirror is a technology studio. Governed AI platforms, institutional data products, and compliance-grade systems — for finance, real estate, healthcare, and regulated industries. 123 repositories. 8 published papers. 47 live services. Built in one year.</p>
             <hr style="border-color: #1a1a1a; margin: 2em 0;" />
             <p><a href="/products/" style="color: #fff;">Our work</a> | <a href="/about/" style="color: #fff;">About</a> | <a href="/docs/" style="color: #fff;">Docs</a> | <a href="/about/contact/" style="color: #fff;">Contact</a></p>
             <p style="font-size: 0.75em; color: #52555C; margin-top: 2em;">N1 Intelligence (OPC) Pvt Ltd. Goa, India.</p>
@@ -452,14 +461,16 @@
                 registrations.forEach(r => r.unregister());
             });
         }
-        // Hide static content once React mounts into #root
-        var observer = new MutationObserver(function(mutations) {
-            if (document.getElementById('root') && document.getElementById('root').children.length > 0) {
-                document.body.classList.add('react-mounted');
-                observer.disconnect();
-            }
-        });
-        observer.observe(document.getElementById('root'), { childList: true });
+        // On sub-pages, React SPA replaces static content
+        if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+          var observer = new MutationObserver(function(mutations) {
+              if (document.getElementById('root') && document.getElementById('root').children.length > 0) {
+                  document.body.classList.add('react-mounted');
+                  observer.disconnect();
+              }
+          });
+          observer.observe(document.getElementById('root'), { childList: true });
+        }
     </script>
 </body>
 
