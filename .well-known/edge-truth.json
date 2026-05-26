@@ -1,0 +1,43 @@
+{
+  "schema_version": "edge-truth.v1",
+  "generated_at": "2026-05-15T10:52:55.769169+00:00",
+  "surface": {
+    "id": "activemirror-main",
+    "product": "Active Mirror",
+    "domain": "activemirror.ai",
+    "origin": "https://activemirror.ai",
+    "kind": "static_site",
+    "builder": "vite",
+    "served_paths": [
+      "/version.json",
+      "/.well-known/edge-truth.json"
+    ]
+  },
+  "source": {
+    "repo": "activemirror-site",
+    "branch": "main",
+    "commit": "de97d5a1c3b7be03ef83cbb84b1b72f86e4da96f",
+    "committed_at": "2026-05-15T16:21:46+05:30",
+    "remote": "https://github.com/MirrorDNA-Reflection-Protocol/activemirror-site",
+    "dirty": false,
+    "dirty_file_count": 0,
+    "dirty_files_sample": []
+  },
+  "content": {
+    "watch_roots": [
+      "index.html",
+      "package.json",
+      "public",
+      "src",
+      "vite.config.js"
+    ],
+    "watch_file_count": 371,
+    "missing_paths": [],
+    "watch_fingerprint": "a4d0c922de443f358928353618258fbed736ea6eba1186530a0ffd3adfe13eac",
+    "newest_path": "src/data/showcaseVideos.generated.js",
+    "newest_mtime": "2026-05-15T10:52:54.604418+00:00"
+  },
+  "notes": [
+    "Static GitHub Pages surface."
+  ]
+}

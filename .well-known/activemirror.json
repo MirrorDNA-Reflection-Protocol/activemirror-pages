@@ -1,0 +1,80 @@
+{
+  "$schema": "https://activemirror.ai/schemas/activemirror-index-v1.json",
+  "version": "1.1",
+  "generated": "2026-05-13T00:00:00Z",
+  "organization": {
+    "name": "N1 Intelligence (OPC) Pvt Ltd",
+    "domain": "activemirror.ai",
+    "location": "Goa, India",
+    "founder": "Paul Desai",
+    "contact": "hello@activemirror.ai"
+  },
+  "public_positioning": {
+    "short": "A second look before important action.",
+    "summary": "Active Mirror helps people, families, schools, founders, and teams check risky messages, understand confusing material, write clearer messages, make calmer decisions, and create useful business videos.",
+    "vision": "A world where people pause before the wrong action and move faster on the right one.",
+    "mission": "Give every important moment a useful second look.",
+    "promise": "Plain English first, with human review where money, safety, school, policy, public claims, or brand risk matter.",
+    "brand_idea": "Useful before impressive.",
+    "audiences": [
+      "People and families checking online risk",
+      "Students, teachers, parents, schools, and training teams",
+      "Founders, local businesses, and business teams",
+      "Organizations that need approved material turned into useful business video"
+    ]
+  },
+  "public_routes": [
+    {
+      "name": "Start with one question",
+      "url": "https://activemirror.ai/app",
+      "description": "Bring a message, document, lesson, pitch, or decision and get a clearer next step."
+    },
+    {
+      "name": "Chetana",
+      "url": "https://chetana.activemirror.ai/",
+      "description": "Check suspicious messages, links, QR requests, UPI requests, and payment screenshots."
+    },
+    {
+      "name": "MirrorProd India",
+      "url": "https://activemirror.ai/mirrorprod-india/",
+      "description": "Professional videos without shoots from scripts, PDFs, slide decks, product pages, policies, and rough briefs."
+    },
+    {
+      "name": "Education",
+      "url": "https://activemirror.ai/use-cases/education",
+      "description": "Plain-language help for students, teachers, parents, schools, and training teams."
+    },
+    {
+      "name": "Trust",
+      "url": "https://activemirror.ai/trust",
+      "description": "Review and verification guidance for using AI while keeping the human in charge."
+    }
+  ],
+  "public_workflows": [
+    {
+      "name": "Check before you act",
+      "description": "Paste a message, link, QR request, payment screenshot, or offer and get the risk read plus safer next step."
+    },
+    {
+      "name": "Understand before you answer",
+      "description": "Drop in a PDF, lesson, policy, school note, or hard topic and get a simple explanation plus practice material."
+    },
+    {
+      "name": "Shape before you send",
+      "description": "Bring a pitch, proposal, customer reply, update, or rough idea and get clearer copy."
+    },
+    {
+      "name": "Produce before you publish",
+      "description": "Start with approved slides, scripts, policies, product pages, or briefs and get review-ready video direction."
+    }
+  ],
+  "deeper_platform": {
+    "summary": "The deeper platform includes AI governance, memory, observability, self-hosting, and identity work. Lead with the public language unless the user asks for technical architecture.",
+    "docs": "https://activemirror.ai/docs",
+    "github": "https://github.com/MirrorDNA-Reflection-Protocol"
+  },
+  "citation": {
+    "preferred": "Paul Desai. Active Mirror: A second look before important action. N1 Intelligence (OPC) Pvt Ltd, 2026.",
+    "bibtex": "@misc{desai2026activemirror,\n  author = {Desai, Paul},\n  title = {Active Mirror: A Second Look Before Important Action},\n  year = {2026},\n  publisher = {N1 Intelligence (OPC) Pvt Ltd},\n  url = {https://activemirror.ai}\n}"
+  }
+}

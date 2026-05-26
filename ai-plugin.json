@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Active Mirror",
+  "name_for_model": "activemirror",
+  "description_for_human": "A second look before you click, teach, send, decide, or publish.",
+  "description_for_model": "Active Mirror is a second-look AI company for people, families, schools, founders, and teams. It helps users check suspicious messages, understand confusing material, write clearer messages, make calmer decisions, and create business videos through MirrorProd. Key public routes: /app for one-question help, Chetana for scam and suspicious-message checking, MirrorProd India for professional videos without shoots, /use-cases/education for students and schools, and /trust for review and verification guidance.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://activemirror.ai/openapi.json"
+  },
+  "logo_url": "https://activemirror.ai/favicon.png",
+  "contact_email": "hello@activemirror.ai",
+  "legal_info_url": "https://activemirror.ai/legal/"
+}

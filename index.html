@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Active Mirror | The Trust Layer for the AI Era</title>
+    <meta name="title" content="Active Mirror | The Trust Layer for the AI Era" />
+    <meta name="description" content="Verifiable AI to stop digital scams, govern enterprise inference, and protect your portable identity. Free scam checks in 12 Indian languages. Don't trust the AI — verify the proof." />
+    <meta name="keywords" content="Active Mirror, governed AI work platform, AI approvals, AI review workflow, AI for schools, AI document explainer, AI video production, MirrorProd, Chetana" />
+    <meta name="author" content="Active Mirror" />
+    <meta name="robots" content="index, follow" />
+    <meta name="ai-summary" content="Active Mirror helps teams turn messy prompts, documents, approvals, and video ideas into work people can review, trust, and ship." />
+    <meta name="geo.region" content="IN-GA" />
+    <meta name="geo.placename" content="Goa, India" />
+    <meta name="geo.position" content="15.2993;74.1240" />
+    <meta name="ICBM" content="15.2993, 74.1240" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://activemirror.ai/" />
+    <meta property="og:title" content="Active Mirror | The Trust Layer for the AI Era" />
+    <meta property="og:description" content="Verifiable AI to stop digital scams, govern enterprise inference, and protect your portable identity. Free scam checks in 12 Indian languages." />
+    <meta property="og:image" content="https://activemirror.ai/assets/og-image.png" />
+    <meta property="og:image:alt" content="Active Mirror homepage showing AI work, review, approval, and video production" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:site_name" content="Active Mirror" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://activemirror.ai/" />
+    <meta name="twitter:title" content="Active Mirror | The Trust Layer for the AI Era" />
+    <meta name="twitter:description" content="Verifiable AI to stop digital scams, govern enterprise inference, and protect your portable identity. Free scam checks in 12 Indian languages." />
+    <meta name="twitter:image" content="https://activemirror.ai/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Active Mirror governed AI work homepage" />
+    <meta name="twitter:creator" content="@pauldesai123" />
+    <meta name="twitter:site" content="@activemirror" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://activemirror.ai/" />
+    
+    <!-- Theme -->
+    <meta name="theme-color" content="#08161e" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="msapplication-TileColor" content="#08161e" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Static homepage styles (visible to crawlers, replaced by React on hydration) -->
+    <style>
+      :root {
+        --bg-dark: #060913;
+        --bg-card: rgba(255, 255, 255, 0.03);
+        --border-color: rgba(255, 255, 255, 0.1);
+        --text-primary: #FFFFFF;
+        --text-secondary: #94A3B8;
+        --accent-blue: #3B82F6;
+        --accent-orange: #F5A623;
+        --accent-purple: #8B5CF6;
+      }
+      #static-home { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg-dark); color: var(--text-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+      #static-home .s-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+      #static-home nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid var(--border-color); }
+      #static-home .brand { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.5px; }
+      #static-home .nav-links a { color: var(--text-secondary); text-decoration: none; margin-left: 2rem; font-size: 0.9rem; transition: color 0.2s; }
+      #static-home .nav-links a:hover { color: var(--text-primary); }
+      #static-home .hero { padding: 8rem 0 6rem; text-align: center; max-width: 800px; margin: 0 auto; }
+      #static-home .hero-badge { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--accent-blue); color: var(--accent-blue); border-radius: 100px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; margin-bottom: 2rem; background: rgba(59, 130, 246, 0.1); }
+      #static-home .hero h1 { font-size: 4.5rem; line-height: 1.1; font-weight: 700; letter-spacing: -2px; margin-bottom: 1.5rem; }
+      #static-home .hero p { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; }
+      #static-home .cta-group { display: flex; gap: 1rem; justify-content: center; }
+      #static-home .btn { padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+      #static-home .btn-primary { background: var(--text-primary); color: var(--bg-dark); }
+      #static-home .btn-outline { border: 1px solid var(--border-color); color: var(--text-primary); }
+      #static-home .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding: 4rem 0; }
+      #static-home .product-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; backdrop-filter: blur(10px); }
+      #static-home .icon-wrapper { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; }
+      #static-home .bg-orange { background: rgba(245, 166, 35, 0.1); color: var(--accent-orange); }
+      #static-home .bg-blue { background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); }
+      #static-home .bg-purple { background: rgba(139, 92, 246, 0.1); color: var(--accent-purple); }
+      #static-home .product-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+      #static-home .product-card p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem; }
+      #static-home .product-link { color: var(--text-primary); text-decoration: none; font-weight: 500; }
+      #static-home .stats-section { padding: 6rem 0; border-top: 1px solid var(--border-color); text-align: center; }
+      #static-home .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 4rem; }
+      #static-home .stat-item h4 { font-family: 'JetBrains Mono', monospace; font-size: 2.5rem; margin-bottom: 0.5rem; }
+      #static-home .stat-item p { color: var(--text-secondary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+      #static-home footer { padding: 4rem 0; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; color: var(--text-secondary); font-size: 0.9rem; flex-wrap: wrap; gap: 1rem; }
+      /* Why section */
+      #static-home .why-section { padding: 6rem 0; border-top: 1px solid var(--border-color); }
+      #static-home .why-section h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+      #static-home .why-section > p { color: var(--text-secondary); text-align: center; max-width: 600px; margin: 0 auto 3rem; }
+      #static-home .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      #static-home .why-card { padding: 2rem; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-card); }
+      #static-home .why-card h3 { font-size: 1.2rem; margin-bottom: 0.75rem; }
+      #static-home .why-card p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+      /* FAQ section */
+      #static-home .faq-section { padding: 6rem 0; border-top: 1px solid var(--border-color); }
+      #static-home .faq-section h2 { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+      #static-home .faq-item { border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; }
+      #static-home .faq-item h3 { font-size: 1.1rem; margin-bottom: 0.75rem; font-weight: 600; }
+      #static-home .faq-item p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+      /* Trust badges */
+      #static-home .trust-bar { padding: 3rem 0; border-top: 1px solid var(--border-color); text-align: center; }
+      #static-home .trust-badges { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 1.5rem; }
+      #static-home .trust-badge-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+      #static-home .trust-badge-item .badge-icon { font-size: 1.75rem; }
+      #static-home .trust-badge-item .badge-label { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; font-family: 'JetBrains Mono', monospace; }
+      /* CTA banner */
+      #static-home .cta-banner { padding: 5rem 0; border-top: 1px solid var(--border-color); text-align: center; }
+      #static-home .cta-banner h2 { font-size: 2rem; margin-bottom: 1rem; }
+      #static-home .cta-banner p { color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+      @media (max-width: 900px) {
+        #static-home .products-grid { grid-template-columns: 1fr; }
+        #static-home .stats-grid { grid-template-columns: 1fr 1fr; }
+        #static-home .hero h1 { font-size: 3rem; }
+        #static-home .why-grid { grid-template-columns: 1fr; }
+      }
+      /* Hide static content once React mounts */
+      body.react-mounted #static-home { display: none; }
+    </style>
+    
+    <!-- Structured Data: Software Application -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Active Mirror",
+        "applicationCategory": "AI review, approval, education, and video production tools",
+        "operatingSystem": "Web browser",
+        "description": "Active Mirror helps teams use AI for real work while keeping review, approvals, evidence, and publishing under control.",
+        "slogan": "AI work, under control.",
+        "url": "https://activemirror.ai",
+        "featureList": [
+            "Risky-message checking",
+            "Plain-language document explanation",
+            "Learning and study support",
+            "Business writing and pitch drafting",
+            "Human review and approval workflows",
+            "Business video production through MirrorProd"
+        ],
+        "audience": [
+            { "@type": "BusinessAudience", "audienceType": "Business teams using AI for reviewed work" },
+            { "@type": "EducationalAudience", "audienceType": "Schools, teachers, students, and training teams" },
+            { "@type": "Audience", "audienceType": "People checking risky messages before acting" }
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Active Mirror",
+            "url": "https://activemirror.ai",
+            "logo": "https://activemirror.ai/favicon.png",
+            "sameAs": [
+                "https://www.youtube.com/@ActiveMirror-1"
+            ]
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Active Mirror",
+        "legalName": "N1 Intelligence (OPC) Pvt Ltd",
+        "url": "https://activemirror.ai",
+        "logo": "https://activemirror.ai/favicon.png",
+        "description": "A company building governed AI work tools for review-ready output, education, risk checks, and useful business video.",
+        "slogan": "AI work, under control.",
+        "knowsAbout": [
+            "Scam and suspicious-message checking",
+            "Plain-language education support",
+            "Business communication",
+            "AI-assisted video production",
+            "Human review workflows"
+        ],
+        "sameAs": [
+            "https://www.youtube.com/@ActiveMirror-1"
+        ],
+        "founder": {
+            "@type": "Person",
+            "name": "Paul Desai",
+            "jobTitle": "Founder",
+            "url": "https://activemirror.ai/about/"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@activemirror.ai",
+            "contactType": "General Inquiry"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Active Mirror",
+        "url": "https://activemirror.ai",
+        "description": "A practical AI front door for review-ready work, risk checks, learning support, and business video production.",
+        "slogan": "Put AI to work without losing control."
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Active Mirror?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                "text": "Active Mirror helps teams and individuals turn messy AI work into clearer, review-ready outputs before they send, publish, teach, decide, or make a video."
+            }
+        },
+        {
+            "@type": "Question",
+                "name": "Who is Active Mirror for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                "text": "Active Mirror is for business teams, founders, schools, training teams, teachers, students, and people checking risky messages before acting."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can schools and training teams use it?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Schools and training teams can use Active Mirror to explain lessons and policies, create study material, prepare parent communication, and turn approved material into training videos."
+            }
+        }
+    ]
+    }
+    </script>
+    
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+        (function(l) {
+            if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) {
+                    return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+            }
+        }(window.location))
+    </script>
+  <script type="module" crossorigin src="/assets/main-BNGRpK9m.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-react-Ce5_Qco_.js">
+  <link rel="modulepreload" crossorigin href="/assets/index-rdcNquEx.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-motion-BD6hWH2g.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-CN0GTv39.css">
+</head>
+
+<body>
+    <!-- Static homepage content: visible to crawlers + no-JS users. React replaces #root innerHTML on mount. -->
+    <div id="static-home">
+      <div class="s-container">
+        <nav>
+          <div class="brand">Active Mirror</div>
+          <div class="nav-links">
+            <a href="/products/">Products</a>
+            <a href="/pricing/">Pricing</a>
+            <a href="/docs/">Docs</a>
+            <a href="/about/">About</a>
+          </div>
+        </nav>
+
+        <main class="hero">
+          <div class="hero-badge">AI YOU CAN VERIFY</div>
+          <h1>The Trust Layer for <br/>the AI Era.</h1>
+          <p>We build verifiable AI systems to stop digital scams, govern enterprise inference, and protect your portable identity. Don't trust the AI. Verify the proof.</p>
+          <div class="cta-group">
+            <a href="https://chetana.activemirror.ai" class="btn btn-primary">Try Chetana Free</a>
+            <a href="/docs/" class="btn btn-outline">Read Documentation</a>
+          </div>
+        </main>
+
+        <section class="products-grid">
+          <div class="product-card">
+            <div class="icon-wrapper bg-orange">&#x1f6e1;&#xfe0f;</div>
+            <h3>Chetana</h3>
+            <p>Before you pay, verify it. Free scam checks for SMS, links, UPI, and phone numbers. Supports 12 Indian languages and runs safely on your device.</p>
+            <a href="https://chetana.activemirror.ai" class="product-link">Protect yourself &#x2192;</a>
+          </div>
+          <div class="product-card">
+            <div class="icon-wrapper bg-blue">&#x2699;&#xfe0f;</div>
+            <h3>MirrorGate</h3>
+            <p>Governed AI inference for teams. Self-host your LLMs behind a strict, auditable proxy that enforces safety, redaction, and compliance policies.</p>
+            <a href="/platform/" class="product-link">Explore Platform &#x2192;</a>
+          </div>
+          <div class="product-card">
+            <div class="icon-wrapper bg-purple">&#x1f511;</div>
+            <h3>Mirror Seed</h3>
+            <p>Never explain yourself to AI again. A sovereign, portable identity file you own, keep locally, and carry between any AI tool.</p>
+            <a href="https://id.activemirror.ai" class="product-link">Create Identity &#x2192;</a>
+          </div>
+        </section>
+
+        <section class="stats-section">
+          <h2>Built from first principles. Proven in production.</h2>
+          <p style="color: var(--text-secondary); margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            &#x20b9;1,750 crore was lost to digital fraud in India last year. We are building the open-source infrastructure to stop it.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item"><h4>119+</h4><p>Repositories</p></div>
+            <div class="stat-item"><h4>100%</h4><p>Local Processing</p></div>
+            <div class="stat-item"><h4>12</h4><p>Indian Languages</p></div>
+            <div class="stat-item"><h4>SCD v3.1</h4><p>Open Protocol</p></div>
+          </div>
+        </section>
+
+        <!-- Why Active Mirror -->
+        <section class="why-section">
+          <h2>Why Active Mirror?</h2>
+          <p>We are not another AI wrapper. We build the verification layer that sits between AI and real-world consequences.</p>
+          <div class="why-grid">
+            <div class="why-card">
+              <h3>Verification, Not Prediction</h3>
+              <p>Every other AI company races to generate. We ensure what was generated is safe to act on. Our systems carry proof of origin, governance rules applied, and human review status.</p>
+            </div>
+            <div class="why-card">
+              <h3>On-Device First</h3>
+              <p>Chetana processes scam checks entirely on your phone. No data is uploaded. No server sees your messages. Your privacy is not a setting — it is the architecture.</p>
+            </div>
+            <div class="why-card">
+              <h3>Built for India, Open to the World</h3>
+              <p>12 Indian languages. UPI fraud detection. Designed for the 800 million Indians coming online, where a single scam can wipe out a family's savings.</p>
+            </div>
+            <div class="why-card">
+              <h3>Solo-Built, Production-Hardened</h3>
+              <p>One founder. No VC. No board. 119+ repositories. Every line of code ships because it solves a real problem, not because a roadmap committee approved it. Building since 2025.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <h3>What is Active Mirror?</h3>
+            <p>Active Mirror builds verifiable AI products. Our flagship product Chetana helps people check suspicious messages, links, UPI requests, and phone numbers before acting on them. For enterprises, MirrorGate provides governed AI inference with full audit trails.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Is Chetana really free?</h3>
+            <p>Yes. Chetana scam checks are free, unlimited, and require no account. We believe scam protection is a public good, not a premium feature.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Does Active Mirror store my data?</h3>
+            <p>No. Chetana runs entirely on your device. Your messages, screenshots, and UPI details never leave your phone. There is no server to breach because we never collect it.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Who is Active Mirror for?</h3>
+            <p>Individuals protecting themselves from digital fraud. Teams and enterprises who need governed, auditable AI inference. Schools and educators who need review-ready AI outputs. Anyone who believes AI should be verified before trusted.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How is this different from other AI safety tools?</h3>
+            <p>Most AI safety tools audit models after the fact. Active Mirror operates at the point of action — before you send money, before you click a link, before an AI response reaches production. We verify the moment that matters.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What languages does Chetana support?</h3>
+            <p>Hindi, English, Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi, Gujarati, Punjabi, Odia, and Assamese. More languages are in development.</p>
+          </div>
+        </section>
+
+        <!-- Trust Badges -->
+        <section class="trust-bar">
+          <p style="color: var(--text-secondary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px;">Built with conviction</p>
+          <div class="trust-badges">
+            <div class="trust-badge-item">
+              <span class="badge-icon">&#x1f1ee;&#x1f1f3;</span>
+              <span class="badge-label">Made in India</span>
+            </div>
+            <div class="trust-badge-item">
+              <span class="badge-icon">&#x1f512;</span>
+              <span class="badge-label">On-Device Only</span>
+            </div>
+            <div class="trust-badge-item">
+              <span class="badge-icon">&#x1f6e1;&#xfe0f;</span>
+              <span class="badge-label">Zero Data Collection</span>
+            </div>
+            <div class="trust-badge-item">
+              <span class="badge-icon">&#x1f310;</span>
+              <span class="badge-label">12 Languages</span>
+            </div>
+            <div class="trust-badge-item">
+              <span class="badge-icon">&#x1f4e6;</span>
+              <span class="badge-label">Open Protocol</span>
+            </div>
+            <div class="trust-badge-item">
+              <span class="badge-icon">&#x2696;&#xfe0f;</span>
+              <span class="badge-label">Governed Inference</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta-banner">
+          <h2>Stop trusting. Start verifying.</h2>
+          <p>Check your first suspicious message in under 10 seconds. No signup. No data collected. Just protection.</p>
+          <div class="cta-group">
+            <a href="https://chetana.activemirror.ai" class="btn btn-primary">Try Chetana Free</a>
+            <a href="/about/contact/" class="btn btn-outline">Contact Us</a>
+          </div>
+        </section>
+
+        <footer>
+          <div>&copy; 2026 N1 Intelligence (OPC) Pvt Ltd. All rights reserved.</div>
+          <div class="nav-links">
+            <a href="/trust/">Trust</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="/terms/">Terms</a>
+            <a href="/about/contact/">Contact</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <noscript>
+        <div style="padding: 40px; max-width: 800px; margin: 0 auto; font-family: system-ui; color: #ccc; background: #000; line-height: 1.6;">
+            <h1>Active Mirror — AI work, under control.</h1>
+            <p>Use Active Mirror to turn messy prompts, documents, approvals, and video ideas into work people can review, trust, and ship.</p>
+
+            <h2>Start here</h2>
+            <ul>
+                <li><a href="/landing.html">Start with one real thing</a> — Bring a message, document, lesson, pitch, or decision.</li>
+                <li><a href="https://chetana.activemirror.ai/">Chetana</a> — Check suspicious messages, links, QR / UPI requests, and payment screenshots.</li>
+                <li><a href="/use-cases/education/">Education</a> — Help students, teachers, parents, and training teams explain material clearly.</li>
+                <li><a href="https://activemirror.ai/mirrorprod-india/">MirrorProd India</a> — Create a professional business video without a shoot.</li>
+            </ul>
+
+            <h2>Documentation</h2>
+            <ul>
+                <li><a href="/trust/">Trust</a> — How to review, verify, and stay in charge before acting.</li>
+                <li><a href="/docs/">Docs</a> — Deeper product and technical material when you need it.</li>
+                <li><a href="/docs/self-hosting/">Self-Hosting</a> — Run the deeper platform on your infrastructure.</li>
+                <li><a href="/docs/api/">API Reference</a> — Endpoint and integration documentation.</li>
+            </ul>
+
+            <h2>About</h2>
+            <p>Built by N1 Intelligence (OPC) Pvt Ltd from Goa, India. <a href="/about/">Learn more</a> | <a href="/about/contact/">Contact</a> | <a href="/research/">Research papers</a></p>
+
+            <hr style="border-color: #333; margin: 2em 0;" />
+            <nav>
+                <a href="/">Home</a> |
+                <a href="/products/">Products</a> |
+                <a href="/features/">Features</a> |
+                <a href="/ecosystem/">Ecosystem</a> |
+                <a href="/docs/">Docs</a> |
+                <a href="/about/">About</a> |
+                <a href="/pricing/">Pricing</a> |
+                <a href="/privacy/">Privacy</a> |
+                <a href="/terms/">Terms</a> |
+                <a href="/trust/">Trust</a>
+            </nav>
+            <p style="font-size: 0.85em; color: #666; margin-top: 1em;">Active Mirror by N1 Intelligence (OPC) Pvt Ltd. Practical AI first, deeper layers only when they help.</p>
+        </div>
+    </noscript>
+    <script>
+        // Force unregister any old service workers causing cache issues
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+                registrations.forEach(r => r.unregister());
+            });
+        }
+        // Hide static content once React mounts into #root
+        var observer = new MutationObserver(function(mutations) {
+            if (document.getElementById('root') && document.getElementById('root').children.length > 0) {
+                document.body.classList.add('react-mounted');
+                observer.disconnect();
+            }
+        });
+        observer.observe(document.getElementById('root'), { childList: true });
+    </script>
+</body>
+
+</html>
