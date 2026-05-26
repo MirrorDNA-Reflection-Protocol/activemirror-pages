@@ -50,6 +50,16 @@
 
         html { font-size: 16px; scroll-behavior: smooth; }
         body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+        /* Subtle film grain — not AI-sterile */
+        body::after {
+            content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.022;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* Lazy images fade in */
+        img[loading="lazy"] { opacity: 0; transition: opacity 0.5s ease; }
+        img[loading="lazy"].loaded { opacity: 1; }
         a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
         a:hover { color: var(--accent-hover); }
         .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2.5rem; }
@@ -323,7 +333,7 @@
                 </a>
             </div>
             <div class="evidence-img reveal" style="margin-top: 2.5rem;">
-                <img src="assets/dashboards-dual-view.png" alt="Active Mirror dashboards — live governance monitoring" />
+                <img src="assets/dashboards-dual-view.png" alt="Active Mirror dashboards — live governance monitoring" loading="lazy" />
             </div>
             <p class="evidence-caption reveal">Live governance dashboard — real infrastructure, not a mockup</p>
         </div>
@@ -338,11 +348,11 @@
                 <p class="section-desc">Every AI action passes through 7 verification hooks. High-risk decisions require cryptographic phone approval. The architecture is published and open.</p>
             </div>
             <div class="evidence-img reveal">
-                <img src="assets/fig_governance_flow.png" alt="Governance Gate Flow — from agent action through verification to execution" />
+                <img src="assets/fig_governance_flow.png" alt="Governance Gate Flow — from agent action through verification to execution" loading="lazy" />
             </div>
             <p class="evidence-caption reveal">Governance Gate Flow — from our published, copyright-registered research</p>
             <div class="evidence-img reveal" style="margin-top: 2.5rem;">
-                <img src="assets/fig_architecture.png" alt="MirrorDNA System Architecture" />
+                <img src="assets/fig_architecture.png" alt="MirrorDNA System Architecture" loading="lazy" />
             </div>
             <p class="evidence-caption reveal">Multi-tier inference with automatic failover and governance at every layer</p>
         </div>
@@ -437,10 +447,30 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll reveals
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
             }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Lazy image fade-in
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                if (img.complete) { img.classList.add('loaded'); }
+                else { img.addEventListener('load', () => img.classList.add('loaded')); }
+            });
+
+            // Nav shrink on scroll
+            const header = document.querySelector('header');
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        header.style.boxShadow = window.scrollY > 20 ? '0 1px 8px rgba(11,18,34,0.06)' : 'none';
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
         });
     </script>
 </body>
