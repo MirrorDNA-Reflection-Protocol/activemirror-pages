@@ -186,8 +186,36 @@
             .outcome-card:last-child { border-bottom: none !important; }
             .products-row { grid-template-columns: 1fr 1fr; }
             .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .thesis-inner { grid-template-columns: 1fr; gap: 2rem; }
             .footer-links { gap: 2rem; }
         }
+        /* ─── TRUST BAR ─── */
+        .trust-bar { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; padding: 1.5rem 0 0; }
+        .trust-bar span { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); position: relative; padding-left: 1rem; }
+        .trust-bar span::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 5px; height: 5px; border-radius: 50%; background: var(--rule); }
+
+        /* ─── THESIS ─── */
+        .thesis { padding: 5rem 0; border-top: 1px solid var(--rule); background: var(--navy); overflow: hidden; }
+        .thesis-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .thesis h2 { font-size: 1.75rem; font-weight: 700; color: #F0EDE8; letter-spacing: -0.5px; margin-bottom: 1rem; }
+        .thesis p { font-size: 0.92rem; color: #8891A0; line-height: 1.75; margin-bottom: 1rem; }
+        .thesis p strong { color: #C5C0B8; }
+        .thesis-table { width: 100%; border-collapse: collapse; }
+        .thesis-table th { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #5A6474; padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid #2A3A4E; }
+        .thesis-table td { font-size: 0.85rem; color: #8891A0; padding: 0.65rem 1rem; border-bottom: 1px solid #1A2530; }
+        .thesis-table td:last-child { color: #C5C0B8; font-weight: 500; }
+        .thesis-table tr:last-child td { border-bottom: none; }
+
+        /* ─── CURSOR GLOW ─── */
+        .glow-card { position: relative; overflow: hidden; }
+        .glow-card::before { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(27,79,114,0.08) 0%, transparent 70%); pointer-events: none; transform: translate(-50%, -50%); opacity: 0; transition: opacity 0.3s; }
+        .glow-card:hover::before { opacity: 1; }
+
+        /* ─── BACK TO TOP ─── */
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 42px; height: 42px; border-radius: 50%; background: var(--navy); color: var(--surface); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(10px); transition: opacity 0.3s, transform 0.3s, background 0.2s; z-index: 100; box-shadow: 0 4px 12px rgba(11,18,34,0.15); }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { background: var(--navy-80); transform: translateY(-2px); }
+
         /* ─── SCROLL PROGRESS ─── */
         .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--accent), #2980B9); z-index: 200; width: 0%; transition: width 0.1s linear; }
 
@@ -233,6 +261,11 @@
             .prod-card .tag { background: #1A2E1A; color: var(--green); }
             .hero-image, .hero-video, .evidence-img { border-color: var(--rule); box-shadow: 0 12px 48px rgba(0,0,0,0.3); }
             .scroll-progress { background: linear-gradient(90deg, var(--accent), #7CB9E8); }
+            .thesis { background: #080A0F; }
+            .back-to-top { background: var(--accent); }
+            .back-to-top:hover { background: var(--accent-hover); }
+            .glow-card::before { background: radial-gradient(circle, rgba(91,163,217,0.1) 0%, transparent 70%); }
+            .trust-bar span::before { background: var(--rule); }
         }
 
         @media (max-width: 968px) {
@@ -292,6 +325,13 @@
                     <a href="#how-it-works" class="btn-secondary"><span class="live-dot"></span> See how it works</a>
                 </div>
                 <p class="hero-trust"><strong>Production clients in sovereign wealth and regulated fintech.</strong> 8 published papers. 7 live platforms. EU AI Act ready.</p>
+                <div class="trust-bar">
+                    <span>Sovereign Wealth</span>
+                    <span>Regulated Fintech</span>
+                    <span>Consumer Safety</span>
+                    <span>AI Governance</span>
+                    <span>On-Device Inference</span>
+                </div>
             </div>
             <div class="hero-video reveal d1">
                 <video autoplay muted loop playsinline poster="assets/mirrordash_glass.png">
@@ -349,20 +389,48 @@
                 <p class="section-desc">Three disciplines. One guarantee: if we don't deliver, you don't pay.</p>
             </div>
             <div class="cap-grid">
-                <div class="cap-card reveal d1">
+                <div class="cap-card glow-card reveal d1">
                     <div class="cap-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
                     <h3>Governed Software</h3>
                     <p>Custom platforms for finance, compliance, and institutional operations. Defined scope, agreed deliverables, guaranteed timeline. Not consulting hours — a product, delivered.</p>
                 </div>
-                <div class="cap-card reveal d2">
+                <div class="cap-card glow-card reveal d2">
                     <div class="cap-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
                     <h3>Intelligence Platforms</h3>
                     <p>Data systems where every answer cites its source. Entity verification, NLP search with provenance, and structured data for institutional decision-making. No hallucinations by design.</p>
                 </div>
-                <div class="cap-card reveal d3">
+                <div class="cap-card glow-card reveal d3">
                     <div class="cap-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
                     <h3>Privacy Infrastructure</h3>
                     <p>AI that runs on your hardware with zero cloud dependency. On-device inference, cryptographic audit trails, and portable identity. Your data stays in your jurisdiction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ THESIS: REFLECTIVE AI ═══ -->
+    <section class="thesis" id="thesis">
+        <div class="container">
+            <div class="thesis-inner reveal">
+                <div>
+                    <h2>The industry builds AI that generates.<br/>We build AI that reflects.</h2>
+                    <p><strong>Reflective AI</strong> is infrastructure that examines its own outputs before they reach production. It governs itself. It knows what it doesn't know. It decays claims that haven't been verified.</p>
+                    <p>This isn't a feature. It's an architectural position — and it's what regulated industries actually need.</p>
+                </div>
+                <div>
+                    <table class="thesis-table">
+                        <thead>
+                            <tr><th>Generative AI</th><th>Reflective AI</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Produces output</td><td>Governs output</td></tr>
+                            <tr><td>Trusts the model</td><td>Verifies the model</td></tr>
+                            <tr><td>Stateless</td><td>Persistent identity</td></tr>
+                            <tr><td>Vendor-locked</td><td>Sovereign, portable</td></tr>
+                            <tr><td>Cloud-dependent</td><td>Local-first, cloud-optional</td></tr>
+                            <tr><td>Aligned by training</td><td>Governed by structure</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -476,6 +544,10 @@
         </div>
     </section>
 
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
     <footer>
         <div class="container">
             <div class="footer-inner">
@@ -560,6 +632,33 @@
                         navLinks.classList.remove('open');
                         hamburger.innerHTML = '<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
                     });
+                });
+            }
+
+            // Cursor glow on cards
+            document.querySelectorAll('.glow-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    card.style.setProperty('--glow-x', (e.clientX - rect.left) + 'px');
+                    card.style.setProperty('--glow-y', (e.clientY - rect.top) + 'px');
+                    if (card.querySelector('::before') || true) {
+                        card.style.cssText += `--glow-x:${e.clientX - rect.left}px;--glow-y:${e.clientY - rect.top}px;`;
+                    }
+                });
+            });
+            // Override glow position via CSS custom properties
+            const glowStyle = document.createElement('style');
+            glowStyle.textContent = '.glow-card::before { left: var(--glow-x, 50%); top: var(--glow-y, 50%); }';
+            document.head.appendChild(glowStyle);
+
+            // Back to top
+            const backBtn = document.getElementById('backToTop');
+            if (backBtn) {
+                window.addEventListener('scroll', () => {
+                    backBtn.classList.toggle('visible', window.scrollY > 600);
+                });
+                backBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
 
