@@ -30,8 +30,30 @@
         "url": "https://activemirror.ai",
         "founder": { "@type": "Person", "name": "Paul Desai" },
         "foundingDate": "2025",
-        "contactPoint": { "@type": "ContactPoint", "email": "paul@activemirror.ai" }
+        "contactPoint": { "@type": "ContactPoint", "email": "paul@activemirror.ai" },
+        "sameAs": ["https://github.com/pDesai199", "https://dev.to/paul_desai_ff9e1e7b5605ef"],
+        "knowsAbout": ["AI Governance", "Reflective AI", "Sovereign Infrastructure", "Privacy-First AI"],
+        "numberOfEmployees": { "@type": "QuantitativeValue", "value": 1 },
+        "areaServed": "Worldwide"
     }
+    </script>
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org", "@type": "SoftwareApplication",
+        "name": "Chetana", "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Android, iOS", "offers": { "@type": "Offer", "price": "0" },
+        "description": "AI-powered scam detection for India in 12 languages. Runs entirely on-device."
+    },{
+        "@context": "https://schema.org", "@type": "SoftwareApplication",
+        "name": "MirrorSeed", "applicationCategory": "UtilitiesApplication",
+        "description": "Portable AI identity. One file makes any AI remember you.",
+        "url": "https://id.activemirror.ai"
+    },{
+        "@context": "https://schema.org", "@type": "SoftwareApplication",
+        "name": "MirrorGate", "applicationCategory": "DeveloperApplication",
+        "description": "Governed inference control plane with policy enforcement and cryptographic attestation.",
+        "url": "https://docs.activemirror.ai"
+    }]
     </script>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -211,6 +233,41 @@
             .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
             .footer-links { gap: 2rem; }
         }
+        /* ─── SKIP NAV (accessibility) ─── */
+        .skip-nav { position: absolute; top: -100%; left: 1rem; background: var(--navy); color: var(--surface); padding: 0.5rem 1rem; border-radius: 0 0 4px 4px; z-index: 300; font-size: 0.85rem; transition: top 0.2s; }
+        .skip-nav:focus { top: 0; }
+
+        /* ─── FOCUS STYLES ─── */
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+        /* ─── PAGE LOAD ─── */
+        .page-enter { opacity: 0; }
+        .page-ready { opacity: 1; transition: opacity 0.5s ease; }
+
+        /* ─── ROTATING TAGLINE ─── */
+        .tagline-rotate { display: inline-block; position: relative; overflow: hidden; vertical-align: bottom; }
+        .tagline-rotate span { display: block; animation: rotateWords 12s ease-in-out infinite; }
+        @keyframes rotateWords {
+            0%, 20% { transform: translateY(0); opacity: 1; }
+            25%, 45% { transform: translateY(-100%); opacity: 1; }
+            50%, 70% { transform: translateY(-200%); opacity: 1; }
+            75%, 95% { transform: translateY(-300%); opacity: 1; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        .tagline-stack { display: inline-flex; flex-direction: column; height: 1.15em; overflow: hidden; }
+
+        /* ─── THESIS DOTS BG ─── */
+        .thesis { position: relative; }
+        .thesis canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.15; pointer-events: none; }
+
+        /* ─── PRODUCT LIVE DOT ─── */
+        .prod-status { display: inline-flex; align-items: center; gap: 0.35rem; }
+        .prod-status .live-indicator { width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; }
+
+        /* ─── OUTCOME CARD ARROW ─── */
+        .outcome-card .arrow { display: inline-block; opacity: 0; transform: translateX(-6px); transition: opacity 0.25s, transform 0.25s; color: var(--accent); font-size: 0.85rem; margin-left: 0.5rem; }
+        .outcome-card:hover .arrow { opacity: 1; transform: translateX(0); }
+
         /* ─── HERO HEADLINE SHIMMER ─── */
         .hero h1 .shimmer {
             background: linear-gradient(90deg, var(--navy) 40%, var(--accent) 50%, var(--navy) 60%);
@@ -318,6 +375,8 @@
             .trust-bar span::before { background: var(--rule); }
             .hero h1 .shimmer { background: linear-gradient(90deg, #E8E6E1 40%, var(--accent) 50%, #E8E6E1 60%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; animation: shimmer 3s ease-in-out infinite; }
             .beacon-cta { border-top-color: var(--rule); }
+            .skip-nav { background: var(--accent); }
+            .prod-status .live-indicator { background: var(--green); }
         }
 
         @media (max-width: 968px) {
@@ -343,8 +402,9 @@
         }
     </style>
 </head>
-<body>
+<body class="page-enter">
 
+    <a href="#outcomes" class="skip-nav">Skip to content</a>
     <div class="scroll-progress" id="scrollProgress"></div>
 
     <header>
@@ -367,7 +427,14 @@
     <section class="hero">
         <div class="container">
             <div class="reveal">
-                <h1><span class="shimmer">AI you can trust.</span><br/>Built for organizations that need it.</h1>
+                <h1><span class="shimmer">AI you can trust.</span><br/>
+                    <span class="tagline-stack">
+                        <span>Built for organizations that need it.</span>
+                        <span>Governed by architecture, not hope.</span>
+                        <span>Reflective, not just generative.</span>
+                        <span>Trusted where it matters most.</span>
+                    </span>
+                </h1>
                 <p>We build governed software, intelligence platforms, and privacy-first AI. If your decisions require compliance, verification, or audit trails — we deliver.</p>
                 <div class="hero-actions">
                     <a href="mailto:paul@activemirror.ai" class="btn-primary">
@@ -408,25 +475,25 @@
                     <div class="sector">Institutional Capital</div>
                     <h3>Intelligence platform for sovereign wealth decision-makers</h3>
                     <p>Natural-language search across 500 verified entities with source provenance on every data point. Every answer traceable to origin.</p>
-                    <span class="outcome-metric">500 entities · NLP search · Source provenance</span>
+                    <span class="outcome-metric">500 entities · NLP search · Source provenance<span class="arrow">→</span></span>
                 </div>
                 <div class="outcome-card">
                     <div class="sector">Regulated Fintech</div>
                     <h3>Tokenized investment platform with full compliance lifecycle</h3>
                     <p>Investor onboarding through KYC/KYB gates, custodial wallet integration, and cryptographic audit trails on every transaction.</p>
-                    <span class="outcome-metric">KYC/KYB · Custody · Audit trails</span>
+                    <span class="outcome-metric">KYC/KYB · Custody · Audit trails<span class="arrow">→</span></span>
                 </div>
                 <div class="outcome-card">
                     <div class="sector">Consumer Safety · India</div>
                     <h3>Scam detection serving 12 languages, zero data collection</h3>
                     <p>Real-time verification of messages, UPI payments, QR codes, and deepfakes. Runs entirely on-device. Free for 1.4 billion people.</p>
-                    <span class="outcome-metric">12 languages · On-device · Zero data leaves phone</span>
+                    <span class="outcome-metric">12 languages · On-device · Zero data leaves phone<span class="arrow">→</span></span>
                 </div>
                 <div class="outcome-card">
                     <div class="sector">AI Governance</div>
                     <h3>Inference control plane blocking unverified AI output</h3>
                     <p>Policy enforcement, PII redaction, and cryptographic attestation before any model response reaches production systems.</p>
-                    <span class="outcome-metric">7 verification hooks · Ed25519 signing</span>
+                    <span class="outcome-metric">7 verification hooks · Ed25519 signing<span class="arrow">→</span></span>
                 </div>
             </div>
         </div>
@@ -462,6 +529,7 @@
 
     <!-- ═══ THESIS: REFLECTIVE AI ═══ -->
     <section class="thesis" id="thesis">
+        <canvas id="thesisDots"></canvas>
         <div class="container">
             <div class="thesis-inner reveal">
                 <div>
@@ -496,23 +564,23 @@
                 <h2 class="section-title">Live now. Try them.</h2>
             </div>
             <div class="products-row">
-                <a href="https://chetana.activemirror.ai" class="prod-card reveal d1">
-                    <div class="name">Chetana</div>
+                <a href="https://chetana.activemirror.ai" class="prod-card glow-card reveal d1">
+                    <div class="name prod-status"><span class="live-indicator"></span> Chetana</div>
                     <div class="desc">Scam detection for India. 12 languages. On-device. No data collection.</div>
                     <div class="tag">Free</div>
                 </a>
-                <a href="https://id.activemirror.ai" class="prod-card reveal d1">
-                    <div class="name">MirrorSeed</div>
+                <a href="https://id.activemirror.ai" class="prod-card glow-card reveal d1">
+                    <div class="name prod-status"><span class="live-indicator"></span> MirrorSeed</div>
                     <div class="desc">Never explain yourself to AI again. Portable identity, 60 seconds.</div>
                     <div class="tag">Live</div>
                 </a>
-                <a href="https://brain.activemirror.ai" class="prod-card reveal d2">
-                    <div class="name">MirrorBrain</div>
+                <a href="https://brain.activemirror.ai" class="prod-card glow-card reveal d2">
+                    <div class="name prod-status"><span class="live-indicator"></span> MirrorBrain</div>
                     <div class="desc">On-device AI inference. Five local models. No cloud required.</div>
                     <div class="tag">Live</div>
                 </a>
-                <a href="https://docs.activemirror.ai" class="prod-card reveal d2">
-                    <div class="name">MirrorGate</div>
+                <a href="https://docs.activemirror.ai" class="prod-card glow-card reveal d2">
+                    <div class="name prod-status"><span class="live-indicator"></span> MirrorGate</div>
                     <div class="desc">Governed inference proxy. Policy. Audit. Cryptographic attestation.</div>
                     <div class="tag">Production</div>
                 </a>
@@ -676,6 +744,59 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Page load fade-in
+            requestAnimationFrame(() => {
+                document.body.classList.remove('page-enter');
+                document.body.classList.add('page-ready');
+            });
+
+            // Thesis section animated dot grid
+            const canvas = document.getElementById('thesisDots');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let dots = [];
+                function initDots() {
+                    canvas.width = canvas.offsetWidth;
+                    canvas.height = canvas.offsetHeight;
+                    dots = [];
+                    const count = Math.floor((canvas.width * canvas.height) / 8000);
+                    for (let i = 0; i < count; i++) {
+                        dots.push({
+                            x: Math.random() * canvas.width,
+                            y: Math.random() * canvas.height,
+                            vx: (Math.random() - 0.5) * 0.3,
+                            vy: (Math.random() - 0.5) * 0.3,
+                            r: Math.random() * 1.5 + 0.5
+                        });
+                    }
+                }
+                function drawDots() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = 'rgba(136,145,160,0.5)';
+                    dots.forEach(d => {
+                        d.x += d.vx; d.y += d.vy;
+                        if (d.x < 0 || d.x > canvas.width) d.vx *= -1;
+                        if (d.y < 0 || d.y > canvas.height) d.vy *= -1;
+                        ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2); ctx.fill();
+                    });
+                    // Draw connections
+                    ctx.strokeStyle = 'rgba(136,145,160,0.08)';
+                    ctx.lineWidth = 0.5;
+                    for (let i = 0; i < dots.length; i++) {
+                        for (let j = i + 1; j < dots.length; j++) {
+                            const dx = dots[i].x - dots[j].x;
+                            const dy = dots[i].y - dots[j].y;
+                            if (dx * dx + dy * dy < 6400) {
+                                ctx.beginPath(); ctx.moveTo(dots[i].x, dots[i].y); ctx.lineTo(dots[j].x, dots[j].y); ctx.stroke();
+                            }
+                        }
+                    }
+                    requestAnimationFrame(drawDots);
+                }
+                initDots(); drawDots();
+                window.addEventListener('resize', initDots);
+            }
+
             // Scroll reveals
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
