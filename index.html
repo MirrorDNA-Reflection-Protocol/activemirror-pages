@@ -1,166 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Active Mirror — Governed AI Infrastructure</title>
+    <meta name="description" content="We build governed AI systems for organizations that need trust, compliance, and verifiability. Software, intelligence platforms, and privacy-first products." />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Active Mirror — AI Infrastructure for Finance & Regulated Industries</title>
-    <meta name="title" content="Active Mirror — AI Infrastructure for Finance & Regulated Industries" />
-    <meta name="description" content="We build governed AI platforms, institutional data products, and compliance-grade infrastructure for finance, real estate, and regulated industries. Strategy, architecture, and production — with a delivery guarantee." />
-    <meta name="keywords" content="AI infrastructure, AI consulting, governed AI platforms, regulated fintech development, institutional data platform, AI compliance, AI strategy consulting, tokenized asset platform, AI for finance, AI for healthcare, verifiable AI systems" />
-    <meta name="author" content="Active Mirror" />
-    <meta name="robots" content="index, follow" />
-    <meta name="ai-summary" content="Active Mirror is a technology studio that builds governed AI platforms, institutional data products, and compliance-grade infrastructure for finance, real estate, healthcare, and regulated industries. Delivery guarantee: defined deliverables, agreed upfront — if we don't deliver, you don't pay." />
-    <meta name="geo.region" content="IN-GA" />
-    <meta name="geo.placename" content="Goa, India" />
-    <meta name="geo.position" content="15.2993;74.1240" />
-    <meta name="ICBM" content="15.2993, 74.1240" />
-    
-    <!-- Open Graph / Facebook -->
+    <link rel="canonical" href="https://activemirror.ai/" />
+    <meta name="theme-color" content="#ffffff" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://activemirror.ai/" />
-    <meta property="og:title" content="Active Mirror — AI Infrastructure for Finance & Regulated Industries" />
-    <meta property="og:description" content="We build governed AI platforms, institutional data products, and compliance-grade infrastructure. Strategy, architecture, production — with a delivery guarantee." />
+    <meta property="og:title" content="Active Mirror — Governed AI Infrastructure" />
+    <meta property="og:description" content="Software, intelligence platforms, and privacy-first AI. Built for organizations that need to trust their systems." />
     <meta property="og:image" content="https://activemirror.ai/assets/og-image.png" />
-    <meta property="og:image:alt" content="Active Mirror — governed AI studio" />
-    <meta property="og:image:width" content="1024" />
-    <meta property="og:image:height" content="1024" />
-    <meta property="og:site_name" content="Active Mirror" />
-    <meta property="og:locale" content="en_US" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://activemirror.ai/" />
-    <meta name="twitter:title" content="Active Mirror — AI Infrastructure for Finance & Regulated Industries" />
-    <meta name="twitter:description" content="We build governed AI platforms, institutional data products, and compliance-grade infrastructure. Strategy, architecture, production — with a delivery guarantee." />
-    <meta name="twitter:image" content="https://activemirror.ai/assets/og-image.png" />
-    <meta name="twitter:image:alt" content="Active Mirror — governed AI studio" />
-    <meta name="twitter:creator" content="@pauldesai123" />
-    <meta name="twitter:site" content="@activemirror" />
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://activemirror.ai/" />
-    
-    <!-- Theme -->
-    <meta name="theme-color" content="#08161e" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="msapplication-TileColor" content="#08161e" />
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Static homepage styles (visible to crawlers, replaced by React on hydration) -->
-    <style>
-      :root {
-        --bg: #050505;
-        --bg-card: rgba(255, 255, 255, 0.02);
-        --border: rgba(255, 255, 255, 0.06);
-        --border-hover: rgba(255, 255, 255, 0.12);
-        --text: #FFFFFF;
-        --text-2: #8A8F98;
-        --text-3: #52555C;
-        --accent: #FFFFFF;
-      }
-      #static-home { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-      #static-home .s-container { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
-      #static-home nav { display: flex; justify-content: space-between; align-items: center; padding: 2.5rem 0; }
-      #static-home .brand { font-size: 1rem; font-weight: 600; letter-spacing: -0.3px; color: var(--text); }
-      #static-home .nav-links a { color: var(--text-3); text-decoration: none; margin-left: 2.5rem; font-size: 0.8rem; letter-spacing: 0.02em; transition: color 0.2s; }
-      #static-home .nav-links a:hover { color: var(--text-2); }
-      /* Hero */
-      #static-home .hero { padding: 12rem 0 8rem; max-width: 720px; }
-      #static-home .hero h1 { font-size: 3.5rem; line-height: 1.08; font-weight: 600; letter-spacing: -1.5px; margin-bottom: 2rem; }
-      #static-home .hero p { font-size: 1.15rem; color: var(--text-2); margin-bottom: 3.5rem; line-height: 1.7; max-width: 540px; }
-      #static-home .btn { display: inline-block; padding: 0.85rem 2rem; font-size: 0.85rem; font-weight: 500; text-decoration: none; border-radius: 6px; transition: all 0.2s; letter-spacing: 0.01em; }
-      #static-home .btn-primary { background: var(--text); color: var(--bg); }
-      #static-home .btn-primary:hover { opacity: 0.85; }
-      #static-home .btn-ghost { color: var(--text-2); margin-left: 1.5rem; }
-      #static-home .btn-ghost:hover { color: var(--text); }
-      /* Divider */
-      #static-home .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
-      /* Section */
-      #static-home .section { padding: 6rem 0; }
-      #static-home .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 3rem; }
-      /* Work */
-      #static-home .work-item { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
-      #static-home .work-item:first-child { border-top: 1px solid var(--border); }
-      #static-home .work-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.75rem; }
-      #static-home .work-item h3 { font-size: 1.35rem; font-weight: 500; margin-bottom: 0.75rem; letter-spacing: -0.3px; }
-      #static-home .work-item p { color: var(--text-2); font-size: 0.95rem; max-width: 600px; line-height: 1.7; }
-      /* Capabilities */
-      #static-home .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-      #static-home .cap-cell { background: var(--bg); padding: 2.5rem; }
-      #static-home .cap-cell h3 { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.75rem; letter-spacing: -0.2px; }
-      #static-home .cap-cell p { color: var(--text-3); font-size: 0.85rem; line-height: 1.65; }
-      /* Industries */
-      #static-home .ind-row { display: flex; flex-wrap: wrap; gap: 0; }
-      #static-home .ind-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-3); padding: 0.6rem 1.2rem; border: 1px solid var(--border); border-radius: 100px; margin: 0.3rem; transition: all 0.2s; }
-      #static-home .ind-tag:hover { color: var(--text-2); border-color: var(--border-hover); }
-      /* CTA */
-      #static-home .cta-section { padding: 8rem 0; }
-      #static-home .cta-section h2 { font-size: 2rem; font-weight: 500; letter-spacing: -0.8px; margin-bottom: 1.25rem; }
-      #static-home .cta-section p { color: var(--text-2); margin-bottom: 2.5rem; max-width: 420px; }
-      /* Footer */
-      #static-home footer { padding: 3rem 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--text-3); font-size: 0.75rem; flex-wrap: wrap; gap: 1rem; }
-      #static-home footer a { color: var(--text-3); text-decoration: none; margin-left: 2rem; }
-      #static-home footer a:hover { color: var(--text-2); }
-      @media (max-width: 768px) {
-        #static-home .hero { padding: 6rem 0 4rem; }
-        #static-home .hero h1 { font-size: 2.25rem; }
-        #static-home .cap-grid { grid-template-columns: 1fr; }
-      }
-      body.react-mounted #static-home { display: none; }
-    </style>
-    
-    <!-- Structured Data: Software Application -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Active Mirror",
-        "applicationCategory": "Governed AI studio and platform engineering",
-        "operatingSystem": "Web browser",
-        "description": "Active Mirror is a governed AI studio that builds trust-grade platforms, data products, and AI systems for clients in finance, real estate, and institutional capital.",
-        "slogan": "Every output verifiable. Every action governed.",
-        "url": "https://activemirror.ai",
-        "featureList": [
-            "Trust-grade platform builds for regulated industries",
-            "Governed AI inference with audit trails",
-            "Institutional data platforms with source provenance",
-            "Scam and fraud verification systems",
-            "AI video production with brand governance",
-            "Portable AI identity"
-        ],
-        "audience": [
-            { "@type": "BusinessAudience", "audienceType": "Operators building regulated platforms in finance and real estate" },
-            { "@type": "BusinessAudience", "audienceType": "Institutional data and capital markets businesses" },
-            { "@type": "Audience", "audienceType": "Teams needing verifiable, governed AI in production" }
-        ],
-        "author": {
-            "@type": "Organization",
-            "name": "Active Mirror",
-            "url": "https://activemirror.ai",
-            "logo": "https://activemirror.ai/favicon.png",
-            "sameAs": [
-                "https://www.youtube.com/@ActiveMirror-1"
-            ]
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
-    }
-    </script>
-
-    <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -168,310 +20,546 @@
         "name": "Active Mirror",
         "legalName": "N1 Intelligence (OPC) Pvt Ltd",
         "url": "https://activemirror.ai",
-        "logo": "https://activemirror.ai/favicon.png",
-        "description": "A governed AI studio that builds trust-grade platforms, data products, and AI systems for clients in finance, real estate, and institutional capital.",
-        "slogan": "Every output verifiable. Every action governed.",
-        "knowsAbout": [
-            "Governed AI inference and compliance",
-            "Institutional data platforms",
-            "Tokenized asset platform engineering",
-            "Scam and fraud verification",
-            "AI video production",
-            "Portable AI identity"
-        ],
-        "sameAs": [
-            "https://www.youtube.com/@ActiveMirror-1"
-        ],
-        "founder": {
-            "@type": "Person",
-            "name": "Paul Desai",
-            "jobTitle": "Founder",
-            "url": "https://activemirror.ai/about/"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "hello@activemirror.ai",
-            "contactType": "General Inquiry"
+        "description": "Governed AI infrastructure — software, intelligence, and privacy.",
+        "founder": { "@type": "Person", "name": "Paul Desai" },
+        "foundingDate": "2025",
+        "contactPoint": { "@type": "ContactPoint", "email": "paul@activemirror.ai", "contactType": "General" }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #FAFAF8;
+            --bg-alt: #F3F2EF;
+            --surface: #FFFFFF;
+            --navy: #0B1222;
+            --navy-80: #1D2B3E;
+            --text: #2C3340;
+            --text-2: #5A6474;
+            --text-3: #8891A0;
+            --accent: #1B4F72;
+            --accent-hover: #2980B9;
+            --rule: #DDD9D3;
+            --rule-light: #EAE8E3;
+            --green: #2E7D32;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            --max-w: 1140px;
         }
-    }
-    </script>
 
-    <!-- Structured Data: WebSite with SearchAction -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Active Mirror",
-        "url": "https://activemirror.ai",
-        "description": "A governed AI studio building trust-grade platforms for finance, real estate, and institutional capital.",
-        "slogan": "Every output verifiable. Every action governed."
-    }
-    </script>
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    <!-- Structured Data: FAQ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "What is Active Mirror?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Active Mirror is a governed AI studio. We build trust-grade platforms, data products, and AI infrastructure for industries where being wrong is not an option — finance, government, healthcare, defense, and regulated platforms."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Who is Active Mirror for?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Operators building regulated platforms, institutional data businesses, and any organization deploying AI in a context where unverified output is a liability."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What has Active Mirror built?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "123 repositories, 8 published research papers, and 47 live services — including institutional data platforms, regulated investment platforms, consumer scam verification in 12 languages, governed inference infrastructure, and portable AI identity protocols. Built in one year."
-                }
-            }
-    ]
-    }
-    </script>
-    
-    <!-- GitHub Pages SPA redirect handler -->
-    <script>
-        (function(l) {
-            if (l.search[1] === '/' ) {
-                var decoded = l.search.slice(1).split('&').map(function(s) {
-                    return s.replace(/~and~/g, '&')
-                }).join('?');
-                window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
-            }
-        }(window.location))
-    </script>
-  <!-- React SPA loads on sub-pages only; homepage serves optimized static HTML -->
-  <script>
-    (function() {
-      var p = window.location.pathname;
-      if (p !== '/' && p !== '/index.html') {
-        var m = document.createElement('script');
-        m.type = 'module'; m.crossOrigin = ''; m.src = '/assets/main-BNGRpK9m.js';
-        document.head.appendChild(m);
-        var c = document.createElement('link');
-        c.rel = 'stylesheet'; c.crossOrigin = ''; c.href = '/assets/index-CN0GTv39.css';
-        document.head.appendChild(c);
-      }
-    })();
-  </script>
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent-hover); }
+        .container { max-width: var(--max-w); margin: 0 auto; padding: 0 2.5rem; }
+
+        /* ─── REVEAL ANIMATIONS ─── */
+        .reveal {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* ─── NAV ─── */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250, 250, 248, 0.88);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--rule-light);
+        }
+        nav { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+        .wordmark { font-size: 1rem; font-weight: 700; color: var(--navy); letter-spacing: -0.4px; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.85rem; color: var(--text-2); font-weight: 500; }
+        .nav-links a:hover { color: var(--navy); }
+        .nav-cta {
+            font-size: 0.8rem !important; color: var(--surface) !important;
+            background: var(--navy); padding: 0.45rem 1.1rem; border-radius: 4px;
+            font-weight: 500 !important; transition: background 0.2s, transform 0.15s !important;
+        }
+        .nav-cta:hover { background: var(--navy-80) !important; color: var(--surface) !important; transform: translateY(-1px); }
+
+        /* Live pulse */
+        .live-dot {
+            display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+            background: var(--green); margin-right: 6px; position: relative;
+        }
+        .live-dot::after {
+            content: ''; position: absolute; top: -3px; left: -3px;
+            width: 13px; height: 13px; border-radius: 50%;
+            background: rgba(46, 125, 50, 0.25);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.6); opacity: 0; }
+        }
+
+        /* ─── HERO ─── */
+        .hero { padding: 6rem 0 4.5rem; }
+        .hero h1 {
+            font-size: 3.2rem; font-weight: 700; color: var(--navy);
+            letter-spacing: -1.5px; line-height: 1.12; max-width: 680px; margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.1rem; color: var(--text-2); line-height: 1.75;
+            max-width: 540px; margin-bottom: 2.5rem;
+        }
+        .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.92rem; font-weight: 600; color: var(--surface);
+            background: var(--navy); padding: 0.75rem 1.6rem; border-radius: 5px;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            background: var(--navy-80); color: var(--surface);
+            transform: translateY(-1px); box-shadow: 0 4px 12px rgba(11, 18, 34, 0.15);
+        }
+        .btn-primary svg { transition: transform 0.2s; }
+        .btn-primary:hover svg { transform: translateX(3px); }
+        .btn-secondary {
+            font-size: 0.92rem; font-weight: 500; color: var(--text-2);
+            padding: 0.75rem 1.2rem; transition: color 0.2s;
+        }
+        .btn-secondary:hover { color: var(--navy); }
+
+        /* Hero image */
+        .hero-image {
+            margin-top: 3.5rem; border-radius: 10px; overflow: hidden;
+            border: 1px solid var(--rule);
+            box-shadow: 0 12px 48px rgba(11, 18, 34, 0.08);
+            transition: box-shadow 0.4s, transform 0.4s;
+        }
+        .hero-image:hover {
+            box-shadow: 0 20px 60px rgba(11, 18, 34, 0.12);
+            transform: translateY(-2px);
+        }
+        .hero-image img { width: 100%; display: block; }
+
+        /* ─── SECTIONS ─── */
+        .section { padding: 5.5rem 0; border-top: 1px solid var(--rule); }
+        .section-alt { background: var(--bg-alt); }
+        .section-label {
+            font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.75rem;
+        }
+        .section-title {
+            font-size: 2rem; font-weight: 700; color: var(--navy);
+            letter-spacing: -0.6px; line-height: 1.25; margin-bottom: 0.75rem;
+        }
+        .section-desc {
+            font-size: 1rem; color: var(--text-2); line-height: 1.75;
+            max-width: 540px; margin-bottom: 2.5rem;
+        }
+
+        /* ─── HOW WE HELP ─── */
+        .help-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+        .help-card {
+            background: var(--surface); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 2rem 1.75rem;
+            transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+        }
+        .help-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 28px rgba(11, 18, 34, 0.07);
+            transform: translateY(-3px);
+        }
+        .help-icon {
+            width: 40px; height: 40px; border-radius: 8px;
+            background: var(--bg-alt); display: flex; align-items: center;
+            justify-content: center; margin-bottom: 1.25rem;
+            transition: background 0.3s;
+        }
+        .help-card:hover .help-icon { background: #E3EFF7; }
+        .help-icon svg { color: var(--accent); }
+        .help-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+        .help-card p { font-size: 0.88rem; color: var(--text-2); line-height: 1.65; }
+
+        /* ─── WORK ─── */
+        .work-row {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+            border: 1px solid var(--rule); border-radius: 8px; overflow: hidden;
+        }
+        .work-card {
+            padding: 2.25rem; border-right: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule); transition: background 0.25s;
+        }
+        .work-card:hover { background: var(--surface); }
+        .work-card:nth-child(2n) { border-right: none; }
+        .work-card:nth-child(n+3) { border-bottom: none; }
+        .work-card .sector {
+            font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.6rem;
+        }
+        .work-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+        .work-card p { font-size: 0.87rem; color: var(--text-2); line-height: 1.6; }
+
+        /* ─── EVIDENCE SCREENSHOTS ─── */
+        .evidence-img {
+            border-radius: 10px; overflow: hidden; border: 1px solid var(--rule);
+            box-shadow: 0 8px 36px rgba(11, 18, 34, 0.06);
+            transition: box-shadow 0.4s, transform 0.4s;
+        }
+        .evidence-img:hover {
+            box-shadow: 0 16px 48px rgba(11, 18, 34, 0.1);
+            transform: translateY(-2px);
+        }
+        .evidence-img img { width: 100%; display: block; }
+        .evidence-caption {
+            font-size: 0.75rem; color: var(--text-3); text-align: center;
+            margin-top: 1rem; font-style: italic;
+        }
+
+        /* ─── PRODUCTS ─── */
+        .products-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+        .prod-card {
+            background: var(--surface); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 1.75rem 1.5rem;
+            transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+            display: block;
+        }
+        .prod-card:hover {
+            border-color: var(--accent); transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(11, 18, 34, 0.07);
+        }
+        .prod-card .name { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+        .prod-card .desc { font-size: 0.83rem; color: var(--text-2); line-height: 1.6; margin-bottom: 0.8rem; }
+        .prod-card .tag {
+            display: inline-block; font-size: 0.68rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.06em;
+            padding: 0.15rem 0.5rem; border-radius: 3px;
+            background: #E8F5E9; color: var(--green);
+        }
+
+        /* ─── RESEARCH ─── */
+        .papers { list-style: none; }
+        .papers li {
+            display: flex; justify-content: space-between; align-items: baseline;
+            padding: 1rem 0; border-bottom: 1px solid var(--rule-light);
+            transition: padding-left 0.25s;
+        }
+        .papers li:first-child { border-top: 1px solid var(--rule-light); }
+        .papers li:hover { padding-left: 0.5rem; }
+        .papers .title { font-size: 0.92rem; color: var(--text); transition: color 0.2s; }
+        .papers a:hover .title { color: var(--accent); }
+        .papers .meta {
+            font-family: var(--mono); font-size: 0.68rem; color: var(--text-3);
+            white-space: nowrap; margin-left: 2rem; flex-shrink: 0;
+        }
+
+        /* ─── CONTACT ─── */
+        .contact { padding: 5.5rem 0; border-top: 1px solid var(--rule); }
+        .contact h2 {
+            font-size: 1.75rem; font-weight: 700; color: var(--navy);
+            letter-spacing: -0.4px; margin-bottom: 0.75rem;
+        }
+        .contact p { font-size: 0.95rem; color: var(--text-2); max-width: 480px; margin-bottom: 2rem; line-height: 1.75; }
+
+        /* ─── FOOTER ─── */
+        footer { border-top: 1px solid var(--rule); padding: 2.5rem 0; }
+        .footer-inner {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            flex-wrap: wrap; gap: 2rem;
+        }
+        .footer-brand p { font-size: 0.78rem; color: var(--text-3); margin-top: 0.5rem; line-height: 1.6; }
+        .footer-links { display: flex; gap: 3rem; }
+        .footer-col h4 {
+            font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--text-2); margin-bottom: 0.75rem;
+        }
+        .footer-col a { display: block; font-size: 0.82rem; color: var(--text-2); margin-bottom: 0.4rem; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--navy); }
+        .footer-legal {
+            margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--rule-light);
+            font-size: 0.72rem; color: var(--text-3);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 968px) {
+            .hero h1 { font-size: 2.25rem; }
+            .help-grid { grid-template-columns: 1fr; }
+            .work-row { grid-template-columns: 1fr; }
+            .work-card { border-right: none !important; border-bottom: 1px solid var(--rule) !important; }
+            .work-card:last-child { border-bottom: none !important; }
+            .products-row { grid-template-columns: 1fr 1fr; }
+            .footer-links { gap: 2rem; }
+        }
+        @media (max-width: 640px) {
+            .hero { padding: 4rem 0 3rem; }
+            .hero h1 { font-size: 1.85rem; }
+            .section { padding: 3.5rem 0; }
+            .products-row { grid-template-columns: 1fr; }
+            .container { padding: 0 1.5rem; }
+            .nav-links a:not(.nav-cta) { display: none; }
+            .papers li { flex-direction: column; gap: 0.25rem; }
+            .papers .meta { margin-left: 0; }
+            .footer-inner { flex-direction: column; }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Static homepage content: visible to crawlers + no-JS users. React replaces #root innerHTML on mount. -->
-    <div id="static-home">
-      <div class="s-container">
-        <nav>
-          <div class="brand">Active Mirror</div>
-          <div class="nav-links">
-            <a href="/products/">Work</a>
-            <a href="/about/">About</a>
-            <a href="/docs/">Docs</a>
-            <a href="/about/contact/">Contact</a>
-          </div>
+
+    <header>
+        <nav class="container">
+            <div class="wordmark">Active Mirror</div>
+            <div class="nav-links">
+                <a href="#how-we-help">Services</a>
+                <a href="#products">Products</a>
+                <a href="#research">Research</a>
+                <a href="https://beacon.activemirror.ai">Insights</a>
+                <a href="mailto:paul@activemirror.ai" class="nav-cta">Get in Touch</a>
+            </div>
         </nav>
+    </header>
 
-        <main class="hero">
-          <h1>We build AI infrastructure for industries where being wrong is expensive.</h1>
-          <p>Active Mirror is a technology studio. We design and ship governed AI platforms, institutional data products, and compliance-grade systems — for finance, real estate, healthcare, and regulated industries.</p>
-          <div>
-            <a href="/about/contact/" class="btn btn-primary">Start a conversation</a>
-            <a href="/products/" class="btn btn-ghost">Our work</a>
-          </div>
-        </main>
-
-        <hr class="divider" />
-
-        <!-- Work -->
-        <section class="section">
-          <div class="section-label">Selected work</div>
-
-          <div class="work-item">
-            <div class="work-label">Institutional Finance</div>
-            <h3>Intelligence platform for sovereign wealth</h3>
-            <p>Verified entities. Source provenance on every data point. Natural-language search across deals, allocations, and leadership — every answer traceable to origin.</p>
-          </div>
-
-          <div class="work-item">
-            <div class="work-label">Regulated Fintech</div>
-            <h3>Tokenized real-asset investment platform</h3>
-            <p>Custody integration. KYC/KYB. Mint and burn lifecycle. Compliance audit trails. Every external dependency tracked as a first-class gate.</p>
-          </div>
-
-          <div class="work-item">
-            <div class="work-label">Consumer Safety</div>
-            <h3>Fraud verification across 12 languages</h3>
-            <p>Real-time scam detection for messages, links, UPI requests, and phone numbers. On-device processing. No data leaves the phone. Free for everyone.</p>
-          </div>
-        </section>
-
-        <hr class="divider" />
-
-        <!-- Capabilities -->
-        <section class="section">
-          <div class="section-label">How we work</div>
-
-          <div class="cap-grid">
-            <div class="cap-cell">
-              <h3>AI Strategy</h3>
-              <p>Where are you now, what does governed production look like, and what is the fastest path between the two.</p>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+        <div class="container">
+            <div class="reveal">
+                <h1>AI you can trust.<br/>Built for organizations that need it.</h1>
+                <p>We build software, intelligence platforms, and privacy-first AI systems. If your industry requires compliance, verification, or governance — we can help.</p>
+                <div class="hero-actions">
+                    <a href="mailto:paul@activemirror.ai" class="btn-primary">
+                        Tell us what you need
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary"><span class="live-dot"></span> See how it works</a>
+                </div>
             </div>
-            <div class="cap-cell">
-              <h3>Architecture</h3>
-              <p>Design trust-grade systems — inference pipelines, compliance gates, data provenance layers, and multi-agent topologies.</p>
+            <div class="hero-image reveal reveal-delay-1">
+                <img src="assets/mirrordash_glass.png" alt="Active Mirror governance dashboard — real-time compliance monitoring and system health" />
             </div>
-            <div class="cap-cell">
-              <h3>Build</h3>
-              <p>Ship production platforms. Regulated fintech. Institutional data products. Consumer safety systems. From first commit to live traffic.</p>
-            </div>
-          </div>
-
-          <div class="section-label" style="margin-top: 4rem;">Technology</div>
-
-          <div class="cap-grid">
-            <div class="cap-cell">
-              <h3>Governed Inference</h3>
-              <p>Policy enforcement, PII redaction, and cryptographic attestation before any model call reaches production.</p>
-            </div>
-            <div class="cap-cell">
-              <h3>Portable Identity</h3>
-              <p>Sovereign identity that travels between AI tools. Locally owned. Never locked to a vendor.</p>
-            </div>
-            <div class="cap-cell">
-              <h3>Multi-Agent Orchestration</h3>
-              <p>Coordinated operations across models, devices, and agents. Shared memory. Human authority at the root.</p>
-            </div>
-            <div class="cap-cell">
-              <h3>Hybrid Runtime</h3>
-              <p>Cloud, local hardware, and edge devices in one sovereign mesh. Zero cloud dependency when you need it.</p>
-            </div>
-            <div class="cap-cell">
-              <h3>Data Provenance</h3>
-              <p>Every number traceable to origin. Every feed tracked for freshness. Messy data in, verified product out.</p>
-            </div>
-            <div class="cap-cell">
-              <h3>Compliance Infrastructure</h3>
-              <p>Behavioral governance, drift detection, approval gates, and audit trails. Published open standard.</p>
-            </div>
-          </div>
-        </section>
-
-        <hr class="divider" />
-
-        <!-- Industries -->
-        <section class="section">
-          <div class="section-label">Industries</div>
-          <div class="ind-row">
-            <span class="ind-tag">Finance</span>
-            <span class="ind-tag">Government</span>
-            <span class="ind-tag">Healthcare</span>
-            <span class="ind-tag">Defense</span>
-            <span class="ind-tag">Legal</span>
-            <span class="ind-tag">Insurance</span>
-            <span class="ind-tag">Energy</span>
-            <span class="ind-tag">Supply Chain</span>
-            <span class="ind-tag">Media</span>
-            <span class="ind-tag">Pharmaceuticals</span>
-            <span class="ind-tag">Education</span>
-            <span class="ind-tag">Real Estate</span>
-          </div>
-        </section>
-
-        <hr class="divider" />
-
-        <!-- Numbers -->
-        <section class="section" style="text-align: center;">
-          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
-            <div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 2.25rem; font-weight: 500; letter-spacing: -1px;">123</div>
-              <div style="color: var(--text-3); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Repositories</div>
-            </div>
-            <div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 2.25rem; font-weight: 500; letter-spacing: -1px;">8</div>
-              <div style="color: var(--text-3); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Published Papers</div>
-            </div>
-            <div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 2.25rem; font-weight: 500; letter-spacing: -1px;">47</div>
-              <div style="color: var(--text-3); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Live Services</div>
-            </div>
-            <div>
-              <div style="font-family: 'JetBrains Mono', monospace; font-size: 2.25rem; font-weight: 500; letter-spacing: -1px;">1</div>
-              <div style="color: var(--text-3); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.5rem;">Year</div>
-            </div>
-          </div>
-        </section>
-
-        <hr class="divider" />
-
-        <!-- CTA -->
-        <section class="section" style="border-top: 1px solid var(--border); padding-top: 4rem;">
-          <div style="max-width: 540px; padding: 3rem 0;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 2rem;">Guarantee</p>
-            <p style="font-size: 1.35rem; font-weight: 400; letter-spacing: -0.3px; line-height: 1.5; color: var(--text);">Defined deliverables. Agreed before we begin.<br/>If we do not deliver, you do not pay.</p>
-          </div>
-        </section>
-
-        <section class="cta-section">
-          <h2>If trust matters, we should talk.</h2>
-          <p>We work with teams building AI systems where the stakes are real.</p>
-          <a href="/about/contact/" class="btn btn-primary">Start a conversation</a>
-        </section>
-
-        <footer>
-          <div>&copy; 2026 N1 Intelligence (OPC) Pvt Ltd</div>
-          <div>
-            <a href="/trust/">Trust</a>
-            <a href="/privacy/">Privacy</a>
-            <a href="/terms/">Terms</a>
-            <a href="/about/contact/">Contact</a>
-          </div>
-        </footer>
-      </div>
-    </div>
-
-    <div id="root"></div>
-    <noscript>
-        <div style="padding: 40px; max-width: 700px; margin: 0 auto; font-family: system-ui; color: #8A8F98; background: #050505; line-height: 1.7;">
-            <h1 style="color: #fff; font-size: 2rem; letter-spacing: -1px;">Active Mirror</h1>
-            <p>We build AI infrastructure for industries where being wrong is expensive.</p>
-            <p>Active Mirror is a technology studio. Governed AI platforms, institutional data products, and compliance-grade systems — for finance, real estate, healthcare, and regulated industries. 123 repositories. 8 published papers. 47 live services. Built in one year.</p>
-            <hr style="border-color: #1a1a1a; margin: 2em 0;" />
-            <p><a href="/products/" style="color: #fff;">Our work</a> | <a href="/about/" style="color: #fff;">About</a> | <a href="/docs/" style="color: #fff;">Docs</a> | <a href="/about/contact/" style="color: #fff;">Contact</a></p>
-            <p style="font-size: 0.75em; color: #52555C; margin-top: 2em;">N1 Intelligence (OPC) Pvt Ltd. Goa, India.</p>
         </div>
-    </noscript>
+    </section>
+
+    <!-- ═══ HOW WE HELP ═══ -->
+    <section class="section" id="how-we-help">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">How We Help</div>
+                <h2 class="section-title">Three things we do well.</h2>
+            </div>
+            <div class="help-grid">
+                <div class="help-card reveal reveal-delay-1">
+                    <div class="help-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    </div>
+                    <h3>Software</h3>
+                    <p>Custom platforms for finance, compliance, and institutional operations. Governed by design. Delivered on scope, on time, with a guarantee.</p>
+                </div>
+                <div class="help-card reveal reveal-delay-2">
+                    <div class="help-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    </div>
+                    <h3>Intelligence</h3>
+                    <p>Data platforms where every answer is traceable to its source. NLP search, entity verification, and provenance tracking for decisions that matter.</p>
+                </div>
+                <div class="help-card reveal reveal-delay-3">
+                    <div class="help-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Privacy</h3>
+                    <p>AI that runs on your hardware. Zero data collection. On-device inference. Cryptographic audit trails. Your data never leaves your control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SELECTED WORK ═══ -->
+    <section class="section section-alt" id="work">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Selected Work</div>
+                <h2 class="section-title">What we've built for clients.</h2>
+                <p class="section-desc">We work across sectors — wherever AI needs to be trusted before it's deployed.</p>
+            </div>
+            <div class="work-row reveal">
+                <div class="work-card">
+                    <div class="sector">Institutional Capital</div>
+                    <h3>Sovereign wealth intelligence platform</h3>
+                    <p>500 verified entities. Source provenance on every data point. Natural-language search traceable to origin.</p>
+                </div>
+                <div class="work-card">
+                    <div class="sector">Regulated Fintech</div>
+                    <h3>Tokenized real-asset investment platform</h3>
+                    <p>KYC/KYB compliance gates. Custodial wallet integration. Audit trails on every transaction.</p>
+                </div>
+                <div class="work-card">
+                    <div class="sector">Consumer Safety</div>
+                    <h3>Scam detection for 1.4 billion people</h3>
+                    <p>12 Indian languages. UPI, QR, deepfake, and message verification. On-device. Zero data leaves the phone. Free.</p>
+                </div>
+                <div class="work-card">
+                    <div class="sector">AI Governance</div>
+                    <h3>Inference control plane</h3>
+                    <p>Policy enforcement and cryptographic attestation before any model output reaches production systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS ═══ -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">How It Works</div>
+                <h2 class="section-title">Every AI action is governed before it executes.</h2>
+                <p class="section-desc">7 verification hooks. Risk assessment. Cryptographic phone approval for high-stakes decisions. Nothing reaches production unverified.</p>
+            </div>
+            <div class="evidence-img reveal">
+                <img src="assets/fig_governance_flow.png" alt="Governance Gate Flow — from agent action through verification hooks to cryptographic approval" />
+            </div>
+            <p class="evidence-caption reveal">From our published paper: Governance Gate Flow — Agent Action to Execution</p>
+
+            <div class="evidence-img reveal" style="margin-top: 3rem;">
+                <img src="assets/fig_architecture.png" alt="MirrorDNA System Architecture — multi-tier inference with governance layer" />
+            </div>
+            <p class="evidence-caption reveal">System Architecture — published, copyright registered</p>
+        </div>
+    </section>
+
+    <!-- ═══ PRODUCTS ═══ -->
+    <section class="section section-alt" id="products">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Products</div>
+                <h2 class="section-title">Tools you can use today.</h2>
+                <p class="section-desc">Open, live, and documented. Pick what you need.</p>
+            </div>
+            <div class="products-row">
+                <a href="https://chetana.activemirror.ai" class="prod-card reveal reveal-delay-1">
+                    <div class="name">Chetana</div>
+                    <div class="desc">Scam detection for India. 12 languages. On-device. No data collection.</div>
+                    <div class="tag">Free</div>
+                </a>
+                <a href="https://id.activemirror.ai" class="prod-card reveal reveal-delay-1">
+                    <div class="name">MirrorSeed</div>
+                    <div class="desc">Portable AI identity. One file. Any AI remembers you. 60 seconds to set up.</div>
+                    <div class="tag">Live</div>
+                </a>
+                <a href="https://brain.activemirror.ai" class="prod-card reveal reveal-delay-2">
+                    <div class="name">MirrorBrain</div>
+                    <div class="desc">On-device AI inference. Five local models. No cloud required.</div>
+                    <div class="tag">Live</div>
+                </a>
+                <a href="https://docs.activemirror.ai" class="prod-card reveal reveal-delay-2">
+                    <div class="name">MirrorGate</div>
+                    <div class="desc">Governed inference proxy. Policy enforcement. Audit. Attestation.</div>
+                    <div class="tag">Production</div>
+                </a>
+            </div>
+            <div class="evidence-img reveal" style="margin-top: 2.5rem;">
+                <img src="assets/dashboards-dual-view.png" alt="Active Mirror dashboards — live governance monitoring" />
+            </div>
+            <p class="evidence-caption reveal">Live governance dashboard — real infrastructure, not a mockup</p>
+        </div>
+    </section>
+
+    <!-- ═══ RESEARCH ═══ -->
+    <section class="section" id="research">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Research</div>
+                <h2 class="section-title">Published and open.</h2>
+                <p class="section-desc">We publish what we learn. 8 papers, 3 with copyright registration, DOI-indexed.</p>
+            </div>
+            <ul class="papers reveal">
+                <li>
+                    <a href="https://github.com/pDesai199/ActiveMirrorOS-WhitePaper"><span class="title">ActiveMirrorOS: Wrapper-First AI Systems for Governed Deployment</span></a>
+                    <span class="meta">White Paper · ©</span>
+                </li>
+                <li>
+                    <a href="https://github.com/pDesai199/publications"><span class="title">Layered Governance for Large Language Model Systems</span></a>
+                    <span class="meta">Published · 2025</span>
+                </li>
+                <li>
+                    <a href="https://github.com/pDesai199/publications"><span class="title">Number-Theoretic Graphs for Knowledge Representation</span></a>
+                    <span class="meta">Published · 2025</span>
+                </li>
+                <li>
+                    <a href="https://github.com/pDesai199/publications"><span class="title">Structured Contextual Distillation: Deterministic State for AI Agents</span></a>
+                    <span class="meta">DOI: 10.5281/zenodo.17787619</span>
+                </li>
+                <li>
+                    <a href="https://github.com/pDesai199/publications"><span class="title">Sovereign AI Infrastructure on Consumer Hardware</span></a>
+                    <span class="meta">Published · ©</span>
+                </li>
+            </ul>
+            <div class="evidence-img reveal" style="margin-top: 2.5rem;">
+                <img src="assets/fig_operational_metrics.png" alt="MirrorDNA operational metrics — session reports, bus activity, governance decisions" />
+            </div>
+            <p class="evidence-caption reveal">Operational metrics from published research — May 2025 to March 2026</p>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section class="contact" id="contact">
+        <div class="container reveal">
+            <h2>Tell us what you're working on.</h2>
+            <p>Whether you need a governed platform built, an intelligence system designed, or privacy infrastructure for your AI — start a conversation.</p>
+            <a href="mailto:paul@activemirror.ai" class="btn-primary">
+                paul@activemirror.ai
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="wordmark">Active Mirror</div>
+                    <p>N1 Intelligence (OPC) Pvt Ltd<br/>Goa, India · Founded 2025</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <a href="https://chetana.activemirror.ai">Chetana</a>
+                        <a href="https://id.activemirror.ai">MirrorSeed</a>
+                        <a href="https://brain.activemirror.ai">MirrorBrain</a>
+                        <a href="https://docs.activemirror.ai">MirrorGate</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Learn</h4>
+                        <a href="https://github.com/pDesai199/publications">Papers</a>
+                        <a href="https://beacon.activemirror.ai">Beacon</a>
+                        <a href="https://docs.activemirror.ai">Docs</a>
+                        <a href="https://dev.to/paul_desai_ff9e1e7b5605ef">Dev.to</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/pDesai199">GitHub</a>
+                        <a href="mailto:paul@activemirror.ai">Email</a>
+                        <a href="https://constellation.activemirror.ai">Constellation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">© 2026 N1 Intelligence (OPC) Pvt Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+
     <script>
-        // Force unregister any old service workers causing cache issues
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(registrations => {
-                registrations.forEach(r => r.unregister());
-            });
-        }
-        // On sub-pages, React SPA replaces static content
-        if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
-          var observer = new MutationObserver(function(mutations) {
-              if (document.getElementById('root') && document.getElementById('root').children.length > 0) {
-                  document.body.classList.add('react-mounted');
-                  observer.disconnect();
-              }
-          });
-          observer.observe(document.getElementById('root'), { childList: true });
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
     </script>
 </body>
-
 </html>
