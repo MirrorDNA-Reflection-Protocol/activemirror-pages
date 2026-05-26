@@ -192,11 +192,14 @@
             }
         }(window.location))
     </script>
+  <!-- React SPA disabled on products page — serving static HTML directly -->
+  <!--
   <script type="module" crossorigin src="/assets/main-BNGRpK9m.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/vendor-react-Ce5_Qco_.js">
   <link rel="modulepreload" crossorigin href="/assets/index-rdcNquEx.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-motion-BD6hWH2g.js">
   <link rel="stylesheet" crossorigin href="/assets/index-CN0GTv39.css">
+  -->
 </head>
 
 <body>
@@ -286,14 +289,7 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.getRegistrations().then(function(r) { r.forEach(function(s) { s.unregister(); }); });
         }
-        // Hide static content when React mounts
-        var obs = new MutationObserver(function() {
-            if (document.getElementById('root').children.length > 0) {
-                var el = document.getElementById('static-products'); if (el) el.style.display = 'none';
-                obs.disconnect();
-            }
-        });
-        obs.observe(document.getElementById('root'), { childList: true });
+        // React disabled — static HTML is canonical
     </script>
 </body>
 
