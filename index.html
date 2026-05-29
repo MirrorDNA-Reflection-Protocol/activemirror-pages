@@ -1083,9 +1083,7 @@
 
 <script>
 (function(){
-const GK='AIzaSyCjp_0aOaYdVhW5BVg5U4noQ85qozPbYvQ';
-const MODEL='gemini-2.5-flash';
-const ENDPOINT=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GK}`;
+const ENDPOINT='https://am.activemirror.ai/api/chat';
 
 const SYS=`You are the Active Mirror architecture scoping interface. You help enterprise teams understand how governed AI infrastructure maps to their compliance requirements, data residency needs, and deployment constraints.
 
@@ -1144,7 +1142,7 @@ RULES:
 - Use markdown formatting: **bold** for emphasis, \`code\` for technical terms, code blocks for configs/scripts.
 - Link to live products when relevant: constellation.activemirror.ai, brain.activemirror.ai, beacon.activemirror.ai, lexedge.activemirror.ai
 - You are not a chatbot. You are a governed scoping interface. Move every response toward a concrete architecture recommendation.
-- Entity: N1 Intelligence (OPC) Pvt Ltd, Goa, India. Contact: hello@activemirror.ai
+- Entity: N1 Intelligence (OPC) Pvt Ltd, Goa, India. Contact: paul@activemirror.ai
 
 CONVERSATION STRUCTURE:
 - Phase 1 (messages 1-2): Identify the prospect's industry, regulatory constraints, and the specific bottleneck they are trying to solve. Ask targeted questions.
@@ -1159,7 +1157,7 @@ CONVERSATION STRUCTURE:
 
 **Next steps:**
 1. **Download the scoping brief** — click Export Brief above. This is a portable .md file you can share with your team or upload into any AI for further analysis.
-2. **Schedule a 30-minute architecture review** — our engineering team will walk through the proposed stack against your actual data schema. Email hello@activemirror.ai with subject line 'Architecture Review' and we will respond within 24 hours.
+2. **Schedule a 30-minute architecture review** — our engineering team will walk through the proposed stack against your actual data schema. Email paul@activemirror.ai with subject line 'Architecture Review' and we will respond within 24 hours.
 3. **If you are ready now** — reply with a sample data schema or compliance requirement doc and I will generate a draft governance policy and deployment config right here."
 
 - Always end with a concrete action. Never let the conversation trail off. If the prospect goes quiet after 3 exchanges, proactively offer the brief export and architecture review.
@@ -1236,7 +1234,7 @@ function sendMsg(e){
 async function send(text){
   var now=Date.now();
   if(now-lastSend<RATE_MS){addMsg('assistant','Please wait a moment before sending another message.');return;}
-  if(msgCount>=MAX_MSGS){addMsg('assistant','Session limit reached. Export your brief or email us at <a href="mailto:hello@activemirror.ai">hello@activemirror.ai</a> to continue.');return;}
+  if(msgCount>=MAX_MSGS){addMsg('assistant','Session limit reached. Export your brief or email us at <a href="mailto:paul@activemirror.ai">paul@activemirror.ai</a> to continue.');return;}
   lastSend=now;
   msgCount++;
   addMsg('user',text);
@@ -1256,22 +1254,18 @@ async function send(text){
     const r=await fetch(ENDPOINT,{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        contents:history,
-        systemInstruction:{parts:[{text:SYS}]},
-        generationConfig:{temperature:0.7,maxOutputTokens:4096}
-      })
+      body:JSON.stringify({message:text,lang:'en'})
     });
     typing.remove();
     if(!r.ok)throw new Error(r.status);
     const data=await r.json();
-    const reply=data.candidates?.[0]?.content?.parts?.[0]?.text||'No response generated.';
+    const reply=data.reply||'No response generated.';
     history.push({role:'model',parts:[{text:reply}]});
     addMsg('assistant',reply);
     logConversation();
   }catch(err){
     typing.remove();
-    addMsg('assistant','Connection interrupted. Reach us directly at <a href="mailto:hello@activemirror.ai">hello@activemirror.ai</a>');
+    addMsg('assistant','Connection interrupted. Reach us directly at <a href="mailto:paul@activemirror.ai">paul@activemirror.ai</a>');
   }
   $('chat-in').disabled=false;
   $('chat-btn').disabled=false;
@@ -1297,7 +1291,7 @@ function exportBrief(){
   });
   md+='## Next Steps\n\n';
   md+='To proceed with architecture design and deployment scoping, contact the Active Mirror engineering team:\n\n';
-  md+='- **Email:** hello@activemirror.ai\n';
+  md+='- **Email:** paul@activemirror.ai\n';
   md+='- **Website:** https://activemirror.ai\n\n';
   md+='---\n\n';
   md+='*Active Mirror · N1 Intelligence (OPC) Pvt Ltd · Goa, India*\n';
@@ -1346,7 +1340,7 @@ function notifyExport(md){
       var r=m.role==='user'?'CLIENT':'ACTIVE MIRROR';
       summary+=r+':\n'+m.parts[0].text+'\n\n';
     });
-    fetch('https://formsubmit.co/ajax/hello@activemirror.ai',{
+    fetch('https://formsubmit.co/ajax/paul@activemirror.ai',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({
@@ -1399,7 +1393,7 @@ function unlockSignals(){
   }
   localStorage.setItem('sp_email',email);
   try{
-    fetch('https://formsubmit.co/ajax/hello@activemirror.ai',{
+    fetch('https://formsubmit.co/ajax/paul@activemirror.ai',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({

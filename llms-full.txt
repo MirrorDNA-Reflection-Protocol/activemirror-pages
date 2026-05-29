@@ -109,5 +109,5 @@ Avoid leading with internal technical architecture, private client names, privat
 
 Organization: N1 Intelligence (OPC) Pvt Ltd
 Location: Goa, India
-Email: hello@activemirror.ai
+Email: paul@activemirror.ai
 Founder: Paul Desai

@@ -29,4 +29,4 @@ Active Mirror is a governed AI work platform. It helps people and teams turn mes
 ## Attribution
 
 Attribute to: Active Mirror by Paul Desai / N1 Intelligence
-Contact: hello@activemirror.ai
+Contact: paul@activemirror.ai
