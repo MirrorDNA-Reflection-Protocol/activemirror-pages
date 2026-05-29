@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SWFI Case Study — Active Mirror</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0b1220; color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7; padding: 3rem 1.5rem;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  a { color: #227fd5; text-decoration: none; }
+  .breadcrumb { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-bottom: 2.5rem; }
+  .badge {
+    display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #227fd5; border: 1px solid #227fd5;
+    padding: 0.25rem 0.75rem; border-radius: 3px; margin-bottom: 1.25rem;
+  }
+  h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff; }
+  .subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.6); margin-bottom: 2.5rem; }
+  h2 {
+    font-size: 1.15rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.06em; color: #227fd5; margin: 2.5rem 0 1rem;
+  }
+  p, li { color: rgba(255,255,255,0.75); margin-bottom: 0.75rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.5rem; }
+  .card {
+    background: #111d30; border: 1px solid #1c2d45; border-radius: 6px;
+    padding: 1.5rem; margin: 1.5rem 0;
+  }
+  .stats {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem; margin: 1.5rem 0;
+  }
+  .stat {
+    background: #111d30; border: 1px solid #1c2d45; border-radius: 6px;
+    padding: 1.25rem; text-align: center;
+  }
+  .stat-value { font-size: 1.5rem; font-weight: 700; color: #fff; }
+  .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.25rem; }
+  .principle {
+    border-left: 3px solid #227fd5; padding: 1.25rem 1.5rem;
+    background: rgba(34,127,213,0.06); margin: 2rem 0; border-radius: 0 6px 6px 0;
+  }
+  .principle p { color: #e2e8f0; font-size: 1.05rem; font-style: italic; margin: 0; }
+  .tech-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; list-style: none; padding: 0; }
+  .tech-list li {
+    background: rgba(34,127,213,0.1); border: 1px solid #1c2d45;
+    padding: 0.3rem 0.75rem; border-radius: 4px; font-size: 0.85rem;
+    color: rgba(255,255,255,0.7); margin: 0;
+  }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #1c2d45; }
+  footer p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb"><a href="/">Active Mirror</a> / Case Studies</div>
+  <div class="badge">Case Study</div>
+  <h1>SWFI — Institutional Capital Intelligence</h1>
+  <p class="subtitle">Real-time, evidence-gated AI search across the global institutional investor landscape.</p>
+
+  <h2>The Challenge</h2>
+  <p>Sovereign wealth funds, public pensions, central banks, and endowments operate within a fragmented intelligence landscape. The Sovereign Wealth Fund Institute (SWFI) — the leading data provider for this market — maintains profiles on more than 27,000 institutional investors, tracking transactions, mandates, and personnel changes in real time.</p>
+  <p>Decision-makers at these institutions do not need another search bar that returns raw tables. They need synthesized, evidence-backed briefs that resolve ambiguous queries against verified records and produce answers they can act on with confidence.</p>
+
+  <h2>The Approach</h2>
+  <p>Active Mirror built a governed AI intelligence layer on top of SWFI's institutional dataset, deployed at institutionalinvestorhub.com. The core constraint: every response must trace to identified source records. If the system cannot find evidence to support a claim, it states that explicitly rather than generating unsourced analysis.</p>
+  <p>A graph-based entity resolution engine classifies user intent across 10 distinct query types — rankings, comparisons, mandate searches, sector scans, people lookups, transaction histories, trend analysis, and more — then assembles context from the appropriate data sources before generating a response. Access is tiered between public and subscriber-gated routes.</p>
+
+  <h2>The Architecture</h2>
+  <div class="card">
+    <ul class="tech-list">
+      <li>Python backend</li>
+      <li>MongoDB</li>
+      <li>Graph-based query router</li>
+      <li>Evidence-class enforcement</li>
+      <li>Nonce-based CSP</li>
+      <li>Caddy reverse proxy</li>
+      <li>Hetzner bare metal</li>
+    </ul>
+    <p>The query router classifies intent, resolves entities against the institutional graph, and enforces evidence-class rules at the response layer. A sanitizer inspects every generated response and replaces any claim that cannot be traced to a verified record. Security includes rate limiting, prompt injection detection, origin verification, and X-Robots-Tag enforcement on sensitive endpoints. A status API masks underlying data from unauthenticated requests.</p>
+  </div>
+
+  <h2>The Results</h2>
+  <div class="stats">
+    <div class="stat"><div class="stat-value">27,249</div><div class="stat-label">Institutions</div></div>
+    <div class="stat"><div class="stat-value">177,677</div><div class="stat-label">Transactions</div></div>
+    <div class="stat"><div class="stat-value">128,781</div><div class="stat-label">People Records</div></div>
+    <div class="stat"><div class="stat-value">4,800+</div><div class="stat-label">Mandates</div></div>
+  </div>
+  <ul>
+    <li>10 of 10 query types return evidence-backed responses with full source traceability.</li>
+    <li>Sub-second response times on production queries against the full dataset.</li>
+    <li>Zero hallucination tolerance — the evidence-gated sanitizer replaces any unsourced claim before it reaches the user.</li>
+    <li>Hardened production environment: prompt injection blocking, rate limiting, abuse detection, and origin verification.</li>
+    <li>Public and subscriber access tiers enforce data governance at the route level.</li>
+  </ul>
+
+  <div class="principle">
+    <p>"Evidence over eloquence. The system produces analyst briefs, not chatbot answers."</p>
+  </div>
+
+  <footer>
+    <p>Active Mirror builds governed AI systems for organizations where accuracy is not optional.</p>
+  </footer>
+</div>
+</body>
+</html>
