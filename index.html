@@ -1053,46 +1053,49 @@ async function send(text){
 
 function exportBrief(){
   if(history.length===0){alert('Start a conversation first.');return;}
-  let conv='';
-  history.forEach(m=>{
-    const role=m.role==='user'?'CLIENT':'ACTIVE MIRROR';
-    conv+=role+':\\n'+m.parts[0].text+'\\n\\n';
+  var msgs='';
+  history.forEach(function(m){
+    var role=m.role==='user'?'Client':'Active Mirror';
+    msgs+='<div class="msg"><div class="msg-role">'+role+'</div><div class="msg-text">'+esc(m.parts[0].text)+'</div></div>';
   });
-  const w=window.open('','_blank');
-  w.document.write(\`<!DOCTYPE html><html><head><title>Architecture Brief - Active Mirror</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a2e;padding:3rem;max-width:800px;margin:0 auto;line-height:1.7}
-h1{font-size:1.5rem;font-weight:700;margin-bottom:.25rem}
-.subtitle{color:#666;font-size:.9rem;margin-bottom:2rem}
-.meta{display:flex;gap:2rem;margin-bottom:2rem;padding:1rem;background:#f8f9fa;border-radius:6px;font-size:.82rem;color:#555}
-.meta strong{color:#1a1a2e}
-h2{font-size:1.1rem;font-weight:600;margin:2rem 0 .75rem;padding-bottom:.5rem;border-bottom:1px solid #e5e5e5;color:#1a1a2e}
-.msg{margin-bottom:1.25rem}
-.msg-role{font-family:monospace;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#227fd5;margin-bottom:.25rem}
-.msg-text{font-size:.88rem;color:#333;white-space:pre-wrap}
-.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;font-size:.78rem;color:#999;text-align:center}
-@media print{body{padding:1.5rem}@page{margin:1.5cm}}
-</style></head><body>
-<h1>Architecture Brief</h1>
-<p class="subtitle">Active Mirror &mdash; Governed AI for Institutional Work</p>
-<div class="meta">
-<div><strong>Date:</strong> \${new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}</div>
-<div><strong>Entity:</strong> N1 Intelligence (OPC) Pvt Ltd</div>
-<div><strong>Classification:</strong> Scoping Document</div>
-</div>
-<h2>Scoping Conversation</h2>
-\${history.map(m=>\`<div class="msg"><div class="msg-role">\${m.role==='user'?'Client':'Active Mirror'}</div><div class="msg-text">\${esc(m.parts[0].text)}</div></div>\`).join('')}
-<h2>Next Steps</h2>
-<p style="font-size:.88rem;color:#333">To proceed with architecture design and deployment scoping, contact the Active Mirror engineering team:</p>
-<p style="font-size:.88rem;margin-top:.5rem"><strong>Email:</strong> hello@activemirror.ai</p>
-<div class="footer">
-Active Mirror &middot; N1 Intelligence (OPC) Pvt Ltd &middot; Goa, India<br>
-Generated \${new Date().toISOString().split('T')[0]} &middot; Governed by 7-layer verification stack
-</div>
-</body></html>\`);
+  var today=new Date();
+  var dateStr=today.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  var isoDate=today.toISOString().split('T')[0];
+  var html='<!DOCTYPE html><html><head><title>Architecture Brief - Active Mirror</title>'
+    +'<style>'
+    +'*{margin:0;padding:0;box-sizing:border-box}'
+    +'body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;background:#fff;color:#1a1a2e;padding:3rem;max-width:800px;margin:0 auto;line-height:1.7}'
+    +'h1{font-size:1.5rem;font-weight:700;margin-bottom:.25rem}'
+    +'.subtitle{color:#666;font-size:.9rem;margin-bottom:2rem}'
+    +'.meta{display:flex;gap:2rem;margin-bottom:2rem;padding:1rem;background:#f8f9fa;border-radius:6px;font-size:.82rem;color:#555}'
+    +'.meta strong{color:#1a1a2e}'
+    +'h2{font-size:1.1rem;font-weight:600;margin:2rem 0 .75rem;padding-bottom:.5rem;border-bottom:1px solid #e5e5e5;color:#1a1a2e}'
+    +'.msg{margin-bottom:1.25rem}'
+    +'.msg-role{font-family:monospace;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#227fd5;margin-bottom:.25rem}'
+    +'.msg-text{font-size:.88rem;color:#333;white-space:pre-wrap}'
+    +'.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;font-size:.78rem;color:#999;text-align:center}'
+    +'@media print{body{padding:1.5rem}@page{margin:1.5cm}}'
+    +'</style></head><body>'
+    +'<h1>Architecture Brief</h1>'
+    +'<p class="subtitle">Active Mirror &mdash; Governed AI for Institutional Work</p>'
+    +'<div class="meta">'
+    +'<div><strong>Date:</strong> '+dateStr+'</div>'
+    +'<div><strong>Entity:</strong> N1 Intelligence (OPC) Pvt Ltd</div>'
+    +'<div><strong>Classification:</strong> Scoping Document</div>'
+    +'</div>'
+    +'<h2>Scoping Conversation</h2>'
+    +msgs
+    +'<h2>Next Steps</h2>'
+    +'<p style="font-size:.88rem;color:#333">To proceed with architecture design and deployment scoping, contact the Active Mirror engineering team:</p>'
+    +'<p style="font-size:.88rem;margin-top:.5rem"><strong>Email:</strong> hello@activemirror.ai</p>'
+    +'<div class="footer">'
+    +'Active Mirror &middot; N1 Intelligence (OPC) Pvt Ltd &middot; Goa, India<br>'
+    +'Generated '+isoDate+' &middot; Governed by 7-layer verification stack'
+    +'</div></body></html>';
+  var w=window.open('','_blank');
+  w.document.write(html);
   w.document.close();
-  setTimeout(()=>w.print(),500);
+  setTimeout(function(){w.print()},500);
 }
 
 window.openChat=openChat;
