@@ -75,6 +75,43 @@
   }
   .nav-cta:hover { background: #1a6fbe; }
 
+  /* ─── Animations ─── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes glowPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+  @keyframes gridDrift { 0% { transform: translate(0,0); } 100% { transform: translate(-40px,-40px); } }
+  @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-d1 { transition-delay: 0.1s; }
+  .reveal-d2 { transition-delay: 0.2s; }
+  .reveal-d3 { transition-delay: 0.3s; }
+
+  /* ─── Hero Canvas ─── */
+  .hero-bg {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden; z-index: 0; pointer-events: none;
+  }
+  .hero-grid {
+    position: absolute; top: -50px; left: -50px; right: -50px; bottom: -50px;
+    background-image:
+      linear-gradient(rgba(34,127,213,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34,127,213,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridDrift 20s linear infinite;
+  }
+  .hero-glow {
+    position: absolute; top: -20%; left: -10%; width: 50%; height: 70%;
+    background: radial-gradient(ellipse, rgba(34,127,213,0.08) 0%, transparent 70%);
+    filter: blur(60px);
+  }
+  .hero-glow-2 {
+    position: absolute; bottom: -30%; right: -5%; width: 40%; height: 60%;
+    background: radial-gradient(ellipse, rgba(34,127,213,0.05) 0%, transparent 70%);
+    filter: blur(80px);
+  }
+  .hero { position: relative; }
+  .hero > * { position: relative; z-index: 1; }
+
   /* ─── Sections ─── */
   section { max-width: var(--max-w); margin: 0 auto; padding: 5rem 2rem; }
   section.bordered { border-top: 1px solid var(--border); }
@@ -155,9 +192,9 @@
   .product-card {
     background: var(--bg-card); border: 1px solid var(--border);
     border-radius: 6px; padding: 1.25rem 1.5rem;
-    transition: border-color 0.2s;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   }
-  .product-card:hover { border-color: #2a4060; }
+  .product-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(34,127,213,0.1); }
   .product-name {
     font-weight: 600; font-size: 0.95rem; color: var(--text-bright);
     display: flex; align-items: center; gap: 0.5rem;
@@ -546,13 +583,18 @@
 
 <!-- ─── Hero ─── -->
 <section class="hero">
-  <div class="kicker">Governed AI for Institutional Work</div>
-  <h1>AI systems for industries<br>where accuracy is not optional.</h1>
-  <p class="lead">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+  </div>
+  <div class="kicker reveal">Governed AI for Institutional Work</div>
+  <h1 class="reveal reveal-d1">AI systems for industries<br>where accuracy is not optional.</h1>
+  <p class="lead reveal reveal-d2">
     Active Mirror builds governed AI for regulated industries. Every decision
     auditable. Every model explainable. Every deployment sovereign.
   </p>
-  <div class="hero-actions">
+  <div class="hero-actions reveal reveal-d3">
     <a href="#work" class="btn-primary">See the work</a>
     <a href="#" onclick="openChat();return false" class="btn-ghost">Discuss a build</a>
   </div>
@@ -578,7 +620,7 @@
 
 <!-- ─── Thesis ─── -->
 <section class="bordered">
-  <div class="kicker">Our Approach</div>
+  <div class="kicker reveal">Our Approach</div>
   <h2>Reflective AI, not generative AI.</h2>
   <p class="lead">Generative AI produces content. Reflective AI produces evidence. We build the second kind.</p>
   <table class="thesis-table">
@@ -626,7 +668,7 @@
 
 <!-- ─── Products ─── -->
 <section id="products" class="bordered">
-  <div class="kicker">Proof Surfaces</div>
+  <div class="kicker reveal">Proof Surfaces</div>
   <h2>10 products. One governance layer.</h2>
   <p class="lead">Every product is a live, auditable system that demonstrates governed AI in production. Open where it matters.</p>
   <div class="product-grid">
@@ -679,7 +721,7 @@
 
 <!-- ─── Architecture ─── -->
 <section id="architecture" class="bordered">
-  <div class="kicker">Architecture</div>
+  <div class="kicker reveal">Architecture</div>
   <h2>7-layer governance stack.</h2>
   <p class="lead">Every request passes through seven deterministic layers before a model produces output. No layer is optional. Every layer has a defined failure mode.</p>
   <div class="layer-list">
@@ -744,7 +786,7 @@
 
 <!-- ─── Deployment ─── -->
 <section class="bordered">
-  <div class="kicker">Sovereign Deployment</div>
+  <div class="kicker reveal">Sovereign Deployment</div>
   <h2>Your data never leaves your boundary.</h2>
   <p class="lead">Three deployment models. All sovereign. Choose based on your threat model, not our convenience.</p>
   <div class="deploy-grid">
@@ -783,7 +825,7 @@
 
 <!-- ─── Client Work ─── -->
 <section id="work" class="bordered">
-  <div class="kicker">Client Work</div>
+  <div class="kicker reveal">Client Work</div>
   <h2>Governed AI in production.</h2>
   <p class="lead">Not demos. Not proofs of concept. Live systems serving real users in regulated domains.</p>
   <div class="work-grid">
@@ -818,7 +860,7 @@
 
 <!-- ─── Governance & Compliance ─── -->
 <section class="bordered">
-  <div class="kicker">Governance &amp; Security</div>
+  <div class="kicker reveal">Governance &amp; Security</div>
   <h2>Compliance is architecture, not a checkbox.</h2>
   <p class="lead">Governance is the foundation every system is built on. Not a layer added after building.</p>
   <div class="compliance-grid">
@@ -843,7 +885,7 @@
 
 <!-- ─── Research ─── -->
 <section id="research" class="bordered">
-  <div class="kicker">Research</div>
+  <div class="kicker reveal">Research</div>
   <h2>8 published papers. Open where it matters.</h2>
   <p class="lead">Peer-reviewed research on sovereign AI, reflective memory, behavioral governance, and structured contextual distillation. All published with Zenodo DOIs.</p>
   <div class="paper-list">
@@ -887,7 +929,7 @@
 
 <!-- ─── Enterprise ─── -->
 <section class="bordered">
-  <div class="kicker">Enterprise</div>
+  <div class="kicker reveal">Enterprise</div>
   <h2>Built for procurement, not just pilots.</h2>
   <p class="lead">Enterprise SLAs, marketplace billing, and dedicated support. Built to clear your vendor review.</p>
   <div class="enterprise-grid">
@@ -1364,6 +1406,21 @@ window.exportBrief=exportBrief;
 window.amLeads=amLeads;
 window.toggleSignals=toggleSignals;
 window.unlockSignals=unlockSignals;
+})();
+</script>
+<script>
+// Scroll reveal observer
+(function(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  // Auto-reveal hero elements on load
+  setTimeout(function(){
+    document.querySelectorAll('.hero .reveal').forEach(function(el){el.classList.add('visible');});
+  },100);
 })();
 </script>
 
