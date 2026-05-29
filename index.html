@@ -896,7 +896,7 @@
 
 <script>
 (function(){
-const GK='AIzaSyAeETtEU8RmZhKEyHewcTHE6iJqV-Qm958';
+const GK='AIzaSyCjp_0aOaYdVhW5BVg5U4noQ85qozPbYvQ';
 const MODEL='gemini-2.5-flash';
 const ENDPOINT=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GK}`;
 
@@ -982,7 +982,10 @@ const $=id=>document.getElementById(id);
 function openChat(){
   $('chat-overlay').classList.add('open');
   document.body.style.overflow='hidden';
-  $('chat-in').focus();
+  var inp=$('chat-in');
+  inp.value='What is Active Mirror?';
+  inp.focus();
+  inp.select();
 }
 function closeChat(){
   $('chat-overlay').classList.remove('open');
