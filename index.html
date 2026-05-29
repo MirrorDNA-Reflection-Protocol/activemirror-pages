@@ -1059,6 +1059,7 @@ async function send(text){
     const reply=data.candidates?.[0]?.content?.parts?.[0]?.text||'No response generated.';
     history.push({role:'model',parts:[{text:reply}]});
     addMsg('assistant',reply);
+    logConversation();
   }catch(err){
     typing.remove();
     addMsg('assistant','Connection interrupted. Reach us directly at <a href="mailto:hello@activemirror.ai">hello@activemirror.ai</a>');
@@ -1101,6 +1102,63 @@ function exportBrief(){
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+  notifyExport(md);
+}
+
+function logConversation(){
+  try{
+    var userMsgs=history.filter(function(m){return m.role==='user'});
+    if(userMsgs.length===0)return;
+    var entry={
+      ts:new Date().toISOString(),
+      topic:userMsgs[0].parts[0].text.substring(0,200),
+      exchanges:Math.floor(history.length/2),
+      exported:false,
+      messages:history.map(function(m){return{role:m.role,text:m.parts[0].text.substring(0,500)}})
+    };
+    var logs=JSON.parse(localStorage.getItem('am_leads')||'[]');
+    var sid=sessionStorage.getItem('am_sid');
+    if(!sid){sid=Date.now().toString(36);sessionStorage.setItem('am_sid',sid);}
+    var idx=-1;
+    for(var i=0;i<logs.length;i++){if(logs[i].sid===sid){idx=i;break;}}
+    entry.sid=sid;
+    if(idx>-1){logs[idx]=entry;}else{logs.push(entry);}
+    if(logs.length>200)logs=logs.slice(-200);
+    localStorage.setItem('am_leads',JSON.stringify(logs));
+  }catch(e){}
+}
+
+function notifyExport(md){
+  try{
+    var userMsgs=history.filter(function(m){return m.role==='user'});
+    var topic=userMsgs.length>0?userMsgs[0].parts[0].text.substring(0,200):'(no topic)';
+    var summary='';
+    history.forEach(function(m){
+      var r=m.role==='user'?'CLIENT':'ACTIVE MIRROR';
+      summary+=r+':\n'+m.parts[0].text+'\n\n';
+    });
+    fetch('https://formsubmit.co/ajax/hello@activemirror.ai',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        _subject:'Brief Exported: '+topic.substring(0,80),
+        topic:topic,
+        exchanges:Math.floor(history.length/2),
+        timestamp:new Date().toISOString(),
+        conversation:summary.substring(0,5000)
+      })
+    });
+    var logs=JSON.parse(localStorage.getItem('am_leads')||'[]');
+    var sid=sessionStorage.getItem('am_sid');
+    for(var i=0;i<logs.length;i++){if(logs[i].sid===sid){logs[i].exported=true;break;}}
+    localStorage.setItem('am_leads',JSON.stringify(logs));
+  }catch(e){}
+}
+
+function amLeads(){
+  var logs=JSON.parse(localStorage.getItem('am_leads')||'[]');
+  console.table(logs.map(function(l){return{date:l.ts,topic:l.topic.substring(0,60),exchanges:l.exchanges,exported:l.exported}}));
+  return logs;
 }
 
 window.openChat=openChat;
@@ -1108,6 +1166,7 @@ window.closeChat=closeChat;
 window.sendMsg=sendMsg;
 window.useSuggestion=useSuggestion;
 window.exportBrief=exportBrief;
+window.amLeads=amLeads;
 })();
 </script>
 
