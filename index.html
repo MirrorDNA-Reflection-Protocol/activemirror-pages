@@ -938,14 +938,14 @@
     <button class="sp-close" onclick="toggleSignals()" aria-label="Close">&times;</button>
   </div>
   <div class="sp-gate" id="sp-gate">
-    <div class="sp-gate-title">Classified Intelligence Feed</div>
-    <div class="sp-gate-sub">Real-time signals across governed AI, sovereign infrastructure, and regulatory movements. Updated hourly.</div>
-    <input type="password" class="sp-gate-input" id="sp-code" placeholder="Access code" onkeydown="if(event.key==='Enter')unlockSignals()">
-    <button class="sp-gate-btn" onclick="unlockSignals()">Authenticate</button>
+    <div class="sp-gate-title">Intelligence Feed</div>
+    <div class="sp-gate-sub">Live signals across governed AI, sovereign infrastructure, and regulatory movements. Enter your work email to access.</div>
+    <input type="email" class="sp-gate-input" id="sp-email" placeholder="work@company.com" style="letter-spacing:normal" onkeydown="if(event.key==='Enter')unlockSignals()">
+    <button class="sp-gate-btn" onclick="unlockSignals()">Access Feed</button>
     <div class="sp-gate-err" id="sp-gate-err"></div>
   </div>
   <div class="sp-feed" id="sp-feed" style="display:none"></div>
-  <div class="sp-footer" id="sp-footer" style="display:none">Updated hourly · Governed intelligence · N1 Intelligence</div>
+  <div class="sp-footer" id="sp-footer" style="display:none">Updated daily · Governed intelligence · N1 Intelligence</div>
 </div>
 <button class="signal-toggle" id="signal-toggle" onclick="toggleSignals()">Signal Desk</button>
 
@@ -1284,7 +1284,7 @@ function toggleSignals(){
   document.getElementById('signal-panel').classList.toggle('open',spOpen);
   var tb=document.getElementById('signal-toggle');
   if(spOpen)tb.style.right='380px';else tb.style.right='0';
-  if(spOpen&&localStorage.getItem('sp_auth')==='1'){
+  if(spOpen&&localStorage.getItem('sp_email')){
     document.getElementById('sp-gate').style.display='none';
     document.getElementById('sp-feed').style.display='flex';
     document.getElementById('sp-footer').style.display='block';
@@ -1293,16 +1293,35 @@ function toggleSignals(){
 }
 
 function unlockSignals(){
-  var code=document.getElementById('sp-code').value.trim();
-  if(code===SP_CODE){
-    localStorage.setItem('sp_auth','1');
-    document.getElementById('sp-gate').style.display='none';
-    document.getElementById('sp-feed').style.display='flex';
-    document.getElementById('sp-footer').style.display='block';
-    loadSignals();
-  }else{
-    document.getElementById('sp-gate-err').textContent='Invalid access code';
+  var email=document.getElementById('sp-email').value.trim();
+  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    document.getElementById('sp-gate-err').textContent='Enter a valid work email';return;
   }
+  var freedoms=['gmail.com','yahoo.com','hotmail.com','outlook.com','aol.com','icloud.com','mail.com','protonmail.com'];
+  var domain=email.split('@')[1].toLowerCase();
+  if(freedoms.indexOf(domain)>-1){
+    document.getElementById('sp-gate-err').textContent='Please use your work email';return;
+  }
+  localStorage.setItem('sp_email',email);
+  try{
+    fetch('https://formsubmit.co/ajax/hello@activemirror.ai',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        _subject:'Signal Desk Access: '+email,
+        email:email,
+        source:'signal_desk',
+        timestamp:new Date().toISOString()
+      })
+    });
+  }catch(e){}
+  var leads=JSON.parse(localStorage.getItem('am_signal_leads')||'[]');
+  leads.push({email:email,ts:new Date().toISOString()});
+  localStorage.setItem('am_signal_leads',JSON.stringify(leads));
+  document.getElementById('sp-gate').style.display='none';
+  document.getElementById('sp-feed').style.display='flex';
+  document.getElementById('sp-footer').style.display='block';
+  loadSignals();
 }
 
 function loadSignals(){
