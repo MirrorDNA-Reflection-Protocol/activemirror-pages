@@ -1,0 +1,517 @@
+name: Signal Desk — Daily Feed
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-signals:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate signal feed
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          cat > /tmp/am_signal_desk.py << 'SCRIPT_EOF'
+          #!/usr/bin/env python3
+          """
+          Active Mirror Signal Desk — GitHub Actions inline runner.
+          Generates signals/feed.json for the activemirror.ai homepage.
+          """
+
+          from __future__ import annotations
+
+          import json
+          import os
+          import re
+          import sys
+          import time
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from email.utils import parsedate_to_datetime
+
+          import requests
+
+          RSS_FEEDS = [
+              ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/"),
+              ("MIT Technology Review", "https://www.technologyreview.com/feed/"),
+              ("The Register AI", "https://www.theregister.com/software/ai_ml/headlines.atom"),
+              ("InfoQ AI", "https://feed.infoq.com/ai-ml-data-eng/"),
+              ("Ars Technica AI", "https://feeds.arstechnica.com/arstechnica/technology-lab"),
+              ("VentureBeat AI", "https://venturebeat.com/category/ai/feed/"),
+              ("Inc42", "https://inc42.com/feed/"),
+              ("Medianama", "https://www.medianama.com/feed/"),
+              ("NIST", "https://www.nist.gov/news-events/news/rss.xml"),
+              ("EU Digital Policy", "https://digital-strategy.ec.europa.eu/en/rss.xml"),
+              ("Schneier on Security", "https://www.schneier.com/feed/atom/"),
+              ("The Hacker News", "https://feeds.feedburner.com/TheHackersNews"),
+          ]
+
+          AM_PRODUCTS = {
+              "compliance": {
+                  "url": "https://activemirror.ai/#compliance",
+                  "text": "How MirrorGate enforces compliance by construction",
+                  "keywords": ["compliance", "audit", "regulation", "eu ai act", "dpdp", "gdpr",
+                                "soc 2", "iso 27001", "conformity", "enforcement", "govern"],
+              },
+              "architecture": {
+                  "url": "https://activemirror.ai/#architecture",
+                  "text": "7-layer governance stack with Ed25519 signing",
+                  "keywords": ["architecture", "stack", "layer", "framework", "pipeline",
+                                "deterministic", "audit trail", "governance-by-construction"],
+              },
+              "deployment": {
+                  "url": "https://activemirror.ai/#deployment",
+                  "text": "Sovereign deployment: air-gapped and local edge models",
+                  "keywords": ["deployment", "air-gap", "on-premise", "edge", "local-first",
+                                "sovereign", "data residency", "data locali"],
+              },
+              "work": {
+                  "url": "https://activemirror.ai/#work",
+                  "text": "Enterprise case studies: evidence-gated AI",
+                  "keywords": ["case study", "enterprise", "institutional", "client",
+                                "sovereign wealth", "pension", "swf"],
+              },
+              "products": {
+                  "url": "https://activemirror.ai/#products",
+                  "text": "Active Mirror product suite",
+                  "keywords": ["product", "platform", "suite", "solution", "offering"],
+              },
+              "mirrorbrain": {
+                  "url": "https://brain.activemirror.ai",
+                  "text": "MirrorBrain: local-first inference engine",
+                  "keywords": ["inference", "local model", "edge inference", "wasm", "runtime",
+                                "on-device", "llm deploy", "model serving"],
+              },
+              "mirrorseed": {
+                  "url": "https://id.activemirror.ai",
+                  "text": "MirrorSeed: Ed25519 cryptographic identity",
+                  "keywords": ["ed25519", "cryptograph", "signing", "identity", "non-repudiation",
+                                "digital signature", "key management", "hsm", "pki"],
+              },
+              "constellation": {
+                  "url": "https://constellation.activemirror.ai",
+                  "text": "Constellation: governed multi-agent coordination",
+                  "keywords": ["multi-agent", "swarm", "orchestrat", "agent coordinat",
+                                "inter-agent", "agent accountab"],
+              },
+              "lexedge": {
+                  "url": "https://lexedge.activemirror.ai",
+                  "text": "LexEdge: AI legal research for India",
+                  "keywords": ["legal tech", "legal ai", "case research", "litigation",
+                                "court", "advocate", "judiciary", "verdict", "law firm"],
+              },
+              "beacon": {
+                  "url": "https://beacon.activemirror.ai",
+                  "text": "Beacon: compliance monitoring and alerting",
+                  "keywords": ["monitor", "beacon", "alert", "observ", "detect",
+                                "anomaly", "drift"],
+              },
+              "mirrorprod": {
+                  "url": "https://activemirror.ai/#products",
+                  "text": "MirrorProd: governed video production pipeline",
+                  "keywords": ["video production", "content governance", "brand compliance",
+                                "ai video", "rendering", "script-to-screen", "media pipeline"],
+              },
+          }
+
+          RELEVANCE_THEMES = {
+              "ai_regulation": {
+                  "weight": 20,
+                  "keywords": ["eu ai act", "ai act", "dpdp act", "nist ai", "ai regulation",
+                                "ai governance", "ai compliance", "ai policy", "ai framework",
+                                "high-risk ai", "ai safety", "ai ethics", "responsible ai"],
+              },
+              "sovereign_ai": {
+                  "weight": 18,
+                  "keywords": ["sovereign ai", "sovereign cloud", "data sovereignty",
+                                "local-first", "edge inference", "on-premise ai", "air-gapped",
+                                "data residency", "data locali"],
+              },
+              "enterprise_governance": {
+                  "weight": 16,
+                  "keywords": ["enterprise ai", "ai audit", "audit trail", "compliance audit",
+                                "soc 2", "iso 27001", "governance", "deterministic",
+                                "explainability", "transparency", "accountability"],
+              },
+              "cryptography": {
+                  "weight": 15,
+                  "keywords": ["ed25519", "digital signature", "cryptographic", "zero-trust",
+                                "pki", "key management", "hsm", "tamper-evident", "non-repudiation",
+                                "post-quantum"],
+              },
+              "legal_fintech_india": {
+                  "weight": 14,
+                  "keywords": ["legal tech india", "fintech india", "rbi", "sebi",
+                                "meity", "india ai", "india regulation", "vernacular",
+                                "india compliance", "indian enterprise"],
+              },
+              "ai_video_content": {
+                  "weight": 12,
+                  "keywords": ["ai video", "video production", "content governance",
+                                "brand compliance", "generated video", "deepfake",
+                                "synthetic media", "media governance"],
+              },
+              "multi_agent": {
+                  "weight": 14,
+                  "keywords": ["multi-agent", "agent orchestration", "agent swarm",
+                                "agentic ai", "agent framework", "agent coordination",
+                                "autonomous agent"],
+              },
+              "ai_infrastructure": {
+                  "weight": 10,
+                  "keywords": ["ai infrastructure", "inference engine", "model deployment",
+                                "wasm", "webassembly", "compute", "gpu", "tpu",
+                                "model serving", "onnx"],
+              },
+          }
+
+          CATEGORY_MAP = {
+              "ai_regulation": "Regulation",
+              "sovereign_ai": "Infrastructure",
+              "enterprise_governance": "Security",
+              "cryptography": "Security",
+              "legal_fintech_india": "Market",
+              "ai_video_content": "Production",
+              "multi_agent": "Technology",
+              "ai_infrastructure": "Technology",
+          }
+
+
+          def _clean(text):
+              text = re.sub(r"<[^>]+>", " ", text)
+              text = re.sub(r"\s+", " ", text).strip()
+              return text[:500]
+
+
+          def _text(el, tag, ns=None):
+              child = el.find(tag, ns) if ns else el.find(tag)
+              if child is not None and child.text:
+                  return child.text
+              return None
+
+
+          def fetch_rss_entries(timeout=15):
+              all_entries = []
+              for source_name, url in RSS_FEEDS:
+                  try:
+                      resp = requests.get(url, timeout=timeout, headers={
+                          "User-Agent": "ActiveMirror-SignalDesk/1.0",
+                          "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml",
+                      })
+                      resp.raise_for_status()
+                  except Exception as e:
+                      print(f"  [SKIP] {source_name}: {e}", file=sys.stderr)
+                      continue
+                  entries = _parse_feed_xml(resp.text, source_name)
+                  print(f"  [OK]   {source_name}: {len(entries)} entries", file=sys.stderr)
+                  all_entries.extend(entries)
+              return all_entries
+
+
+          def _parse_feed_xml(xml_text, source_name):
+              entries = []
+              try:
+                  root = ET.fromstring(xml_text)
+              except ET.ParseError:
+                  return entries
+              ns = {
+                  "atom": "http://www.w3.org/2005/Atom",
+                  "dc": "http://purl.org/dc/elements/1.1/",
+              }
+              items = root.findall(".//item")
+              if items:
+                  for item in items:
+                      title = _text(item, "title") or ""
+                      link = _text(item, "link") or ""
+                      desc = _text(item, "description") or ""
+                      pub_date = _text(item, "pubDate") or _text(item, "dc:date", ns) or ""
+                      entries.append({
+                          "title": _clean(title), "link": link.strip(),
+                          "description": _clean(desc), "pub_date": pub_date.strip(),
+                          "source": source_name,
+                      })
+              else:
+                  atom_entries = root.findall("atom:entry", ns) or root.findall("{http://www.w3.org/2005/Atom}entry")
+                  for entry in atom_entries:
+                      title = _text(entry, "atom:title", ns) or _text(entry, "{http://www.w3.org/2005/Atom}title") or ""
+                      link_el = entry.find("atom:link[@rel='alternate']", ns) or entry.find("{http://www.w3.org/2005/Atom}link[@rel='alternate']")
+                      if link_el is None:
+                          link_el = entry.find("atom:link", ns) or entry.find("{http://www.w3.org/2005/Atom}link")
+                      link = (link_el.get("href", "") if link_el is not None else "")
+                      desc = _text(entry, "atom:summary", ns) or _text(entry, "{http://www.w3.org/2005/Atom}summary") or ""
+                      pub_date = _text(entry, "atom:updated", ns) or _text(entry, "{http://www.w3.org/2005/Atom}updated") or ""
+                      if not pub_date:
+                          pub_date = _text(entry, "atom:published", ns) or _text(entry, "{http://www.w3.org/2005/Atom}published") or ""
+                      entries.append({
+                          "title": _clean(title), "link": link.strip(),
+                          "description": _clean(desc), "pub_date": pub_date.strip(),
+                          "source": source_name,
+                      })
+              return entries
+
+
+          def score_entry(entry):
+              text = f"{entry['title']} {entry['description']}".lower()
+              theme_scores = {}
+              for theme_id, theme in RELEVANCE_THEMES.items():
+                  hits = sum(1 for kw in theme["keywords"] if kw in text)
+                  theme_scores[theme_id] = hits * theme["weight"]
+              best_theme = max(theme_scores, key=theme_scores.get)
+              relevance = min(100, max(0, theme_scores[best_theme]))
+              if sum(theme_scores.values()) == 0:
+                  relevance = 5
+              urgency_keywords = ["breaking", "urgent", "mandatory", "enforce", "deadline",
+                                  "effective immediately", "final rule", "takes effect",
+                                  "critical", "emergency", "warning", "breach", "attack"]
+              urgency = min(100, 30 + sum(1 for kw in urgency_keywords if kw in text) * 20)
+              seo_keywords = ["ai governance", "sovereign ai", "ai compliance", "ai audit",
+                              "eu ai act", "dpdp act", "edge inference", "local-first ai",
+                              "enterprise ai", "ai regulation", "zero-trust ai",
+                              "ai video governance", "legal tech ai"]
+              seo = min(100, 25 + sum(1 for kw in seo_keywords if kw in text) * 18)
+              category = CATEGORY_MAP.get(best_theme, "Technology")
+              product_scores = {}
+              for prod_id, prod in AM_PRODUCTS.items():
+                  product_scores[prod_id] = sum(1 for kw in prod["keywords"] if kw in text)
+              best_product_id = max(product_scores, key=product_scores.get)
+              if product_scores[best_product_id] == 0:
+                  best_product_id = "architecture"
+              best_product = AM_PRODUCTS[best_product_id]
+              entry.update({
+                  "relevance": relevance, "urgency": urgency, "seo": seo,
+                  "category": category, "best_theme": best_theme,
+                  "am_link": best_product["url"], "am_link_text": best_product["text"],
+              })
+              return entry
+
+
+          def parse_pub_date(date_str):
+              if not date_str:
+                  return None
+              try:
+                  return parsedate_to_datetime(date_str)
+              except Exception:
+                  pass
+              for fmt in ["%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d %H:%M:%S",
+                          "%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%dT%H:%M:%S.%fZ"]:
+                  try:
+                      return datetime.strptime(date_str, fmt)
+                  except ValueError:
+                      continue
+              try:
+                  cleaned = re.sub(r"(\d{2})(\d{2})$", r"\1:\2", date_str)
+                  return datetime.fromisoformat(cleaned)
+              except Exception:
+                  pass
+              return None
+
+
+          def relative_time(dt):
+              if dt is None:
+                  return "recently"
+              now = datetime.now(timezone.utc)
+              if dt.tzinfo is None:
+                  dt = dt.replace(tzinfo=timezone.utc)
+              seconds = int((now - dt).total_seconds())
+              if seconds < 0:
+                  return "just now"
+              if seconds < 3600:
+                  return f"{max(1, seconds // 60)}m ago"
+              if seconds < 86400:
+                  return f"{seconds // 3600}h ago"
+              days = seconds // 86400
+              return f"{days}d ago"
+
+
+          def generate_insights_batch(entries, api_key):
+              if not entries:
+                  return entries
+              items_text = ""
+              for i, e in enumerate(entries):
+                  items_text += f"\n---\nITEM {i+1}:\nTitle: {e['title']}\nSource: {e['source']}\nCategory: {e['category']}\nDescription: {e['description'][:300]}\nMapped AM product: {e['am_link_text']}\n"
+
+              prompt = f"""You are the signal analyst for Active Mirror (activemirror.ai), a governed AI infrastructure company.
+
+          Active Mirror builds:
+          - MirrorGate: compliance-by-construction for EU AI Act, DPDP Act, SOC 2, ISO 27001
+          - 7-layer governed AI stack with Ed25519 cryptographic signing at every layer
+          - Sovereign/air-gapped/edge deployment models (no cloud dependency)
+          - MirrorBrain: local-first inference engine
+          - MirrorSeed: Ed25519 cryptographic identity and signing
+          - Constellation: governed multi-agent coordination
+          - LexEdge: AI legal research for India
+          - Beacon: compliance monitoring
+          - MirrorProd: governed AI video production pipeline
+
+          For each news item below, write a 2-3 sentence "insight" paragraph that:
+          1. Explains why this news matters for enterprises building governed AI
+          2. Connects it specifically to Active Mirror's stack or products
+          3. Uses authoritative, analytical tone (not salesy)
+
+          Return a JSON array with one object per item, in the same order:
+          [{{"item": 1, "insight": "..."}}, {{"item": 2, "insight": "..."}}]
+
+          Return ONLY the JSON array, no markdown fences, no explanation.
+
+          {items_text}"""
+
+              url = (
+                  f"https://generativelanguage.googleapis.com/v1beta/"
+                  f"models/gemini-2.5-flash:generateContent?key={api_key}"
+              )
+              body = {
+                  "contents": [{"parts": [{"text": prompt}]}],
+                  "generationConfig": {"responseMimeType": "application/json"},
+              }
+              for attempt in range(3):
+                  try:
+                      resp = requests.post(url, headers={
+                          "Content-Type": "application/json",
+                      }, json=body, timeout=120)
+                      if resp.status_code == 429:
+                          time.sleep(2 ** (attempt + 1))
+                          continue
+                      resp.raise_for_status()
+                      content = resp.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+                      if content.startswith("```"):
+                          content = re.sub(r"^```(?:json)?\s*", "", content)
+                          content = re.sub(r"\s*```$", "", content)
+                      parsed = json.loads(content)
+                      if isinstance(parsed, dict):
+                          for key in ("items", "insights", "signals", "results"):
+                              if key in parsed and isinstance(parsed[key], list):
+                                  parsed = parsed[key]
+                                  break
+                      if isinstance(parsed, list):
+                          for i, e in enumerate(entries):
+                              if i < len(parsed):
+                                  insight = parsed[i].get("insight", "")
+                                  if insight:
+                                      e["insight"] = insight
+                          return entries
+                  except Exception as exc:
+                      print(f"  [WARN] Gemini error: {exc}", file=sys.stderr)
+                      if attempt < 2:
+                          time.sleep(2 ** (attempt + 1))
+              print("  [FALL] Gemini unavailable, using heuristic insights", file=sys.stderr)
+              return entries
+
+
+          def heuristic_insight(entry):
+              theme = entry.get("best_theme", "")
+              product_text = entry.get("am_link_text", "Active Mirror's governed AI stack")
+              templates = {
+                  "ai_regulation": f"This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; {product_text} provides architectural compliance that satisfies these requirements by construction.",
+                  "sovereign_ai": f"As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. {product_text} addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
+                  "enterprise_governance": f"Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by {product_text}, are emerging as the baseline requirement for regulated deployments.",
+                  "cryptography": f"Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. {product_text} provides the signing infrastructure that post-hoc monitoring cannot replicate.",
+                  "legal_fintech_india": f"India's legal and financial technology sectors are converging on AI-driven automation with strict data sovereignty requirements. {product_text} is positioned for this market with sovereign-first architecture and vernacular-ready infrastructure.",
+                  "ai_video_content": f"AI-generated content without governance gates creates brand and regulatory risk. {product_text} ensures every output is traceable to an approved policy layer with deterministic verification.",
+                  "multi_agent": f"Multi-agent AI systems introduce accountability gaps that single-model governance cannot address. {product_text} maintains cryptographic provenance chains across every agent action and delegation.",
+                  "ai_infrastructure": f"AI infrastructure is shifting toward local-first and edge-native architectures. {product_text} leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
+              }
+              return templates.get(theme, f"This development highlights the growing need for governed AI infrastructure in enterprise deployments. {product_text} addresses this architectural gap with deterministic, auditable AI pipelines.")
+
+
+          def main():
+              output_path = os.environ.get("SIGNAL_OUTPUT", "signals/feed.json")
+              print("=== Active Mirror Signal Desk (GH Actions) ===", file=sys.stderr)
+
+              print("\n[1/4] Fetching RSS feeds...", file=sys.stderr)
+              entries = fetch_rss_entries()
+              print(f"  Total: {len(entries)}", file=sys.stderr)
+
+              if not entries:
+                  print("  [WARN] No entries fetched.", file=sys.stderr)
+                  if os.path.exists(output_path):
+                      print("  Keeping existing feed.json", file=sys.stderr)
+                      return
+                  feed = {"updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "signals": []}
+                  Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+                  Path(output_path).write_text(json.dumps(feed, indent=2) + "\n")
+                  return
+
+              print("\n[2/4] Scoring...", file=sys.stderr)
+              scored = [score_entry(e) for e in entries]
+              seen = set()
+              deduped = []
+              for e in scored:
+                  norm = re.sub(r"[^a-z0-9 ]", "", e["title"].lower())[:60]
+                  if norm not in seen:
+                      seen.add(norm)
+                      deduped.append(e)
+              relevant = [e for e in deduped if e["relevance"] >= 15]
+              relevant.sort(key=lambda e: e["relevance"], reverse=True)
+              top = relevant[:10]
+              print(f"  Scored={len(scored)}, Deduped={len(deduped)}, Top={len(top)}", file=sys.stderr)
+
+              print("\n[3/4] Insights...", file=sys.stderr)
+              api_key = os.environ.get("GEMINI_API_KEY", "")
+              if api_key:
+                  top = generate_insights_batch(top, api_key)
+              else:
+                  print("  [WARN] No GEMINI_API_KEY", file=sys.stderr)
+
+              for e in top:
+                  if "insight" not in e or not e["insight"]:
+                      e["insight"] = heuristic_insight(e)
+
+              print("\n[4/4] Writing feed.json...", file=sys.stderr)
+              now = datetime.now(timezone.utc)
+              signals = []
+              for e in top:
+                  pub_dt = parse_pub_date(e.get("pub_date", ""))
+                  signals.append({
+                      "title": e["title"],
+                      "source": e["source"],
+                      "time": relative_time(pub_dt),
+                      "category": e["category"],
+                      "insight": e["insight"],
+                      "am_link": e["am_link"],
+                      "am_link_text": e["am_link_text"],
+                      "scores": {"Relevance": e["relevance"], "Urgency": e["urgency"], "SEO": e["seo"]},
+                  })
+              feed = {"updated": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "signals": signals}
+              Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+              Path(output_path).write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n")
+              print(f"  Written: {output_path} ({len(signals)} signals)", file=sys.stderr)
+              print("\n=== Done ===", file=sys.stderr)
+
+
+          if __name__ == "__main__":
+              main()
+          SCRIPT_EOF
+          python3 /tmp/am_signal_desk.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "signal-desk[bot]"
+          git config user.email "signal-desk[bot]@activemirror.ai"
+          git add signals/feed.json
+          if git diff --cached --quiet; then
+            echo "No changes to feed.json"
+          else
+            git commit -m "signal-desk: update feed.json $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
