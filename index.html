@@ -223,11 +223,13 @@
     gap: 1rem; margin-top: 2rem;
   }
   .product-card {
+    display: block; color: inherit; text-decoration: none;
     background: var(--bg-card); border: 1px solid var(--border);
     border-radius: 6px; padding: 1.25rem 1.5rem;
     transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   }
   .product-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(34,127,213,0.1); }
+  .product-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
   .product-name {
     font-weight: 600; font-size: 0.95rem; color: var(--text-bright);
     display: flex; align-items: center; gap: 0.5rem;
@@ -719,50 +721,50 @@
   <h2>10 products. One governance layer.</h2>
   <p class="lead">Every product is a live, auditable system that demonstrates governed AI in production. Open where it matters.</p>
   <div class="product-grid">
-    <div class="product-card">
+    <a class="product-card" href="https://github.com/MirrorDNA-Reflection-Protocol/MirrorDNA">
       <div class="product-name">MirrorDNA <span class="product-badge badge-open">Open</span></div>
       <p class="product-desc">Multi-model session state virtualization. Persistent identity across any AI provider. Your data, your hardware, your rules.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="https://id.activemirror.ai/">
       <div class="product-name">MirrorSeed <span class="product-badge badge-open">Open</span></div>
       <p class="product-desc">Ed25519-signed identity and session management. Cryptographic proof of who did what, when. Non-repudiable by construction.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="https://brain.activemirror.ai/">
       <div class="product-name">MirrorBrain <span class="product-badge badge-live">Live</span></div>
       <p class="product-desc">Local-first inference engine. Run models on-premise or at the edge. Zero cloud dependency. Quantised models on ARM and x86.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="/products/mirrorgate/">
       <div class="product-name">MirrorGate <span class="product-badge badge-open">Open</span></div>
       <p class="product-desc">7-layer verification hook pipeline. Enforces compliance validation on inputs and outputs in real time. No layer is optional.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="/products/kavach/">
       <div class="product-name">Kavach <span class="product-badge badge-private">Private</span></div>
       <p class="product-desc">Low-latency inference firewall. Policy-driven proxy that governs AI requests before they execute. Safety by design.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="https://chetana.activemirror.ai/">
       <div class="product-name">Chetana <span class="product-badge badge-live">Live</span></div>
       <p class="product-desc">Governed conversational AI for regulated industries. Every response logged, every decision traceable. Voice and text.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="/products/cognitive-dashboard/">
       <div class="product-name">MirrorDash <span class="product-badge badge-open">Open</span></div>
       <p class="product-desc">Glass-box AI monitoring. See every decision, every tool call, every gate check in real time. Terminal UI, zero dependencies.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="https://constellation.activemirror.ai/">
       <div class="product-name">Constellation <span class="product-badge badge-live">Live</span></div>
       <p class="product-desc">Multi-agent coordination with visual surface. Governed swarm orchestration where every agent action is signed and auditable.</p>
-    </div>
+    </a>
     <div class="product-card">
       <div class="product-name">ActiveMirrorOS <span class="product-badge badge-open">Open</span></div>
       <p class="product-desc">Sovereign cognitive operating system. Multi-device mesh with purpose-governed inference across distributed hardware.</p>
     </div>
-    <div class="product-card">
+    <a class="product-card" href="/mirrorprod-india/">
       <div class="product-name">MirrorProd <span class="product-badge badge-live">Live</span></div>
       <p class="product-desc">AI-governed video production pipeline. Script-to-screen with compliance gates, brand governance, and deterministic rendering. Every frame traceable.</p>
-    </div>
-    <div class="product-card">
+    </a>
+    <a class="product-card" href="https://beacon.activemirror.ai/">
       <div class="product-name">Beacon <span class="product-badge badge-open">Open</span></div>
       <p class="product-desc">Build log and research publication surface. Where we publish what we build, why, and what we learned. No marketing.</p>
-    </div>
+    </a>
   </div>
 </section>
 
