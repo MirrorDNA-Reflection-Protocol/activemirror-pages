@@ -313,6 +313,128 @@
   footer a:hover { color: var(--text); }
   .footer-links { display: flex; gap: 1.5rem; }
 
+  /* ─── Chat Overlay ─── */
+  .chat-overlay {
+    position: fixed; inset: 0; z-index: 100;
+    background: #070c17;
+    display: flex; flex-direction: column;
+    opacity: 0; visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, visibility 0.3s, transform 0.3s ease;
+  }
+  .chat-overlay.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .chat-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 2rem; border-bottom: 1px solid var(--border);
+  }
+  .chat-hl { display: flex; align-items: center; gap: 1rem; }
+  .chat-brand { font-weight: 700; font-size: 0.92rem; color: var(--text-bright); }
+  .chat-label {
+    font-family: var(--mono); font-size: 0.65rem; color: var(--text-muted);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding-left: 1rem; border-left: 1px solid var(--border);
+  }
+  .chat-hr { display: flex; align-items: center; gap: 1.25rem; }
+  .chat-live {
+    display: flex; align-items: center; gap: 0.4rem;
+    font-family: var(--mono); font-size: 0.62rem;
+    color: #22c55e; letter-spacing: 0.03em;
+  }
+  .chat-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #22c55e; animation: cdot 2s infinite;
+  }
+  @keyframes cdot { 0%,100%{opacity:1} 50%{opacity:.3} }
+  .chat-actions { display: flex; gap: 0.5rem; }
+  .chat-act {
+    background: none; border: 1px solid var(--border);
+    color: var(--text-dim); font-size: 0.72rem;
+    font-family: var(--mono); padding: 0.4rem 0.75rem;
+    border-radius: 4px; cursor: pointer; transition: all 0.15s;
+  }
+  .chat-act:hover { border-color: var(--accent); color: var(--accent); }
+  .chat-x {
+    background: none; border: 1px solid var(--border);
+    color: var(--text-dim); font-size: 1.1rem; width: 34px; height: 34px;
+    border-radius: 4px; cursor: pointer; transition: all 0.15s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .chat-x:hover { border-color: var(--text-dim); color: var(--text); }
+  .chat-body {
+    flex: 1; overflow-y: auto; display: flex;
+    flex-direction: column; align-items: center; padding: 2rem 2rem 1rem;
+  }
+  .chat-thread { max-width: 660px; width: 100%; display: flex; flex-direction: column; gap: 1.5rem; }
+  .chat-msg { animation: cmsg .3s ease; }
+  @keyframes cmsg { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+  .chat-msg.assistant .msg-body {
+    color: rgba(255,255,255,.72); font-size: 0.9rem; line-height: 1.8;
+  }
+  .chat-msg.assistant .msg-body strong { color: var(--text-bright); font-weight: 600; }
+  .chat-msg.assistant .msg-body code {
+    font-family: var(--mono); font-size: 0.82rem;
+    background: rgba(34,127,213,.08); padding: 0.15rem 0.4rem;
+    border-radius: 3px; color: var(--accent);
+  }
+  .chat-msg.assistant .msg-body pre {
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 1rem; border-radius: 5px; overflow-x: auto;
+    margin: 0.75rem 0; font-family: var(--mono); font-size: 0.78rem;
+    line-height: 1.6; color: rgba(255,255,255,.7);
+  }
+  .chat-msg.assistant .msg-body ul, .chat-msg.assistant .msg-body ol {
+    padding-left: 1.25rem; margin: 0.5rem 0;
+  }
+  .chat-msg.assistant .msg-body li { margin-bottom: 0.35rem; }
+  .chat-msg.assistant .msg-body a { color: var(--accent); }
+  .chat-msg.user { display: flex; justify-content: flex-end; }
+  .chat-msg.user .msg-body {
+    background: var(--bg-card); border: 1px solid var(--border);
+    padding: 0.8rem 1.1rem; border-radius: 6px;
+    color: var(--text); font-size: 0.9rem; max-width: 80%; line-height: 1.6;
+  }
+  .chat-starters { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+  .chat-starters button {
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text-dim); font-size: 0.82rem;
+    padding: 0.7rem 1rem; border-radius: 5px;
+    text-align: left; cursor: pointer;
+    font-family: var(--sans); line-height: 1.5; transition: all 0.15s;
+  }
+  .chat-starters button:hover { border-color: var(--accent); color: var(--text); background: rgba(34,127,213,.04); }
+  .chat-input-bar {
+    padding: 1rem 2rem 1.25rem; border-top: 1px solid var(--border);
+    display: flex; justify-content: center;
+  }
+  .chat-iw { max-width: 660px; width: 100%; display: flex; gap: 0.5rem; }
+  .chat-iw input {
+    flex: 1; background: var(--bg-card); border: 1px solid var(--border);
+    color: var(--text); font-family: var(--sans); font-size: 0.88rem;
+    padding: 0.75rem 1rem; border-radius: 5px; outline: none; transition: border-color 0.15s;
+  }
+  .chat-iw input:focus { border-color: var(--accent); }
+  .chat-iw input::placeholder { color: var(--text-muted); }
+  .chat-iw button {
+    background: var(--accent); border: none; color: #fff;
+    padding: 0 1.1rem; border-radius: 5px; cursor: pointer;
+    font-weight: 600; font-size: 0.82rem; font-family: var(--sans); transition: background 0.15s;
+  }
+  .chat-iw button:hover { background: #1a6fbe; }
+  .chat-iw button:disabled { background: var(--border); cursor: not-allowed; color: var(--text-muted); }
+  .chat-foot {
+    padding: 0.5rem 2rem; text-align: center;
+    font-family: var(--mono); font-size: 0.58rem;
+    color: var(--text-muted); letter-spacing: 0.04em;
+  }
+  .typing-ind { display: inline-flex; gap: 4px; padding: 0.5rem 0; }
+  .typing-ind span {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--text-muted); animation: tdot 1.2s infinite;
+  }
+  .typing-ind span:nth-child(2) { animation-delay: .2s; }
+  .typing-ind span:nth-child(3) { animation-delay: .4s; }
+  @keyframes tdot { 0%,100%{opacity:.25} 50%{opacity:1} }
+
   /* ─── Responsive ─── */
   @media (max-width: 768px) {
     .nav { padding: 1rem 1.25rem; }
@@ -332,6 +454,11 @@
     .thesis-table th, .thesis-table td { padding: 0.6rem 0.65rem; }
     footer { flex-direction: column; gap: 0.75rem; text-align: center; }
     .footer-links { justify-content: center; }
+    .chat-header { padding: 0.85rem 1.25rem; }
+    .chat-label { display: none; }
+    .chat-body { padding: 1.5rem 1.25rem 1rem; }
+    .chat-input-bar { padding: 0.75rem 1.25rem 1rem; }
+    .chat-actions { display: none; }
   }
 </style>
 </head>
@@ -346,7 +473,7 @@
     <a href="#architecture">Architecture</a>
     <a href="#research">Research</a>
     <a href="https://beacon.activemirror.ai">Beacon</a>
-    <a href="/mirror/" class="nav-cta">Discuss a Build</a>
+    <a href="#" onclick="openChat();return false" class="nav-cta">Discuss a Build</a>
   </div>
 </nav>
 
@@ -360,7 +487,7 @@
   </p>
   <div class="hero-actions">
     <a href="#work" class="btn-primary">See the work</a>
-    <a href="/mirror/" class="btn-ghost">Discuss a build</a>
+    <a href="#" onclick="openChat();return false" class="btn-ghost">Discuss a build</a>
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
@@ -715,7 +842,7 @@
 <section class="cta-band">
   <h2>Built for industries where AI failure is not a product bug.</h2>
   <p>It is a regulatory event, a fiduciary breach, or a harm to a real person.</p>
-  <a href="/mirror/" class="btn-primary">Discuss a build</a>
+  <a href="#" onclick="openChat();return false" class="btn-primary">Discuss a build</a>
 </section>
 
 <!-- ─── Footer ─── -->
@@ -726,9 +853,252 @@
     <a href="#products">Products</a>
     <a href="#research">Research</a>
     <a href="https://beacon.activemirror.ai">Beacon</a>
-    <a href="/mirror/">Contact</a>
+    <a href="#" onclick="openChat();return false">Contact</a>
   </div>
 </footer>
+
+<!-- ─── Chat Overlay ─── -->
+<div id="chat-overlay" class="chat-overlay">
+  <header class="chat-header">
+    <div class="chat-hl">
+      <span class="chat-brand">Active Mirror</span>
+      <span class="chat-label">Scoping Session</span>
+    </div>
+    <div class="chat-hr">
+      <div class="chat-live"><span class="chat-dot"></span> Governed inference</div>
+      <div class="chat-actions">
+        <button class="chat-act" onclick="exportBrief()">Export Brief</button>
+      </div>
+      <button class="chat-x" onclick="closeChat()" aria-label="Close">&times;</button>
+    </div>
+  </header>
+  <div class="chat-body" id="chat-body">
+    <div class="chat-thread" id="chat-thread">
+      <div class="chat-msg assistant">
+        <div class="msg-body">I'm the Active Mirror scoping interface. Describe your industry, compliance environment, and deployment constraints &mdash; I'll map the architecture, walk you through the stack, and generate a brief you can take to procurement.</div>
+      </div>
+      <div class="chat-starters" id="chat-starters">
+        <button onclick="useSuggestion(this)">We need sovereign AI for our pension fund &mdash; EU data residency required</button>
+        <button onclick="useSuggestion(this)">Walk me through the 7-layer governance stack for a fintech deployment</button>
+        <button onclick="useSuggestion(this)">Generate a Docker deployment config for an air-gapped environment</button>
+        <button onclick="useSuggestion(this)">How does Active Mirror handle DPDP compliance for Indian financial services?</button>
+      </div>
+    </div>
+  </div>
+  <div class="chat-input-bar">
+    <form class="chat-iw" onsubmit="sendMsg(event)">
+      <input type="text" id="chat-in" placeholder="Describe your requirements..." autocomplete="off" />
+      <button type="submit" id="chat-btn">Send</button>
+    </form>
+  </div>
+  <div class="chat-foot">7-layer governance &middot; Ed25519 signed &middot; Sovereign inference &middot; N1 Intelligence (OPC) Pvt Ltd</div>
+</div>
+
+<script>
+(function(){
+const GK='AIzaSyAeETtEuYBm6VpzxGVYmFKxV50p2YMNCUQ';
+const MODEL='gemini-2.0-flash';
+const ENDPOINT=`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GK}`;
+
+const SYS=`You are the Active Mirror architecture scoping interface. You help enterprise teams understand how governed AI infrastructure maps to their compliance requirements, data residency needs, and deployment constraints.
+
+PRODUCTS (10):
+- MirrorDNA: Multi-model session state virtualization. Decouples prompt context from provider APIs. Persistent corporate identity across processing nodes.
+- MirrorSeed: Ed25519 cryptographic identity. Provisions ephemeral or persistent keypairs per task/session. Non-repudiable actions.
+- MirrorBrain: Local-first inference engine. Quantised models on ARM/x86. Sub-10ms latency. Zero cloud dependency.
+- MirrorGate: 7-layer verification hook pipeline. Real-time compliance validation on inputs and outputs. No layer optional.
+- Kavach: Low-latency inference firewall. Policy-driven proxy ahead of model boundary. Drops injections, hostile orchestrations, unscrubbed PII.
+- Chetana: Governed conversational AI. Voice and text for regulated industries. Every response logged, every decision traceable.
+- MirrorDash: Glass-box monitoring console. Live tracing of decisions, tool calls, gate checks. Terminal UI.
+- Constellation: Multi-agent coordination. Governed swarm orchestration. Every agent action signed and auditable.
+- ActiveMirrorOS: Sovereign cognitive OS. Multi-device mesh. Purpose-governed inference across distributed hardware.
+- Beacon: Build log and research blog. Published reflections on governance findings.
+
+7-LAYER GOVERNANCE STACK (every request passes through all 7 before model output):
+L1 Transport Boundary Guard - Verifies packet origin against trusted proxy mappings. Failure: hard drop, no fallback.
+L2 PII Inspection Filter - WebAssembly filters mask protected identifiers (tax IDs, credentials, names). Failure: strip and redact.
+L3 Intent Boundary Validator - Structural token checking blocks alignment attacks and out-of-scope prompts. Failure: policy violation.
+L4 Deterministic Router - Routes to local/private compute only. No multi-tenant clouds. Failure: local-only execution.
+L5 Context Provenance Matcher - Attaches MirrorDNA origin metadata for verified lineage. Failure: drop context.
+L6 Cryptographic Sign-off - SHA-256 state hashes + Ed25519 signatures via MirrorSeed. Failure: invalidate trace.
+L7 Append-Only Ledger Commit - Binds transaction to tamper-evident audit trail. Failure: no rollback.
+
+DEPLOYMENT MODELS (3):
+1. Air-Gapped: Complete network isolation. Zero outbound WAN. Physical data diode updates. HSM key management. On-premise hardware.
+2. Single-Tenant VPC: Dedicated cloud, no shared resources. Private networking. Customer-managed encryption keys (CMEK). SOC 2 boundary.
+3. Local Edge Inference: Quantised models on commodity hardware. ARM/x86. Offline-capable. Sub-10ms latency. Branch offices, factory floors.
+
+COMPLIANCE:
+- EU AI Act: High-risk classification support, conformity assessments, technical documentation from deployment.
+- DPDP Act (India): Consent management, data localisation, purpose limitation at infrastructure layer.
+- SOC 2 Type II & ISO 27001 Annex A: Continuous evidence generation, not assembled before audits.
+- Ed25519: Every model output, decision log, governance artifact cryptographically signed.
+
+CLIENT WORK:
+- SWFI (Sovereign Wealth Fund Institute): Real-time intelligence for institutional investors. 27,249 institutions, 177,677 transactions, 128,781 people. Evidence-gated AI search. Zero hallucination tolerance.
+- Greatx: Regulated fintech. Compliance automation, decision audit trails, model governance across lending/credit. Ed25519 signing.
+- LexEdge: Legal tech for India. Case research, document generation, citation verification. Voice-enabled, vernacular-first.
+
+ENTERPRISE:
+- 99.99% uptime SLA with financial penalties
+- 24/7 priority engineering support (direct access to build team)
+- AWS Marketplace and Azure Marketplace billing
+- Independent verification tool (mirror-verify-cli) for air-gapped audit
+- Source code escrow clause
+
+RESEARCH: 8 papers published with Zenodo DOIs covering sovereign AI memory, contextual distillation, behavioral governance, reflective AI, trust-by-design, audit chain architecture, sovereign inference, governance-by-construction.
+
+RULES:
+- Be professional, direct, and technical. Never use marketing language.
+- Ask clarifying questions about the prospect's threat model, regulatory environment, and scale before recommending architecture.
+- When demonstrating the stack, walk through all 7 layers for their specific use case.
+- Generate code samples when asked: Docker configs, governance schemas, API examples, deployment scripts.
+- Use markdown formatting: **bold** for emphasis, \`code\` for technical terms, code blocks for configs/scripts.
+- When the conversation has enough context, suggest exporting an Architecture Brief.
+- Link to live products when relevant: constellation.activemirror.ai, brain.activemirror.ai, beacon.activemirror.ai, lexedge.activemirror.ai
+- You are not a chatbot. You are a governed scoping interface. Move every response toward a concrete architecture recommendation.
+- Entity: N1 Intelligence (OPC) Pvt Ltd, Goa, India. Contact: hello@activemirror.ai`;
+
+let history=[];
+const $=id=>document.getElementById(id);
+
+function openChat(){
+  $('chat-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  $('chat-in').focus();
+}
+function closeChat(){
+  $('chat-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeChat()});
+
+function md(s){
+  return s
+    .replace(/```(\w*)\n([\s\S]*?)```/g,'<pre><code>$2</code></pre>')
+    .replace(/`([^`]+)`/g,'<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/^\- (.+)/gm,'<li>$1</li>')
+    .replace(/^\d+\. (.+)/gm,'<li>$1</li>')
+    .replace(/(<li>.*<\/li>)/gs,m=>'<ul>'+m+'</ul>')
+    .replace(/<\/ul>\s*<ul>/g,'')
+    .replace(/\n\n/g,'<br><br>')
+    .replace(/\n/g,'<br>');
+}
+
+function addMsg(role,text){
+  const t=$('chat-thread');
+  const d=document.createElement('div');
+  d.className='chat-msg '+role;
+  d.innerHTML='<div class="msg-body">'+(role==='user'?esc(text):md(text))+'</div>';
+  t.appendChild(d);
+  $('chat-body').scrollTop=$('chat-body').scrollHeight;
+  return d;
+}
+
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+function useSuggestion(btn){
+  const t=btn.textContent;
+  const s=$('chat-starters');if(s)s.remove();
+  send(t);
+}
+function sendMsg(e){
+  e.preventDefault();
+  const inp=$('chat-in');
+  const t=inp.value.trim();if(!t)return;
+  inp.value='';
+  const s=$('chat-starters');if(s)s.remove();
+  send(t);
+}
+
+async function send(text){
+  addMsg('user',text);
+  history.push({role:'user',parts:[{text}]});
+
+  $('chat-in').disabled=true;
+  $('chat-btn').disabled=true;
+
+  const t=$('chat-thread');
+  const typing=document.createElement('div');
+  typing.className='chat-msg assistant';
+  typing.innerHTML='<div class="typing-ind"><span></span><span></span><span></span></div>';
+  t.appendChild(typing);
+  $('chat-body').scrollTop=$('chat-body').scrollHeight;
+
+  try{
+    const r=await fetch(ENDPOINT,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        contents:history,
+        systemInstruction:{parts:[{text:SYS}]},
+        generationConfig:{temperature:0.7,maxOutputTokens:4096}
+      })
+    });
+    typing.remove();
+    if(!r.ok)throw new Error(r.status);
+    const data=await r.json();
+    const reply=data.candidates?.[0]?.content?.parts?.[0]?.text||'No response generated.';
+    history.push({role:'model',parts:[{text:reply}]});
+    addMsg('assistant',reply);
+  }catch(err){
+    typing.remove();
+    addMsg('assistant','Connection interrupted. Reach us directly at <a href="mailto:hello@activemirror.ai">hello@activemirror.ai</a>');
+  }
+  $('chat-in').disabled=false;
+  $('chat-btn').disabled=false;
+  $('chat-in').focus();
+}
+
+function exportBrief(){
+  if(history.length===0){alert('Start a conversation first.');return;}
+  let conv='';
+  history.forEach(m=>{
+    const role=m.role==='user'?'CLIENT':'ACTIVE MIRROR';
+    conv+=role+':\\n'+m.parts[0].text+'\\n\\n';
+  });
+  const w=window.open('','_blank');
+  w.document.write(\`<!DOCTYPE html><html><head><title>Architecture Brief - Active Mirror</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a2e;padding:3rem;max-width:800px;margin:0 auto;line-height:1.7}
+h1{font-size:1.5rem;font-weight:700;margin-bottom:.25rem}
+.subtitle{color:#666;font-size:.9rem;margin-bottom:2rem}
+.meta{display:flex;gap:2rem;margin-bottom:2rem;padding:1rem;background:#f8f9fa;border-radius:6px;font-size:.82rem;color:#555}
+.meta strong{color:#1a1a2e}
+h2{font-size:1.1rem;font-weight:600;margin:2rem 0 .75rem;padding-bottom:.5rem;border-bottom:1px solid #e5e5e5;color:#1a1a2e}
+.msg{margin-bottom:1.25rem}
+.msg-role{font-family:monospace;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#227fd5;margin-bottom:.25rem}
+.msg-text{font-size:.88rem;color:#333;white-space:pre-wrap}
+.footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e5e5e5;font-size:.78rem;color:#999;text-align:center}
+@media print{body{padding:1.5rem}@page{margin:1.5cm}}
+</style></head><body>
+<h1>Architecture Brief</h1>
+<p class="subtitle">Active Mirror &mdash; Governed AI for Institutional Work</p>
+<div class="meta">
+<div><strong>Date:</strong> \${new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}</div>
+<div><strong>Entity:</strong> N1 Intelligence (OPC) Pvt Ltd</div>
+<div><strong>Classification:</strong> Scoping Document</div>
+</div>
+<h2>Scoping Conversation</h2>
+\${history.map(m=>\`<div class="msg"><div class="msg-role">\${m.role==='user'?'Client':'Active Mirror'}</div><div class="msg-text">\${esc(m.parts[0].text)}</div></div>\`).join('')}
+<h2>Next Steps</h2>
+<p style="font-size:.88rem;color:#333">To proceed with architecture design and deployment scoping, contact the Active Mirror engineering team:</p>
+<p style="font-size:.88rem;margin-top:.5rem"><strong>Email:</strong> hello@activemirror.ai</p>
+<div class="footer">
+Active Mirror &middot; N1 Intelligence (OPC) Pvt Ltd &middot; Goa, India<br>
+Generated \${new Date().toISOString().split('T')[0]} &middot; Governed by 7-layer verification stack
+</div>
+</body></html>\`);
+  w.document.close();
+  setTimeout(()=>w.print(),500);
+}
+
+window.openChat=openChat;
+window.closeChat=closeChat;
+})();
+</script>
 
 </body>
 </html>
