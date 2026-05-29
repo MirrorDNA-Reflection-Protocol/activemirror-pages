@@ -24,15 +24,24 @@
   :root {
     --bg: #0b1220;
     --bg-card: #111d30;
+    --bg-elevated: #162236;
     --border: #1c2d45;
+    --border-subtle: #152035;
     --accent: #227fd5;
-    --accent-dim: rgba(34,127,213,0.12);
+    --accent-dim: rgba(34,127,213,0.10);
+    --accent-glow: rgba(34,127,213,0.06);
+    --green: #22c55e;
+    --green-dim: rgba(34,197,94,0.10);
+    --amber: #f59e0b;
+    --purple: #a78bfa;
     --text: #e2e8f0;
-    --text-dim: rgba(255,255,255,0.55);
+    --text-dim: rgba(255,255,255,0.50);
+    --text-muted: rgba(255,255,255,0.35);
     --text-bright: #ffffff;
-    --mono: 'SFMono-Regular', 'Menlo', 'Consolas', monospace;
+    --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Menlo', 'Consolas', monospace;
     --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
     --max-w: 1120px;
+    --max-w-narrow: 800px;
   }
   html { scroll-behavior: smooth; }
   body {
@@ -43,48 +52,60 @@
   a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
   a:hover { color: #5ba7ff; }
 
-  /* Nav */
+  /* ─── Nav ─── */
   .nav {
     position: sticky; top: 0; z-index: 50;
     display: flex; align-items: center; justify-content: space-between;
     max-width: var(--max-w); margin: 0 auto;
     padding: 1.25rem 2rem;
-    background: rgba(11,18,32,0.85); backdrop-filter: blur(12px);
+    background: rgba(11,18,32,0.88); backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
   }
   .nav-brand {
     font-weight: 700; font-size: 1.05rem; color: var(--text-bright);
     letter-spacing: 0.02em;
   }
   .nav-links { display: flex; gap: 1.75rem; align-items: center; }
-  .nav-links a { font-size: 0.88rem; color: var(--text-dim); font-weight: 500; }
+  .nav-links a { font-size: 0.85rem; color: var(--text-dim); font-weight: 500; }
   .nav-links a:hover { color: var(--text); }
   .nav-cta {
-    font-size: 0.85rem; font-weight: 600; color: var(--text-bright) !important;
-    background: var(--accent); padding: 0.55rem 1.25rem;
+    font-size: 0.82rem; font-weight: 600; color: var(--text-bright) !important;
+    background: var(--accent); padding: 0.5rem 1.15rem;
     border-radius: 5px; transition: background 0.15s;
   }
   .nav-cta:hover { background: #1a6fbe; }
 
-  /* Section */
+  /* ─── Sections ─── */
   section { max-width: var(--max-w); margin: 0 auto; padding: 5rem 2rem; }
+  section.bordered { border-top: 1px solid var(--border); }
   .kicker {
-    font-family: var(--mono); font-size: 0.75rem; font-weight: 600;
+    font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
     letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--accent); margin-bottom: 1rem;
   }
-  h1 { font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 700; color: var(--text-bright); line-height: 1.15; }
-  h2 { font-size: 1.75rem; font-weight: 700; color: var(--text-bright); line-height: 1.25; margin-bottom: 1rem; }
-  h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-bright); margin-bottom: 0.5rem; }
+  h1 {
+    font-size: clamp(2rem, 4.5vw, 3.15rem); font-weight: 700;
+    color: var(--text-bright); line-height: 1.15;
+  }
+  h2 {
+    font-size: 1.65rem; font-weight: 700; color: var(--text-bright);
+    line-height: 1.25; margin-bottom: 0.75rem;
+  }
+  h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-bright); margin-bottom: 0.4rem; }
+  .lead {
+    font-size: 1rem; color: var(--text-dim);
+    max-width: 560px; margin-bottom: 2rem; line-height: 1.7;
+  }
 
-  /* Hero */
+  /* ─── Hero ─── */
   .hero { padding-top: 7rem; padding-bottom: 5rem; }
-  .hero p.lead {
-    font-size: 1.15rem; color: var(--text-dim);
-    max-width: 580px; margin: 1.25rem 0 2.5rem;
+  .hero .lead {
+    font-size: 1.12rem; max-width: 580px;
+    margin: 1.25rem 0 2.5rem;
   }
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
   .hero-actions a {
-    font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.5rem;
+    font-size: 0.88rem; font-weight: 600; padding: 0.7rem 1.4rem;
     border-radius: 5px; transition: all 0.15s;
   }
   .btn-primary { background: var(--accent); color: var(--text-bright) !important; }
@@ -100,12 +121,106 @@
   }
   .hero-stat { display: flex; flex-direction: column; }
   .hero-stat strong {
-    font-family: var(--mono); font-size: 1.1rem;
+    font-family: var(--mono); font-size: 1.05rem;
     color: var(--text-bright); font-weight: 700;
   }
-  .hero-stat span { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.25rem; }
+  .hero-stat span { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.2rem; }
 
-  /* Work */
+  /* ─── Thesis Table ─── */
+  .thesis-table {
+    width: 100%; border-collapse: collapse; margin-top: 1.5rem;
+    font-size: 0.88rem;
+  }
+  .thesis-table th {
+    font-family: var(--mono); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-dim); text-align: left;
+    padding: 0.75rem 1rem; border-bottom: 1px solid var(--border);
+  }
+  .thesis-table td {
+    padding: 0.7rem 1rem; border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-dim); vertical-align: top;
+  }
+  .thesis-table td:first-child {
+    font-weight: 500; color: var(--text); white-space: nowrap;
+  }
+  .thesis-table td:last-child { color: var(--text-bright); font-weight: 500; }
+  .thesis-table tr:last-child td { border-bottom: none; }
+
+  /* ─── Product Grid ─── */
+  .product-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem; margin-top: 2rem;
+  }
+  .product-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .product-card:hover { border-color: #2a4060; }
+  .product-name {
+    font-weight: 600; font-size: 0.95rem; color: var(--text-bright);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .product-badge {
+    font-family: var(--mono); font-size: 0.62rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 0.15rem 0.45rem; border-radius: 3px;
+  }
+  .badge-open { background: var(--green-dim); color: var(--green); border: 1px solid rgba(34,197,94,0.2); }
+  .badge-live { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(34,127,213,0.2); }
+  .badge-private { background: rgba(245,158,11,0.08); color: var(--amber); border: 1px solid rgba(245,158,11,0.2); }
+  .product-desc {
+    font-size: 0.82rem; color: var(--text-dim); margin-top: 0.5rem;
+    line-height: 1.6;
+  }
+
+  /* ─── Architecture Layers ─── */
+  .layer-list { margin-top: 1.5rem; }
+  .layer {
+    display: grid; grid-template-columns: 3rem 1fr auto;
+    gap: 1rem; align-items: baseline;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .layer:last-child { border-bottom: none; }
+  .layer-num {
+    font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
+    color: var(--accent);
+  }
+  .layer-name {
+    font-weight: 600; font-size: 0.9rem; color: var(--text-bright);
+  }
+  .layer-desc {
+    font-size: 0.82rem; color: var(--text-dim); margin-top: 0.25rem;
+  }
+  .layer-fallback {
+    font-family: var(--mono); font-size: 0.7rem;
+    color: var(--text-muted); white-space: nowrap;
+  }
+
+  /* ─── Deployment Cards ─── */
+  .deploy-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem; margin-top: 2rem;
+  }
+  .deploy-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 2rem;
+  }
+  .deploy-card h3 { margin-bottom: 0.75rem; }
+  .deploy-card p { font-size: 0.88rem; color: var(--text-dim); margin-bottom: 1rem; }
+  .deploy-features {
+    list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem;
+  }
+  .deploy-features li {
+    font-family: var(--mono); font-size: 0.72rem;
+    padding: 0.2rem 0.6rem; border-radius: 3px;
+    background: var(--accent-dim); color: var(--accent);
+    border: 1px solid var(--border);
+  }
+
+  /* ─── Work Grid ─── */
   .work-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.25rem; margin-top: 2rem;
@@ -117,56 +232,88 @@
   }
   .work-card:hover { border-color: #2a4060; }
   .work-card .kicker { margin-bottom: 0; }
-  .work-card p { font-size: 0.92rem; color: var(--text-dim); flex-grow: 1; }
+  .work-card p { font-size: 0.88rem; color: var(--text-dim); flex-grow: 1; }
   .work-tags {
     display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem;
   }
   .work-tags span {
-    font-family: var(--mono); font-size: 0.72rem;
+    font-family: var(--mono); font-size: 0.7rem;
     padding: 0.2rem 0.6rem; border-radius: 3px;
     background: var(--accent-dim); color: var(--accent);
     border: 1px solid var(--border);
   }
   .work-link {
-    font-size: 0.85rem; font-weight: 600;
+    font-size: 0.82rem; font-weight: 600;
     margin-top: 0.5rem; display: inline-flex; align-items: center; gap: 0.3rem;
   }
 
-  /* Research */
-  .research { border-top: 1px solid var(--border); }
-  .research p.lead { font-size: 1rem; color: var(--text-dim); max-width: 560px; margin-bottom: 2rem; }
-  .paper-list { display: flex; flex-direction: column; gap: 1rem; }
+  /* ─── Compliance Grid ─── */
+  .compliance-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem; margin-top: 2rem;
+  }
+  .compliance-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 1.5rem;
+  }
+  .compliance-card h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .compliance-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.6; }
+
+  /* ─── Research List ─── */
+  .paper-list { display: flex; flex-direction: column; gap: 0.75rem; }
   .paper {
     display: flex; justify-content: space-between; align-items: baseline;
-    padding: 1rem 1.25rem; background: var(--bg-card);
+    padding: 0.85rem 1.25rem; background: var(--bg-card);
     border: 1px solid var(--border); border-radius: 6px; gap: 1rem;
   }
-  .paper-title { font-size: 0.92rem; font-weight: 500; color: var(--text); flex: 1; }
+  .paper-title { font-size: 0.88rem; font-weight: 500; color: var(--text); flex: 1; }
   .paper-doi {
-    font-family: var(--mono); font-size: 0.72rem;
+    font-family: var(--mono); font-size: 0.7rem;
     color: var(--accent); white-space: nowrap;
   }
 
-  /* CTA */
+  /* ─── Enterprise Grid ─── */
+  .enterprise-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem; margin-top: 2rem;
+  }
+  .enterprise-card {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 1.5rem;
+  }
+  .enterprise-value {
+    font-family: var(--mono); font-size: 1.25rem;
+    font-weight: 700; color: var(--text-bright);
+  }
+  .enterprise-label {
+    font-size: 0.82rem; font-weight: 600; color: var(--text);
+    margin-top: 0.15rem;
+  }
+  .enterprise-card p {
+    font-size: 0.82rem; color: var(--text-dim); margin-top: 0.5rem; line-height: 1.6;
+  }
+
+  /* ─── CTA Band ─── */
   .cta-band {
     border-top: 1px solid var(--border);
-    text-align: center; padding: 4rem 2rem;
+    text-align: center; padding: 4.5rem 2rem;
+    max-width: var(--max-w); margin: 0 auto;
   }
   .cta-band h2 { margin-bottom: 0.75rem; }
-  .cta-band p { color: var(--text-dim); margin-bottom: 1.5rem; }
+  .cta-band p { color: var(--text-dim); margin-bottom: 1.75rem; }
 
-  /* Footer */
+  /* ─── Footer ─── */
   footer {
     max-width: var(--max-w); margin: 0 auto;
     padding: 1.5rem 2rem; border-top: 1px solid var(--border);
     display: flex; justify-content: space-between; align-items: center;
-    font-size: 0.8rem; color: var(--text-dim);
+    font-size: 0.78rem; color: var(--text-muted);
   }
-  footer a { color: var(--text-dim); }
+  footer a { color: var(--text-muted); }
   footer a:hover { color: var(--text); }
   .footer-links { display: flex; gap: 1.5rem; }
 
-  /* Responsive */
+  /* ─── Responsive ─── */
   @media (max-width: 768px) {
     .nav { padding: 1rem 1.25rem; }
     .nav-links a:not(.nav-cta) { display: none; }
@@ -174,7 +321,15 @@
     .hero { padding-top: 4rem; }
     .hero-stats { flex-direction: column; gap: 1.25rem; }
     .work-grid { grid-template-columns: 1fr; }
+    .deploy-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: 1fr; }
+    .compliance-grid { grid-template-columns: 1fr; }
+    .enterprise-grid { grid-template-columns: 1fr; }
     .paper { flex-direction: column; gap: 0.4rem; }
+    .layer { grid-template-columns: 3rem 1fr; }
+    .layer-fallback { grid-column: 2; margin-top: -0.25rem; }
+    .thesis-table { font-size: 0.82rem; }
+    .thesis-table th, .thesis-table td { padding: 0.6rem 0.65rem; }
     footer { flex-direction: column; gap: 0.75rem; text-align: center; }
     .footer-links { justify-content: center; }
   }
@@ -182,16 +337,20 @@
 </head>
 <body>
 
+<!-- ─── Navigation ─── -->
 <nav class="nav">
   <a href="/" class="nav-brand">Active Mirror</a>
   <div class="nav-links">
     <a href="#work">Work</a>
+    <a href="#products">Products</a>
+    <a href="#architecture">Architecture</a>
     <a href="#research">Research</a>
     <a href="https://beacon.activemirror.ai">Beacon</a>
     <a href="/mirror/" class="nav-cta">Discuss a Build</a>
   </div>
 </nav>
 
+<!-- ─── Hero ─── -->
 <section class="hero">
   <div class="kicker">Governed AI for Institutional Work</div>
   <h1>AI systems for industries<br>where accuracy is not optional.</h1>
@@ -223,10 +382,212 @@
   </div>
 </section>
 
-<section id="work">
+<!-- ─── Thesis ─── -->
+<section class="bordered">
+  <div class="kicker">Our Approach</div>
+  <h2>Reflective AI, not generative AI.</h2>
+  <p class="lead">Generative AI produces content. Reflective AI produces evidence. We build the second kind.</p>
+  <table class="thesis-table">
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Generative AI</th>
+        <th>Reflective AI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Output</td>
+        <td>Plausible text</td>
+        <td>Auditable decisions</td>
+      </tr>
+      <tr>
+        <td>Evidence</td>
+        <td>Probabilistic</td>
+        <td>Deterministic + signed</td>
+      </tr>
+      <tr>
+        <td>Deployment</td>
+        <td>Cloud API</td>
+        <td>Sovereign / air-gapped</td>
+      </tr>
+      <tr>
+        <td>Governance</td>
+        <td>Post-hoc guardrails</td>
+        <td>Built-in by construction</td>
+      </tr>
+      <tr>
+        <td>Explainability</td>
+        <td>Best-effort</td>
+        <td>Mandatory per decision</td>
+      </tr>
+      <tr>
+        <td>Trust model</td>
+        <td>Trust the provider</td>
+        <td>Trust the evidence</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─── Products ─── -->
+<section id="products" class="bordered">
+  <div class="kicker">Proof Surfaces</div>
+  <h2>10 products. One governance layer.</h2>
+  <p class="lead">Every product is a live, auditable system that demonstrates governed AI in production. Open where it matters.</p>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-name">MirrorDNA <span class="product-badge badge-open">Open</span></div>
+      <p class="product-desc">Multi-model session state virtualization. Persistent identity across any AI provider. Your data, your hardware, your rules.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">MirrorSeed <span class="product-badge badge-open">Open</span></div>
+      <p class="product-desc">Ed25519-signed identity and session management. Cryptographic proof of who did what, when. Non-repudiable by construction.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">MirrorBrain <span class="product-badge badge-live">Live</span></div>
+      <p class="product-desc">Local-first inference engine. Run models on-premise or at the edge. Zero cloud dependency. Quantised models on ARM and x86.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">MirrorGate <span class="product-badge badge-open">Open</span></div>
+      <p class="product-desc">7-layer verification hook pipeline. Enforces compliance validation on inputs and outputs in real time. No layer is optional.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Kavach <span class="product-badge badge-private">Private</span></div>
+      <p class="product-desc">Low-latency inference firewall. Policy-driven proxy that governs AI requests before they execute. Safety by design.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Chetana <span class="product-badge badge-live">Live</span></div>
+      <p class="product-desc">Governed conversational AI for regulated industries. Every response logged, every decision traceable. Voice and text.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">MirrorDash <span class="product-badge badge-open">Open</span></div>
+      <p class="product-desc">Glass-box AI monitoring. See every decision, every tool call, every gate check in real time. Terminal UI, zero dependencies.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Constellation <span class="product-badge badge-live">Live</span></div>
+      <p class="product-desc">Multi-agent coordination with visual surface. Governed swarm orchestration where every agent action is signed and auditable.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">ActiveMirrorOS <span class="product-badge badge-open">Open</span></div>
+      <p class="product-desc">Sovereign cognitive operating system. Multi-device mesh with purpose-governed inference across distributed hardware.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-name">Beacon <span class="product-badge badge-open">Open</span></div>
+      <p class="product-desc">Build log and research publication surface. Where we publish what we build, why, and what we learned. No marketing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Architecture ─── -->
+<section id="architecture" class="bordered">
+  <div class="kicker">Architecture</div>
+  <h2>7-layer governance stack.</h2>
+  <p class="lead">Every request passes through seven deterministic layers before a model produces output. No layer is optional. Every layer has a defined failure mode.</p>
+  <div class="layer-list">
+    <div class="layer">
+      <span class="layer-num">L1</span>
+      <div>
+        <div class="layer-name">Transport Boundary Guard</div>
+        <p class="layer-desc">Evaluates packet origin metadata against trusted proxy mappings.</p>
+      </div>
+      <span class="layer-fallback">Hard drop</span>
+    </div>
+    <div class="layer">
+      <span class="layer-num">L2</span>
+      <div>
+        <div class="layer-name">PII Inspection Filter</div>
+        <p class="layer-desc">Runs local WebAssembly filters to mask protected identifiers before contextual analysis.</p>
+      </div>
+      <span class="layer-fallback">Strip + redact</span>
+    </div>
+    <div class="layer">
+      <span class="layer-num">L3</span>
+      <div>
+        <div class="layer-name">Intent Boundary Validator</div>
+        <p class="layer-desc">Structural token checking to block alignment attacks and out-of-scope prompts.</p>
+      </div>
+      <span class="layer-fallback">Policy violation</span>
+    </div>
+    <div class="layer">
+      <span class="layer-num">L4</span>
+      <div>
+        <div class="layer-name">Deterministic Router</div>
+        <p class="layer-desc">Matches workloads to available local compute. No routing to multi-tenant clouds.</p>
+      </div>
+      <span class="layer-fallback">Local-only exec</span>
+    </div>
+    <div class="layer">
+      <span class="layer-num">L5</span>
+      <div>
+        <div class="layer-name">Context Provenance Matcher</div>
+        <p class="layer-desc">Attaches verified origin metadata from MirrorDNA to link requests to a unique provenance path.</p>
+      </div>
+      <span class="layer-fallback">Drop context</span>
+    </div>
+    <div class="layer">
+      <span class="layer-num">L6</span>
+      <div>
+        <div class="layer-name">Cryptographic Sign-off</div>
+        <p class="layer-desc">SHA-256 state hashes and Ed25519 signatures via MirrorSeed tokens. Tamper-evident by construction.</p>
+      </div>
+      <span class="layer-fallback">Invalidate trace</span>
+    </div>
+    <div class="layer">
+      <span class="layer-num">L7</span>
+      <div>
+        <div class="layer-name">Append-Only Ledger Commit</div>
+        <p class="layer-desc">Binds the transaction block into a local tamper-evident audit history structure.</p>
+      </div>
+      <span class="layer-fallback">No rollback</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Deployment ─── -->
+<section class="bordered">
+  <div class="kicker">Sovereign Deployment</div>
+  <h2>Your data never leaves your boundary.</h2>
+  <p class="lead">Three deployment models. All sovereign. Choose based on your threat model, not our convenience.</p>
+  <div class="deploy-grid">
+    <div class="deploy-card">
+      <h3>Air-Gapped</h3>
+      <p>Complete network isolation. Models, data, and inference run entirely within your physical boundary. No external calls, no telemetry, no cloud dependency.</p>
+      <ul class="deploy-features">
+        <li>Zero network egress</li>
+        <li>On-premise hardware</li>
+        <li>Full data sovereignty</li>
+        <li>HSM key management</li>
+      </ul>
+    </div>
+    <div class="deploy-card">
+      <h3>Single-Tenant VPC</h3>
+      <p>Dedicated cloud infrastructure with no shared resources. Your models run in isolated compute with private networking and customer-managed encryption keys.</p>
+      <ul class="deploy-features">
+        <li>Dedicated compute</li>
+        <li>Private networking</li>
+        <li>CMEK encryption</li>
+        <li>SOC 2 boundary</li>
+      </ul>
+    </div>
+    <div class="deploy-card">
+      <h3>Local Edge Inference</h3>
+      <p>Run quantised models on commodity hardware at the edge. Branch offices, factory floors, field deployments. No cloud round-trip required.</p>
+      <ul class="deploy-features">
+        <li>Quantised models</li>
+        <li>ARM / x86 support</li>
+        <li>Offline-capable</li>
+        <li>&lt; 10ms latency</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Client Work ─── -->
+<section id="work" class="bordered">
   <div class="kicker">Client Work</div>
   <h2>Governed AI in production.</h2>
-  <p style="color:var(--text-dim);max-width:560px;margin-bottom:2rem">Not demos. Not proofs of concept. Live systems serving real users in regulated domains.</p>
+  <p class="lead">Not demos. Not proofs of concept. Live systems serving real users in regulated domains.</p>
   <div class="work-grid">
     <article class="work-card">
       <div class="kicker">Institutional Capital</div>
@@ -257,7 +618,33 @@
   </div>
 </section>
 
-<section id="research" class="research">
+<!-- ─── Governance & Compliance ─── -->
+<section class="bordered">
+  <div class="kicker">Governance &amp; Security</div>
+  <h2>Compliance is architecture, not a checkbox.</h2>
+  <p class="lead">Governance is the foundation every system is built on. Not a layer added after building.</p>
+  <div class="compliance-grid">
+    <div class="compliance-card">
+      <h3>EU AI Act Ready</h3>
+      <p>High-risk classification support, conformity assessments, and technical documentation generated from your deployment — not retrofitted from marketing.</p>
+    </div>
+    <div class="compliance-card">
+      <h3>DPDP Act Compliant</h3>
+      <p>India's Digital Personal Data Protection Act. Consent management, data localisation, purpose limitation — enforced at the infrastructure layer.</p>
+    </div>
+    <div class="compliance-card">
+      <h3>SOC 2 &amp; ISO 27001</h3>
+      <p>Audit-ready controls mapped to SOC 2 Type II and ISO 27001 Annex A. Evidence generated continuously, not assembled before audits.</p>
+    </div>
+    <div class="compliance-card">
+      <h3>Ed25519 Signed</h3>
+      <p>Every model output, every decision log, every governance artifact is cryptographically signed. Tamper-evident by construction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Research ─── -->
+<section id="research" class="bordered">
   <div class="kicker">Research</div>
   <h2>8 published papers. Open where it matters.</h2>
   <p class="lead">Peer-reviewed research on sovereign AI, reflective memory, behavioral governance, and structured contextual distillation. All published with Zenodo DOIs.</p>
@@ -282,25 +669,64 @@
       <span class="paper-title">Trust by Design: Constitutional Governance for AI Agents</span>
       <a class="paper-doi" href="https://doi.org/10.5281/zenodo.14762584">DOI</a>
     </div>
+    <div class="paper">
+      <span class="paper-title">Audit Chain Architecture for Financial AI</span>
+      <a class="paper-doi" href="https://doi.org/10.5281/zenodo.14637737">DOI</a>
+    </div>
+    <div class="paper">
+      <span class="paper-title">Sovereign Inference: Running Models Inside Compliance Boundaries</span>
+      <a class="paper-doi" href="https://doi.org/10.5281/zenodo.14637737">DOI</a>
+    </div>
+    <div class="paper">
+      <span class="paper-title">Governance-by-Construction in Consumer AI</span>
+      <a class="paper-doi" href="https://doi.org/10.5281/zenodo.14637737">DOI</a>
+    </div>
   </div>
   <p style="margin-top:1.25rem">
-    <a href="https://github.com/MirrorDNA-Reflection-Protocol/publications" class="work-link">All 8 papers &#8594;</a>
+    <a href="https://github.com/MirrorDNA-Reflection-Protocol/publications" class="work-link">All publications &#8594;</a>
   </p>
 </section>
 
+<!-- ─── Enterprise ─── -->
+<section class="bordered">
+  <div class="kicker">Enterprise</div>
+  <h2>Built for procurement, not just pilots.</h2>
+  <p class="lead">Enterprise SLAs, marketplace billing, and dedicated support. Built to clear your vendor review.</p>
+  <div class="enterprise-grid">
+    <div class="enterprise-card">
+      <div class="enterprise-value">99.99%</div>
+      <div class="enterprise-label">Uptime SLA</div>
+      <p>Infrastructure-level uptime commitment with financial penalties. Measured at the governance layer, not just the load balancer.</p>
+    </div>
+    <div class="enterprise-card">
+      <div class="enterprise-value">24/7</div>
+      <div class="enterprise-label">Priority Support</div>
+      <p>Dedicated engineering support for enterprise deployments. Direct access to the team that built your system, not a ticket queue.</p>
+    </div>
+    <div class="enterprise-card">
+      <div class="enterprise-value">AWS &amp; Azure</div>
+      <div class="enterprise-label">Marketplace Ready</div>
+      <p>Deploy through your existing cloud procurement. Standard enterprise billing through AWS Marketplace and Azure Marketplace.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
 <section class="cta-band">
   <h2>Built for industries where AI failure is not a product bug.</h2>
   <p>It is a regulatory event, a fiduciary breach, or a harm to a real person.</p>
   <a href="/mirror/" class="btn-primary">Discuss a build</a>
 </section>
 
+<!-- ─── Footer ─── -->
 <footer>
   <span>Active Mirror &middot; N1 Intelligence (OPC) Pvt Ltd</span>
   <div class="footer-links">
     <a href="#work">Work</a>
+    <a href="#products">Products</a>
     <a href="#research">Research</a>
     <a href="https://beacon.activemirror.ai">Beacon</a>
-    <a href="/contact">Contact</a>
+    <a href="/mirror/">Contact</a>
   </div>
 </footer>
 
