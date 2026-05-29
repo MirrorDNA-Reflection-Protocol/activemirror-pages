@@ -109,6 +109,39 @@
     background: radial-gradient(ellipse, rgba(34,127,213,0.05) 0%, transparent 70%);
     filter: blur(80px);
   }
+  .hero-dash {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/assets/mirrordash-live.jpg') center center / cover no-repeat;
+    opacity: 0.06; filter: blur(1px);
+  }
+
+  /* ─── Dashboard Showcase ─── */
+  .dash-showcase {
+    margin-top: 3rem; border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--border); position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .dash-showcase img {
+    width: 100%; display: block;
+    border-radius: 10px;
+  }
+  .dash-showcase-bar {
+    position: absolute; top: 0; left: 0; right: 0;
+    padding: 0.6rem 1rem; display: flex; align-items: center; gap: 0.5rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+  }
+  .dash-showcase-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .dash-showcase-dot:nth-child(1) { background: #ff5f56; }
+  .dash-showcase-dot:nth-child(2) { background: #ffbd2e; }
+  .dash-showcase-dot:nth-child(3) { background: #27c93f; }
+  .dash-showcase-label {
+    font-family: var(--mono); font-size: 0.65rem; color: rgba(255,255,255,0.5);
+    margin-left: 0.5rem;
+  }
+  .dash-caption {
+    text-align: center; margin-top: 1rem;
+    font-size: 0.75rem; color: var(--text-muted); font-family: var(--mono);
+  }
   .hero { position: relative; }
   .hero > * { position: relative; z-index: 1; }
 
@@ -584,6 +617,7 @@
 <!-- ─── Hero ─── -->
 <section class="hero">
   <div class="hero-bg">
+    <div class="hero-dash"></div>
     <div class="hero-grid"></div>
     <div class="hero-glow"></div>
     <div class="hero-glow-2"></div>
@@ -616,6 +650,16 @@
       <span>Hallucination tolerance</span>
     </div>
   </div>
+  <div class="dash-showcase reveal">
+    <div class="dash-showcase-bar">
+      <span class="dash-showcase-dot"></span>
+      <span class="dash-showcase-dot"></span>
+      <span class="dash-showcase-dot"></span>
+      <span class="dash-showcase-label">mirrordash.py --profile glass</span>
+    </div>
+    <img src="/assets/mirrordash-live.jpg" alt="MirrorDash — live governance monitoring console showing behavioral metrics, gate activity, model monitor, and session arc" loading="lazy">
+  </div>
+  <p class="dash-caption">MirrorDash — live production screenshot. Every decision, tool, hook, and model. In real time.</p>
 </section>
 
 <!-- ─── Thesis ─── -->

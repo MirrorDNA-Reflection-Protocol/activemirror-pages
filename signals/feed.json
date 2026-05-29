@@ -1,105 +1,145 @@
 {
-  "updated": "2026-05-29T13:00:00Z",
+  "updated": "2026-05-29T13:38:45Z",
   "signals": [
     {
-      "title": "EU AI Act enforcement begins: High-risk classification now mandatory for financial AI",
-      "source": "European Commission",
-      "time": "2h ago",
+      "title": "Draft Commission guidelines on the classification of high-risk AI systems",
+      "source": "EU Digital Policy",
+      "time": "10d ago",
       "category": "Regulation",
-      "insight": "Article 6 enforcement activates today. Any AI system making credit, insurance, or investment decisions must now carry a conformity assessment and technical documentation. Most enterprise AI stacks built on hosted APIs cannot produce this evidence retroactively — governance must be architectural.",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
-      "am_link_text": "How MirrorGate enforces EU AI Act compliance by construction",
-      "scores": {"Relevance": 95, "Urgency": 90, "SEO": 85}
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 40,
+        "Urgency": 50,
+        "SEO": 25
+      }
     },
     {
-      "title": "India's DPDP Act data localisation rules finalize: All PII must stay within sovereign boundary",
-      "source": "MeitY",
-      "time": "4h ago",
-      "category": "Regulation",
-      "insight": "Final rules require all personal data processing for Indian citizens to occur on infrastructure within Indian jurisdiction. Cloud API providers routing through US/EU endpoints face compliance exposure. Air-gapped and local-first inference architectures become mandatory for regulated Indian enterprises.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
-      "scores": {"Relevance": 92, "Urgency": 88, "SEO": 80}
-    },
-    {
-      "title": "Gartner: 78% of enterprise AI projects fail compliance audits — lack of deterministic audit trails cited",
-      "source": "Gartner",
-      "time": "6h ago",
-      "category": "Research",
-      "insight": "New Gartner report finds that probabilistic outputs from LLMs cannot satisfy SOC 2 or ISO 27001 evidence requirements. Organizations using post-hoc guardrails report 4.2x higher audit failure rates than those with governance-by-construction architectures. Cryptographic signing of model outputs identified as emerging best practice.",
+      "title": "Presentation: Designing AI Platforms for Reliability: Tools for Certainty, Agents for Discovery",
+      "source": "InfoQ AI",
+      "time": "2d ago",
+      "category": "Technology",
+      "insight": "Multi-agent AI systems introduce accountability gaps that single-model governance cannot address. 7-layer governance stack with Ed25519 signing maintains cryptographic provenance chains across every agent action and delegation.",
       "am_link": "https://activemirror.ai/#architecture",
       "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {"Relevance": 90, "Urgency": 75, "SEO": 92}
+      "scores": {
+        "Relevance": 28,
+        "Urgency": 30,
+        "SEO": 25
+      }
     },
     {
-      "title": "Sovereign wealth funds increase allocation to AI infrastructure — $47B committed in Q2 2026",
-      "source": "SWFI",
-      "time": "8h ago",
-      "category": "Capital",
-      "insight": "Institutional capital flowing into sovereign AI infrastructure at record pace. Pension funds and SWFs now require data residency guarantees, on-premise deployment options, and deterministic decision trails before committing. Cloud-only AI vendors losing institutional mandates to sovereign-first architectures.",
+      "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
+      "source": "The Register AI",
+      "time": "31d ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
+      "source": "The Register AI",
+      "time": "34d ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#work",
-      "am_link_text": "SWFI case study: evidence-gated institutional AI",
-      "scores": {"Relevance": 95, "Urgency": 70, "SEO": 88}
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
     },
     {
-      "title": "WebAssembly runtime adoption surges for edge AI inference — 3x growth in financial services",
-      "source": "InfoQ",
-      "time": "10h ago",
-      "category": "Technology",
-      "insight": "WASM-based inference runtimes enabling sub-10ms model execution on commodity hardware without cloud dependencies. Financial services leading adoption for latency-sensitive compliance checks and PII filtering at the transport boundary. Deterministic execution guarantees make WASM ideal for governed AI pipelines.",
-      "am_link": "https://brain.activemirror.ai",
-      "am_link_text": "MirrorBrain: local-first inference engine",
-      "scores": {"Relevance": 85, "Urgency": 65, "SEO": 78}
+      "title": "Consultation on the draft guidelines on transparency obligations under the AI Act",
+      "source": "EU Digital Policy",
+      "time": "21d ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
     },
     {
-      "title": "Ed25519 adoption in enterprise AI audit chains — cryptographic non-repudiation becomes table stakes",
-      "source": "NIST",
+      "title": "Glean’s top line crosses $300M as AI budget-cutting becomes its major selling point",
+      "source": "TechCrunch AI",
       "time": "12h ago",
       "category": "Security",
-      "insight": "NIST draft framework recommends Ed25519 digital signatures for all AI decision audit trails in regulated industries. Tamper-evident logging with cryptographic sign-off provides the evidence chain that post-hoc monitoring cannot. Organizations without signing infrastructure face growing regulatory exposure.",
-      "am_link": "https://id.activemirror.ai",
-      "am_link_text": "MirrorSeed: Ed25519 cryptographic identity",
-      "scores": {"Relevance": 92, "Urgency": 80, "SEO": 85}
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 43
+      }
     },
     {
-      "title": "Multi-agent AI systems face governance vacuum — no framework for inter-agent accountability",
-      "source": "MIT Technology Review",
-      "time": "14h ago",
-      "category": "Research",
-      "insight": "As enterprises deploy multi-agent orchestration, accountability gaps emerge. When Agent A delegates to Agent B which calls Agent C, who signs the output? Governed swarm architectures that sign every agent action and maintain provenance chains are the only compliant path for regulated deployments.",
-      "am_link": "https://constellation.activemirror.ai",
-      "am_link_text": "Constellation: governed multi-agent coordination",
-      "scores": {"Relevance": 88, "Urgency": 72, "SEO": 90}
+      "title": "At TechCrunch Disrupt 2026: Databricks’ co-founder on what kills enterprise AI deals",
+      "source": "TechCrunch AI",
+      "time": "23h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 43
+      }
     },
     {
-      "title": "Indian legal tech market reaches $1.2B — AI-driven case research and vernacular-first platforms lead growth",
-      "source": "Inc42",
-      "time": "18h ago",
-      "category": "Market",
-      "insight": "India's legal technology sector growing at 42% CAGR, driven by AI-assisted case research, document automation, and citation verification. Vernacular-first platforms serving tier-2 and tier-3 advocates seeing highest adoption. Sovereign infrastructure requirements accelerating as courts mandate data localisation.",
-      "am_link": "https://lexedge.activemirror.ai",
-      "am_link_text": "LexEdge: AI legal research for India",
-      "scores": {"Relevance": 80, "Urgency": 60, "SEO": 82}
+      "title": "Google claims to have all the answers for enterprise AI agent sprawl",
+      "source": "The Register AI",
+      "time": "37d ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 43
+      }
     },
     {
-      "title": "Air-gapped AI deployments grow 340% in defense and critical infrastructure sectors",
-      "source": "Defense One",
-      "time": "22h ago",
-      "category": "Infrastructure",
-      "insight": "Zero-network-egress AI systems now standard requirement for defense, energy, and critical infrastructure. Physical data diode updates replacing OTA. HSM key management and on-premise hardware mandated. Cloud AI vendors excluded from classified and critical-infrastructure procurement pipelines entirely.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Air-gapped deployment with physical data diode updates",
-      "scores": {"Relevance": 88, "Urgency": 65, "SEO": 75}
+      "title": "AWS MCP Server Reaches GA with Full API Coverage and IAM-Based Governance",
+      "source": "InfoQ AI",
+      "time": "5d ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
     },
     {
-      "title": "Video production governance gap: 62% of AI-generated enterprise video lacks brand compliance verification",
-      "source": "Forrester",
-      "time": "1d ago",
-      "category": "Production",
-      "insight": "Enterprise AI video pipelines producing content without brand governance gates, compliance checks, or deterministic rendering verification. Regulated industries require every frame to be traceable to an approved script and policy layer. Script-to-screen governance emerging as critical capability for marketing and training content.",
-      "am_link": "https://activemirror.ai/#products",
-      "am_link_text": "MirrorProd: governed video production pipeline",
-      "scores": {"Relevance": 82, "Urgency": 55, "SEO": 80}
+      "title": "Exit Is the Primary Agentic Right",
+      "source": "Medianama",
+      "time": "7h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
     }
   ]
 }
