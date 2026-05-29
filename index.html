@@ -460,6 +460,73 @@
     .chat-input-bar { padding: 0.75rem 1.25rem 1rem; }
     .chat-actions { display: none; }
   }
+
+  /* ─── Signal Desk Sidebar ─── */
+  .signal-toggle {
+    position: fixed; right: 0; top: 50%; transform: translateY(-50%);
+    writing-mode: vertical-rl; text-orientation: mixed;
+    background: var(--accent); color: #fff; border: none;
+    padding: 1rem 0.5rem; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+    border-radius: 6px 0 0 6px; z-index: 60;
+    font-family: var(--mono); transition: background 0.2s;
+  }
+  .signal-toggle:hover { background: #1a6fbe; }
+  .signal-panel {
+    position: fixed; right: -380px; top: 0; bottom: 0; width: 380px;
+    background: #080e18; border-left: 1px solid var(--border);
+    z-index: 55; transition: right 0.3s ease; overflow-y: auto;
+    display: flex; flex-direction: column;
+  }
+  .signal-panel.open { right: 0; }
+  .signal-panel.open + .signal-toggle { right: 380px; }
+  .sp-header {
+    padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; background: #080e18; z-index: 2;
+  }
+  .sp-title { font-size: 0.82rem; font-weight: 700; color: var(--text-bright); letter-spacing: 0.04em; }
+  .sp-live { font-size: 0.65rem; color: #34d399; font-family: var(--mono); display: flex; align-items: center; gap: 0.4rem; }
+  .sp-live::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #34d399; animation: tdot 2s infinite; }
+  .sp-close { background: none; border: none; color: var(--text-muted); font-size: 1.2rem; cursor: pointer; }
+  .sp-close:hover { color: var(--text); }
+  .sp-gate {
+    padding: 2.5rem 1.5rem; text-align: center; flex: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
+  }
+  .sp-gate-title { font-size: 0.95rem; font-weight: 600; color: var(--text-bright); }
+  .sp-gate-sub { font-size: 0.78rem; color: var(--text-muted); max-width: 280px; line-height: 1.6; }
+  .sp-gate-input {
+    background: var(--card); border: 1px solid var(--border); border-radius: 6px;
+    color: var(--text); padding: 0.6rem 1rem; font-size: 0.85rem; text-align: center;
+    width: 200px; letter-spacing: 0.15em; font-family: var(--mono);
+  }
+  .sp-gate-input:focus { outline: none; border-color: var(--accent); }
+  .sp-gate-btn {
+    background: var(--accent); color: #fff; border: none; padding: 0.55rem 1.5rem;
+    border-radius: 6px; font-size: 0.78rem; font-weight: 600; cursor: pointer;
+  }
+  .sp-gate-err { color: #f87171; font-size: 0.72rem; min-height: 1rem; }
+  .sp-feed { padding: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .sp-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 1rem 1.15rem; transition: border-color 0.2s;
+  }
+  .sp-card:hover { border-color: var(--accent); }
+  .sp-card-meta { font-size: 0.62rem; color: var(--text-muted); font-family: var(--mono); margin-bottom: 0.4rem; display: flex; justify-content: space-between; }
+  .sp-card-tag { background: rgba(34,127,213,.15); color: var(--accent); padding: 0.1rem 0.45rem; border-radius: 3px; font-size: 0.6rem; font-weight: 600; }
+  .sp-card h4 { font-size: 0.82rem; font-weight: 600; color: var(--text-bright); margin-bottom: 0.35rem; line-height: 1.4; }
+  .sp-card p { font-size: 0.72rem; color: var(--text-dim); line-height: 1.55; margin-bottom: 0.4rem; }
+  .sp-card-link { font-size: 0.68rem; color: var(--accent); font-weight: 500; }
+  .sp-card-link:hover { color: #5ba7ff; }
+  .sp-card-scores { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.35rem; }
+  .sp-score { font-size: 0.58rem; font-family: var(--mono); padding: 0.15rem 0.4rem; border-radius: 3px; background: rgba(255,255,255,.04); color: var(--text-muted); }
+  .sp-score.high { background: rgba(34,127,213,.12); color: var(--accent); }
+  .sp-footer { padding: 1rem 1.5rem; border-top: 1px solid var(--border); text-align: center; font-size: 0.6rem; color: var(--text-muted); font-family: var(--mono); position: sticky; bottom: 0; background: #080e18; }
+  @media (max-width: 768px) {
+    .signal-panel { width: 100%; right: -100%; }
+    .signal-panel.open + .signal-toggle { right: 100%; display: none; }
+  }
 </style>
 </head>
 <body>
@@ -861,6 +928,27 @@
   </div>
 </footer>
 
+<!-- ─── Signal Desk Sidebar ─── -->
+<div class="signal-panel" id="signal-panel">
+  <div class="sp-header">
+    <div>
+      <div class="sp-title">Signal Desk</div>
+      <div class="sp-live">Live feed</div>
+    </div>
+    <button class="sp-close" onclick="toggleSignals()" aria-label="Close">&times;</button>
+  </div>
+  <div class="sp-gate" id="sp-gate">
+    <div class="sp-gate-title">Classified Intelligence Feed</div>
+    <div class="sp-gate-sub">Real-time signals across governed AI, sovereign infrastructure, and regulatory movements. Updated hourly.</div>
+    <input type="password" class="sp-gate-input" id="sp-code" placeholder="Access code" onkeydown="if(event.key==='Enter')unlockSignals()">
+    <button class="sp-gate-btn" onclick="unlockSignals()">Authenticate</button>
+    <div class="sp-gate-err" id="sp-gate-err"></div>
+  </div>
+  <div class="sp-feed" id="sp-feed" style="display:none"></div>
+  <div class="sp-footer" id="sp-footer" style="display:none">Updated hourly · Governed intelligence · N1 Intelligence</div>
+</div>
+<button class="signal-toggle" id="signal-toggle" onclick="toggleSignals()">Signal Desk</button>
+
 <!-- ─── Chat Overlay ─── -->
 <div id="chat-overlay" class="chat-overlay">
   <header class="chat-header">
@@ -1187,12 +1275,76 @@ function amLeads(){
   return logs;
 }
 
+// ─── Signal Desk ───
+var SP_CODE='am-signal-2026';
+var spOpen=false;
+
+function toggleSignals(){
+  spOpen=!spOpen;
+  document.getElementById('signal-panel').classList.toggle('open',spOpen);
+  var tb=document.getElementById('signal-toggle');
+  if(spOpen)tb.style.right='380px';else tb.style.right='0';
+  if(spOpen&&localStorage.getItem('sp_auth')==='1'){
+    document.getElementById('sp-gate').style.display='none';
+    document.getElementById('sp-feed').style.display='flex';
+    document.getElementById('sp-footer').style.display='block';
+    loadSignals();
+  }
+}
+
+function unlockSignals(){
+  var code=document.getElementById('sp-code').value.trim();
+  if(code===SP_CODE){
+    localStorage.setItem('sp_auth','1');
+    document.getElementById('sp-gate').style.display='none';
+    document.getElementById('sp-feed').style.display='flex';
+    document.getElementById('sp-footer').style.display='block';
+    loadSignals();
+  }else{
+    document.getElementById('sp-gate-err').textContent='Invalid access code';
+  }
+}
+
+function loadSignals(){
+  fetch('/signals/feed.json?v='+Date.now())
+    .then(function(r){return r.json()})
+    .then(function(data){renderSignals(data)})
+    .catch(function(){document.getElementById('sp-feed').innerHTML='<div style="padding:2rem;text-align:center;color:var(--text-muted);font-size:0.78rem">Feed loading...</div>'});
+}
+
+function renderSignals(data){
+  var feed=document.getElementById('sp-feed');
+  var html='';
+  var items=data.signals||[];
+  items.forEach(function(s){
+    var scoreHtml='';
+    if(s.scores){
+      Object.keys(s.scores).forEach(function(k){
+        var v=s.scores[k];
+        var cls=v>=75?'sp-score high':'sp-score';
+        scoreHtml+='<span class="'+cls+'">'+k+' '+v+'</span>';
+      });
+    }
+    html+='<div class="sp-card">'
+      +'<div class="sp-card-meta"><span>'+esc(s.source||'')+' · '+(s.time||'')+'</span><span class="sp-card-tag">'+(s.category||'')+'</span></div>'
+      +'<h4>'+esc(s.title)+'</h4>'
+      +'<p>'+esc(s.insight)+'</p>'
+      +(s.am_link?'<a class="sp-card-link" href="'+s.am_link+'">'+esc(s.am_link_text||'Related product')+'  &rarr;</a>':'')
+      +(scoreHtml?'<div class="sp-card-scores">'+scoreHtml+'</div>':'')
+      +'</div>';
+  });
+  if(data.updated)document.getElementById('sp-footer').textContent='Updated '+data.updated+' · Governed intelligence · N1 Intelligence';
+  feed.innerHTML=html||'<div style="padding:2rem;text-align:center;color:var(--text-muted)">No signals yet</div>';
+}
+
 window.openChat=openChat;
 window.closeChat=closeChat;
 window.sendMsg=sendMsg;
 window.useSuggestion=useSuggestion;
 window.exportBrief=exportBrief;
 window.amLeads=amLeads;
+window.toggleSignals=toggleSignals;
+window.unlockSignals=unlockSignals;
 })();
 </script>
 
