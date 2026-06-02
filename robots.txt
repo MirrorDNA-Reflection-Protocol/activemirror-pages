@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Active Mirror public site now resolves to GenUI.
+# Active Mirror apex forwards to the Active Mirror OS surface.
