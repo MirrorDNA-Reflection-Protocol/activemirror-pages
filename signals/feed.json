@@ -1,24 +1,10 @@
 {
-  "updated": "2026-06-05T09:25:36Z",
+  "updated": "2026-06-06T08:21:48Z",
   "signals": [
-    {
-      "title": "Draft Commission guidelines on the classification of high-risk AI systems",
-      "source": "EU Digital Policy",
-      "time": "17d ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#compliance",
-      "am_link_text": "How MirrorGate enforces compliance by construction",
-      "scores": {
-        "Relevance": 40,
-        "Urgency": 50,
-        "SEO": 25
-      }
-    },
     {
       "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
       "source": "The Register AI",
-      "time": "38d ago",
+      "time": "39d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +18,7 @@
     {
       "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
       "source": "The Register AI",
-      "time": "40d ago",
+      "time": "41d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#work",
@@ -46,7 +32,7 @@
     {
       "title": "US lawmakers propose the ‘Great American AI Act’ to block state AI rules",
       "source": "Medianama",
-      "time": "3m ago",
+      "time": "22h ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -60,7 +46,7 @@
     {
       "title": "Article Series: Securing the AI Stack: From Model to Production",
       "source": "InfoQ AI",
-      "time": "25m ago",
+      "time": "23h ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -72,31 +58,17 @@
       }
     },
     {
-      "title": "AI Startup TrueFan Raises $10 Mn To Enter New Markets",
-      "source": "Inc42",
-      "time": "1d ago",
+      "title": "Meta Oversight Board says users should be informed if government requests lead to an account ban",
+      "source": "Medianama",
+      "time": "20h ago",
       "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#work",
-      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
       "scores": {
         "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
-    {
-      "title": "New AI Usage Report: Enterprise AI Risk Is Heavily Concentrated Among a Small Group of AI \"Power users\"",
-      "source": "The Hacker News",
-      "time": "7d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 43
+        "Urgency": 50,
+        "SEO": 25
       }
     }
   ]
