@@ -1,10 +1,24 @@
 {
-  "updated": "2026-06-06T08:21:48Z",
+  "updated": "2026-06-07T08:42:47Z",
   "signals": [
+    {
+      "title": "Sriram Krishnan is leaving his role as White House AI advisor",
+      "source": "TechCrunch AI",
+      "time": "15h ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
     {
       "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
       "source": "The Register AI",
-      "time": "39d ago",
+      "time": "40d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -18,7 +32,7 @@
     {
       "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
       "source": "The Register AI",
-      "time": "41d ago",
+      "time": "42d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#work",
@@ -32,7 +46,7 @@
     {
       "title": "US lawmakers propose the ‘Great American AI Act’ to block state AI rules",
       "source": "Medianama",
-      "time": "22h ago",
+      "time": "1d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -44,9 +58,9 @@
       }
     },
     {
-      "title": "Article Series: Securing the AI Stack: From Model to Production",
+      "title": "Article Series: Securing the AI Stack: from Model to Production",
       "source": "InfoQ AI",
-      "time": "23h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -60,7 +74,7 @@
     {
       "title": "Meta Oversight Board says users should be informed if government requests lead to an account ban",
       "source": "Medianama",
-      "time": "20h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
