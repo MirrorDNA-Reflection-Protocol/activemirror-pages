@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-11T10:01:40Z",
+  "updated": "2026-06-12T09:54:11Z",
   "signals": [
     {
       "title": "xAI fired an engineer who raised alarms about Grok safety, new lawsuit claims",
       "source": "TechCrunch AI",
-      "time": "11h ago",
+      "time": "1d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -18,7 +18,7 @@
     {
       "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
       "source": "The Register AI",
-      "time": "44d ago",
+      "time": "45d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
       "source": "The Register AI",
-      "time": "46d ago",
+      "time": "47d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#work",
@@ -44,9 +44,9 @@
       }
     },
     {
-      "title": "Commission publishes Code of Practice on marking and labelling AI-generated content",
-      "source": "EU Digital Policy",
-      "time": "22h ago",
+      "title": "Lowdown: The EU’s new rules for labelling AI-generated content",
+      "source": "Medianama",
+      "time": "3h ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -58,15 +58,15 @@
       }
     },
     {
-      "title": "Article Series: Securing the AI Stack: from Model to Production",
-      "source": "InfoQ AI",
-      "time": "6d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
+      "title": "Commission publishes Code of Practice on marking and labelling AI-generated content",
+      "source": "EU Digital Policy",
+      "time": "1d ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
       "am_link_text": "7-layer governance stack with Ed25519 signing",
       "scores": {
-        "Relevance": 16,
+        "Relevance": 20,
         "Urgency": 30,
         "SEO": 25
       }
@@ -74,7 +74,7 @@
     {
       "title": "Info session - Code of practice for transparency of AI-generated content & signature process",
       "source": "EU Digital Policy",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
