@@ -1,24 +1,10 @@
 {
-  "updated": "2026-06-13T08:44:39Z",
+  "updated": "2026-06-14T08:59:36Z",
   "signals": [
-    {
-      "title": "xAI fired an engineer who raised alarms about Grok safety, new lawsuit claims",
-      "source": "TechCrunch AI",
-      "time": "2d ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
     {
       "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
       "source": "The Register AI",
-      "time": "46d ago",
+      "time": "47d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +18,7 @@
     {
       "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
       "source": "The Register AI",
-      "time": "48d ago",
+      "time": "49d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#work",
@@ -46,7 +32,7 @@
     {
       "title": "Lowdown: The EU’s new rules for labelling AI-generated content",
       "source": "Medianama",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -60,7 +46,7 @@
     {
       "title": "Commission publishes Code of Practice on marking and labelling AI-generated content",
       "source": "EU Digital Policy",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -72,9 +58,23 @@
       }
     },
     {
+      "title": "Anthropic’s Fable 5, Mythos 5 Access Suspension Rekindles Sovereign AI Debate",
+      "source": "Inc42",
+      "time": "22h ago",
+      "category": "Infrastructure",
+      "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
+      "am_link": "https://activemirror.ai/#deployment",
+      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
+      "scores": {
+        "Relevance": 18,
+        "Urgency": 30,
+        "SEO": 43
+      }
+    },
+    {
       "title": "Pinecone Brings AI Agents Directly to Enterprise Data with Microsoft OneLake Integration",
       "source": "InfoQ AI",
-      "time": "20h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Sovereign deployment: air-gapped and local edge models, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#deployment",
@@ -88,7 +88,7 @@
     {
       "title": "German court holds Google directly liable for false AI Overviews claims: What it means for AI liability",
       "source": "Medianama",
-      "time": "20h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by LexEdge: AI legal research for India, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://lexedge.activemirror.ai",
@@ -102,7 +102,7 @@
     {
       "title": "Info session - Code of practice for transparency of AI-generated content & signature process",
       "source": "EU Digital Policy",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
