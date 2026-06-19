@@ -1,10 +1,24 @@
 {
-  "updated": "2026-06-18T10:02:34Z",
+  "updated": "2026-06-19T10:09:24Z",
   "signals": [
+    {
+      "title": "OpenAI is bringing on some big guns in the lead-up to its IPO",
+      "source": "TechCrunch AI",
+      "time": "14h ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
     {
       "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
       "source": "The Register AI",
-      "time": "51d ago",
+      "time": "52d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -18,7 +32,7 @@
     {
       "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
       "source": "The Register AI",
-      "time": "53d ago",
+      "time": "54d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#work",
@@ -32,7 +46,7 @@
     {
       "title": "Article: Governing AI in the Cloud: A Practical Guide for Architects",
       "source": "InfoQ AI",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -44,15 +58,29 @@
       }
     },
     {
-      "title": "Pinecone Brings AI Agents Directly to Enterprise Data with Microsoft OneLake Integration",
-      "source": "InfoQ AI",
-      "time": "5d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Sovereign deployment: air-gapped and local edge models, are emerging as the baseline requirement for regulated deployments.",
+      "title": "HCLTech’s Sarvam Bet, Vetic Bags $40 Mn & More",
+      "source": "Inc42",
+      "time": "7h ago",
+      "category": "Infrastructure",
+      "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
       "am_link": "https://activemirror.ai/#deployment",
       "am_link_text": "Sovereign deployment: air-gapped and local edge models",
       "scores": {
-        "Relevance": 16,
+        "Relevance": 18,
+        "Urgency": 30,
+        "SEO": 43
+      }
+    },
+    {
+      "title": "HCLTech’s Sarvam AI Bet: Is Patient Capital Finally Here?",
+      "source": "Inc42",
+      "time": "22h ago",
+      "category": "Infrastructure",
+      "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
+      "am_link": "https://activemirror.ai/#deployment",
+      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
+      "scores": {
+        "Relevance": 18,
         "Urgency": 30,
         "SEO": 43
       }
