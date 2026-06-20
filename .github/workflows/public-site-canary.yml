@@ -1,0 +1,44 @@
+name: Public site canary
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify HTTPS content
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$(mktemp)"
+          code="$(curl -fsSLo "$body" -w "%{http_code}" https://activemirror.ai/)"
+          test "$code" = "200"
+          grep -q 'id="first-use"' "$body"
+          grep -q 'Create my first mirror' "$body"
+
+      - name: Verify www route
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$(mktemp)"
+          code="$(curl -fsSL -o "$body" -w "%{http_code}" https://www.activemirror.ai/)"
+          test "$code" = "200"
+          grep -q 'id="first-use"' "$body"
+
+      - name: Verify TLS certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          cert="$(mktemp)"
+          echo | openssl s_client -connect activemirror.ai:443 -servername activemirror.ai 2>/tmp/active-mirror-tls.log \
+            | openssl x509 -noout -subject -issuer -ext subjectAltName > "$cert"
+          grep -q "CN=activemirror.ai" "$cert"
+          grep -q "DNS:activemirror.ai" "$cert"
+          grep -q "DNS:\\*.activemirror.ai" "$cert"

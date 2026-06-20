@@ -7,9 +7,10 @@
       name="description"
       content="Active Mirror is Reflective AI for human momentum. It remembers the work, reflects before predicting, protects boundaries, and carries momentum forward."
     />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Active Mirror | Smarter AI for human momentum</title>
-    <script type="module" crossorigin src="/assets/main-BIahZw0N.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-Bl2jd1wW.css">
+    <script type="module" crossorigin src="/assets/main-DB80gm1L.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CzmRceVq.css">
   </head>
   <body>
     <header class="site-nav" aria-label="Primary">
@@ -36,196 +37,39 @@
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <div class="mini-ribbon" aria-label="Runtime promises">
-            <span>Browser-native</span>
-            <span>Private by design</span>
-          </div>
-          <h1>Smarter AI for human <span>momentum</span></h1>
-          <p>
-            AI that remembers the work, reflects before predicting, protects boundaries,
-            and carries momentum forward.
+      <section class="hero ritual-hero" id="first-use">
+        <div class="hero-glass" aria-hidden="true"></div>
+
+        <div class="ritual-create-panel">
+          <p class="section-label">First use ritual</p>
+          <h1>Create your first Active Mirror</h1>
+          <p class="ritual-intro">
+            Turn scattered work into a private, receipt-backed action board. You bring
+            the intent. Active Mirror structures the goals, blockers, next moves, and
+            memory decision.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#try">Build my mirror</a>
-            <a class="button secondary" href="#how">See how it works</a>
-          </div>
-          <ul class="promise-row" aria-label="Key promises">
-            <li>No installs</li>
-            <li>Your data stays private</li>
-            <li>Works everywhere</li>
-          </ul>
-          <div class="mini-proof">
-            <strong>Built for real work.</strong>
-            <span>Reflect</span>
-            <span>Continuity</span>
-            <span>Boundaries</span>
-            <span>Momentum</span>
-          </div>
-        </div>
 
-        <section class="mirror-console" aria-label="Interactive Active Mirror console">
-          <div class="console-top">
-            <div>
-              <span>Mirror Console</span>
-              <strong id="hero-mode-title">Launch clarity</strong>
-            </div>
-            <div class="console-tabs" aria-label="Mirror modes">
-              <button class="console-tab is-active" type="button" data-mode="launching">Launching</button>
-              <button class="console-tab" type="button" data-mode="overwhelmed">Overwhelmed</button>
-              <button class="console-tab" type="button" data-mode="learning">Learning</button>
-              <button class="console-tab" type="button" data-mode="building">Building</button>
-            </div>
-            <span class="live-pill">Live</span>
-          </div>
-
-          <div class="console-map">
-            <div class="map-side muted">
-              <span>From scattered</span>
-              <div class="fragment-cloud" aria-hidden="true">
-                <i></i><i></i><i></i><i></i><i></i><i></i>
-              </div>
-            </div>
-            <div class="path-stage" aria-label="Continuity path">
-              <svg class="momentum-path" viewBox="0 0 560 300" preserveAspectRatio="none" role="img" aria-label="Path from scattered work to a clear next move">
-                <path class="path-shadow" d="M20 175 C120 62 178 78 238 145 S350 248 426 155 496 76 540 118" />
-                <path class="path-line" d="M20 175 C120 62 178 78 238 145 S350 248 426 155 496 76 540 118" />
-              </svg>
-              <button class="path-node node-a" type="button" data-focus="source">Research synthesis<small>May 2</small></button>
-              <button class="path-node node-b" type="button" data-focus="brief">Product brief<small>May 5</small></button>
-              <button class="path-node node-c" type="button" data-focus="users">User interviews<small>May 7</small></button>
-              <button class="path-node node-d" type="button" data-focus="prototype">Prototype v1<small>May 12</small></button>
-              <span class="target-ring" aria-hidden="true"></span>
-            </div>
-            <div class="map-side clear">
-              <span>To clear next steps</span>
-              <strong id="hero-next-move">Open the launch workspace</strong>
-            </div>
-          </div>
-
-          <div class="receipt-trail" id="receipts">
-            <div class="receipt-head">
-              <strong>Receipt trail</strong>
-              <button class="text-button" id="toggle-receipts" type="button">Open receipts</button>
-            </div>
-            <div class="receipt-cards" id="hero-receipts"></div>
-          </div>
-        </section>
-
-        <section class="mobile-mirror" aria-label="Mobile Active Mirror command surface">
-          <div class="phone-shell">
-            <div class="phone-topbar">
-              <span class="brand-mark small" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                  <path d="M12 3.4 19.5 7.7v8.6L12 20.6 4.5 16.3V7.7L12 3.4Z" />
-                  <path d="M12 7.8 16 10v4l-4 2.2L8 14v-4l4-2.2Z" />
-                </svg>
-              </span>
-              <div>
-                <strong>Active Mirror</strong>
-                <span>Private mobile runtime</span>
-              </div>
-              <em>Live</em>
-            </div>
-
-            <div class="mobile-viewport" id="mobile-viewport" data-mode="launching">
-              <div class="mobile-chat-turn">
-                <p>What should I do next?</p>
-                <div>
-                  <input id="mobile-prompt" value="Turn this scattered launch work into my next move" aria-label="Mobile mirror prompt" readonly />
-                  <button id="mobile-generate" type="button" aria-label="Generate viewport">Go</button>
-                </div>
-              </div>
-
-              <div class="mobile-viewport-head">
-                <span id="mobile-mode-title">Launch clarity</span>
-                <strong id="mobile-next-move">Open the launch workspace</strong>
-              </div>
-
-              <div class="mobile-board" aria-label="Generated mobile viewport board">
-                <button class="mobile-pin pin-source pin-tall is-active" type="button" data-mobile-node="source">
-                  <span>01</span>
-                  <strong id="mobile-node-a">Research</strong>
-                  <small>Source pin</small>
-                </button>
-                <button class="mobile-pin pin-reflect" type="button" data-mobile-node="reflect">
-                  <span>02</span>
-                  <strong id="mobile-node-b">Launch proof</strong>
-                  <small>Reflect pin</small>
-                </button>
-                <button class="mobile-pin pin-act pin-wide" type="button" data-mobile-node="act">
-                  <span>03</span>
-                  <strong id="mobile-node-c">Prototype test</strong>
-                  <small>Action pin</small>
-                </button>
-                <button class="mobile-pin pin-receipt" type="button" data-mobile-node="receipt">
-                  <span>04</span>
-                  <strong>Receipt</strong>
-                  <small>Proof trail</small>
-                </button>
-              </div>
-
-              <div class="mobile-inspector">
-                <span id="mobile-inspector-label">Source</span>
-                <strong id="mobile-inspector-copy">Research notes and interview clips</strong>
-              </div>
-
-              <div class="phone-tabs" aria-label="Mobile mirror modes">
-                <button class="console-tab phone-tab is-active" type="button" data-mode="launching">Launch</button>
-                <button class="console-tab phone-tab" type="button" data-mode="overwhelmed">Calm</button>
-                <button class="console-tab phone-tab" type="button" data-mode="learning">Learn</button>
-                <button class="console-tab phone-tab" type="button" data-mode="building">Build</button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="tool-strip" aria-label="Works with common tools">
-        <p>Trusted by people rebuilding momentum</p>
-        <ul>
-          <li>Linear</li>
-          <li>Vercel</li>
-          <li>Notion</li>
-          <li>Figma</li>
-          <li>Raycast</li>
-          <li>GitHub</li>
-        </ul>
-      </section>
-
-      <section class="first-use" id="first-use">
-        <div class="first-use-copy">
-          <p class="section-label">First use</p>
-          <h2>Bring the mess. Get a mirror you can act on.</h2>
-          <p>
-            Active Mirror starts as a private browser ritual: name the work, set the boundary,
-            generate a useful board, and inspect the receipt before anything becomes memory.
-          </p>
-        </div>
-
-        <div class="ritual-shell">
-          <form class="ritual-input" aria-label="Create your first Active Mirror">
+          <form class="ritual-input cinematic" aria-label="Create your first Active Mirror">
             <div class="ritual-step">
               <span>1</span>
               <div>
-                <label for="ritual-intent">What are you trying to move forward?</label>
-                <textarea id="ritual-intent" rows="5" maxlength="280">I am trying to restart momentum on a product launch, but the notes, positioning, screenshots, and next steps are scattered.</textarea>
-                <small><strong id="ritual-count">126</strong> / 280</small>
+                <label for="ritual-intent">Describe what you want to move forward.</label>
+                <textarea id="ritual-intent" rows="4" maxlength="1000">Restarting a product launch: notes, positioning, screenshots, and next steps are scattered.</textarea>
+                <small><strong id="ritual-count">91</strong> / 1000</small>
               </div>
             </div>
 
             <div class="ritual-step">
               <span>2</span>
               <div>
-                <label for="ritual-boundary">What should I never store, share, or assume?</label>
+                <label for="ritual-boundary">Set a boundary for your mirror.</label>
                 <select id="ritual-boundary">
                   <option value="personal">Do not store personal history without approval</option>
                   <option value="client">Do not expose client or partner details</option>
                   <option value="secrets">Do not route secrets to cloud models</option>
                   <option value="drafts">Do not promote rough drafts to memory</option>
                 </select>
-                <em>Private by default. Promotion requires your approval.</em>
+                <em>Everything stays private unless you explicitly share it.</em>
               </div>
             </div>
 
@@ -233,20 +77,27 @@
               Create my first mirror
             </button>
 
-            <div class="ritual-assurance" aria-label="First-use assurances">
-              <span>Browser-first</span>
-              <span>Boundary checked</span>
-              <span>Receipt-backed</span>
-            </div>
+            <small class="ritual-time">Takes about 15 seconds in the real product.</small>
           </form>
 
-          <div class="ritual-output" aria-label="Generated first mirror board">
+          <div class="ritual-assurance" aria-label="First-use assurances">
+            <span>Private by default</span>
+            <span>Built for clarity</span>
+            <span>Only remembers what you approve</span>
+          </div>
+        </div>
+
+        <div class="ritual-stage" aria-label="Generated Active Mirror board">
+          <div class="mirror-device">
             <div class="ritual-toolbar">
               <div>
                 <span>Live Mirror</span>
                 <strong id="ritual-status">Generated just now</strong>
               </div>
-              <button class="text-button" id="ritual-reset" type="button">Start over</button>
+              <div class="ritual-tools">
+                <button type="button" class="tool-button" id="ritual-refresh" aria-label="Refresh mirror">Refresh</button>
+                <button type="button" class="tool-button" id="ritual-expand" aria-label="Expand mirror">Expand</button>
+              </div>
             </div>
 
             <div class="ritual-board" id="ritual-board">
@@ -263,42 +114,60 @@
                 <ul id="ritual-moves"></ul>
               </article>
               <article class="ritual-column artifact">
-                <div><strong>First artifact</strong><span>Draft</span></div>
+                <div><strong>Artifact</strong><span>1</span></div>
                 <section id="ritual-artifact">
                   <p>Launch clarity memo</p>
                   <strong>What changed, what matters, what ships next.</strong>
                 </section>
               </article>
             </div>
+          </div>
 
-            <div class="ritual-receipt" aria-label="First mirror receipts">
-              <div class="receipt-strip">
-                <span>Receipt</span>
-                <strong id="ritual-receipt-time">local-turn-001</strong>
-              </div>
-              <button class="receipt-line is-open" type="button">
-                <span>Why</span>
-                <strong id="receipt-why">User asked for momentum, not a generic answer.</strong>
-              </button>
-              <button class="receipt-line" type="button">
-                <span>Used</span>
-                <strong id="receipt-used">Intent text, selected boundary, public-safe product frame.</strong>
-              </button>
-              <button class="receipt-line" type="button">
-                <span>Excluded</span>
-                <strong id="receipt-excluded">Secrets, personal details, and unapproved memory promotion.</strong>
-              </button>
-              <button class="receipt-line" type="button">
-                <span>Route</span>
-                <strong id="receipt-route">Local browser board first. Cloud model only after gate approval.</strong>
-              </button>
-              <button class="receipt-line" type="button">
-                <span>Memory</span>
-                <strong id="receipt-memory">Nothing promoted until you accept the receipt.</strong>
-              </button>
+          <div class="ritual-receipt receipt-pack" id="receipts" aria-label="First mirror receipts">
+            <div class="receipt-strip">
+              <span>Receipt</span>
+              <strong id="ritual-receipt-time">local-turn-001</strong>
             </div>
+            <button class="receipt-line is-open" type="button">
+              <span>Why</span>
+              <strong id="receipt-why">User asked for momentum, not a generic answer.</strong>
+            </button>
+            <button class="receipt-line" type="button">
+              <span>Context used</span>
+              <strong id="receipt-used">Intent text, selected boundary, public-safe product frame.</strong>
+            </button>
+            <button class="receipt-line" type="button">
+              <span>Context excluded</span>
+              <strong id="receipt-excluded">Secrets, personal details, and unapproved memory promotion.</strong>
+            </button>
+            <button class="receipt-line" type="button">
+              <span>Route</span>
+              <strong id="receipt-route">Local browser board first. Cloud model only after gate approval.</strong>
+            </button>
+            <button class="receipt-line" type="button">
+              <span>Memory decision</span>
+              <strong id="receipt-memory">Nothing promoted until you accept the receipt.</strong>
+            </button>
+          </div>
+
+          <div class="space-control">
+            <span>This is your space.</span>
+            <strong>You are in control. Edit anything, regenerate, or start over anytime.</strong>
+            <button class="button secondary small" id="ritual-reset" type="button">Start over</button>
           </div>
         </div>
+      </section>
+
+      <section class="tool-strip" aria-label="Works with common tools">
+        <p>Trusted by people rebuilding momentum</p>
+        <ul>
+          <li>Linear</li>
+          <li>Vercel</li>
+          <li>Notion</li>
+          <li>Figma</li>
+          <li>Raycast</li>
+          <li>GitHub</li>
+        </ul>
       </section>
 
       <section class="origin" id="origin">
