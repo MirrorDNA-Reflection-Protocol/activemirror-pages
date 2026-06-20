@@ -39,6 +39,6 @@ jobs:
           cert="$(mktemp)"
           echo | openssl s_client -connect activemirror.ai:443 -servername activemirror.ai 2>/tmp/active-mirror-tls.log \
             | openssl x509 -noout -subject -issuer -ext subjectAltName > "$cert"
-          grep -q "CN=activemirror.ai" "$cert"
-          grep -q "DNS:activemirror.ai" "$cert"
-          grep -q "DNS:\\*.activemirror.ai" "$cert"
+          grep -Eq "subject=.*CN ?= ?activemirror\\.ai|subject=CN=activemirror\\.ai" "$cert"
+          grep -Eq "DNS:activemirror\\.ai" "$cert"
+          grep -Eq "DNS:\\*\\.activemirror\\.ai" "$cert"
