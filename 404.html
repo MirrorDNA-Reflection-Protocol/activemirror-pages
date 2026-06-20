@@ -8,8 +8,8 @@
       content="Active Mirror is Reflective AI for human momentum. It remembers the work, reflects before predicting, protects boundaries, and carries momentum forward."
     />
     <title>Active Mirror | Smarter AI for human momentum</title>
-    <script type="module" crossorigin src="/assets/main-DAZeXMCV.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-DFl3UwhQ.css">
+    <script type="module" crossorigin src="/assets/main-BIahZw0N.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-Bl2jd1wW.css">
   </head>
   <body>
     <header class="site-nav" aria-label="Primary">
@@ -23,6 +23,7 @@
         <span>Active Mirror</span>
       </a>
       <nav class="nav-links" aria-label="Sections">
+        <a href="#first-use">First use</a>
         <a href="#how">How it works</a>
         <a href="#receipts">Receipts</a>
         <a href="#privacy">Privacy</a>
@@ -191,6 +192,113 @@
           <li>Raycast</li>
           <li>GitHub</li>
         </ul>
+      </section>
+
+      <section class="first-use" id="first-use">
+        <div class="first-use-copy">
+          <p class="section-label">First use</p>
+          <h2>Bring the mess. Get a mirror you can act on.</h2>
+          <p>
+            Active Mirror starts as a private browser ritual: name the work, set the boundary,
+            generate a useful board, and inspect the receipt before anything becomes memory.
+          </p>
+        </div>
+
+        <div class="ritual-shell">
+          <form class="ritual-input" aria-label="Create your first Active Mirror">
+            <div class="ritual-step">
+              <span>1</span>
+              <div>
+                <label for="ritual-intent">What are you trying to move forward?</label>
+                <textarea id="ritual-intent" rows="5" maxlength="280">I am trying to restart momentum on a product launch, but the notes, positioning, screenshots, and next steps are scattered.</textarea>
+                <small><strong id="ritual-count">126</strong> / 280</small>
+              </div>
+            </div>
+
+            <div class="ritual-step">
+              <span>2</span>
+              <div>
+                <label for="ritual-boundary">What should I never store, share, or assume?</label>
+                <select id="ritual-boundary">
+                  <option value="personal">Do not store personal history without approval</option>
+                  <option value="client">Do not expose client or partner details</option>
+                  <option value="secrets">Do not route secrets to cloud models</option>
+                  <option value="drafts">Do not promote rough drafts to memory</option>
+                </select>
+                <em>Private by default. Promotion requires your approval.</em>
+              </div>
+            </div>
+
+            <button class="button primary ritual-button" id="ritual-create" type="button">
+              Create my first mirror
+            </button>
+
+            <div class="ritual-assurance" aria-label="First-use assurances">
+              <span>Browser-first</span>
+              <span>Boundary checked</span>
+              <span>Receipt-backed</span>
+            </div>
+          </form>
+
+          <div class="ritual-output" aria-label="Generated first mirror board">
+            <div class="ritual-toolbar">
+              <div>
+                <span>Live Mirror</span>
+                <strong id="ritual-status">Generated just now</strong>
+              </div>
+              <button class="text-button" id="ritual-reset" type="button">Start over</button>
+            </div>
+
+            <div class="ritual-board" id="ritual-board">
+              <article class="ritual-column goals">
+                <div><strong>Goals</strong><span id="goal-count">3</span></div>
+                <ul id="ritual-goals"></ul>
+              </article>
+              <article class="ritual-column blockers">
+                <div><strong>Blockers</strong><span id="blocker-count">3</span></div>
+                <ul id="ritual-blockers"></ul>
+              </article>
+              <article class="ritual-column moves">
+                <div><strong>Next moves</strong><span id="move-count">4</span></div>
+                <ul id="ritual-moves"></ul>
+              </article>
+              <article class="ritual-column artifact">
+                <div><strong>First artifact</strong><span>Draft</span></div>
+                <section id="ritual-artifact">
+                  <p>Launch clarity memo</p>
+                  <strong>What changed, what matters, what ships next.</strong>
+                </section>
+              </article>
+            </div>
+
+            <div class="ritual-receipt" aria-label="First mirror receipts">
+              <div class="receipt-strip">
+                <span>Receipt</span>
+                <strong id="ritual-receipt-time">local-turn-001</strong>
+              </div>
+              <button class="receipt-line is-open" type="button">
+                <span>Why</span>
+                <strong id="receipt-why">User asked for momentum, not a generic answer.</strong>
+              </button>
+              <button class="receipt-line" type="button">
+                <span>Used</span>
+                <strong id="receipt-used">Intent text, selected boundary, public-safe product frame.</strong>
+              </button>
+              <button class="receipt-line" type="button">
+                <span>Excluded</span>
+                <strong id="receipt-excluded">Secrets, personal details, and unapproved memory promotion.</strong>
+              </button>
+              <button class="receipt-line" type="button">
+                <span>Route</span>
+                <strong id="receipt-route">Local browser board first. Cloud model only after gate approval.</strong>
+              </button>
+              <button class="receipt-line" type="button">
+                <span>Memory</span>
+                <strong id="receipt-memory">Nothing promoted until you accept the receipt.</strong>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="origin" id="origin">
