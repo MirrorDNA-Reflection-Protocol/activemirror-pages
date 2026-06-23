@@ -1,14 +1,28 @@
 {
-  "updated": "2026-06-22T11:30:26Z",
+  "updated": "2026-06-23T08:55:29Z",
   "signals": [
     {
-      "title": "OpenAI is bringing on some big guns in the lead-up to its IPO",
-      "source": "TechCrunch AI",
-      "time": "3d ago",
+      "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
+      "source": "The Register AI",
+      "time": "56d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
       "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
+      "source": "The Register AI",
+      "time": "58d ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
       "scores": {
         "Relevance": 20,
         "Urgency": 30,
@@ -32,7 +46,7 @@
     {
       "title": "Anthropic Reports Claude Now Handles 95% of Internal Analytics Queries",
       "source": "InfoQ AI",
-      "time": "18h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -55,6 +69,20 @@
         "Relevance": 16,
         "Urgency": 30,
         "SEO": 43
+      }
+    },
+    {
+      "title": "The Battle For India’s Kirana Stores Has Begun",
+      "source": "Inc42",
+      "time": "3h ago",
+      "category": "Security",
+      "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
+      "am_link": "https://id.activemirror.ai",
+      "am_link_text": "MirrorSeed: Ed25519 cryptographic identity",
+      "scores": {
+        "Relevance": 15,
+        "Urgency": 30,
+        "SEO": 25
       }
     }
   ]
