@@ -1,10 +1,10 @@
 {
-  "updated": "2026-07-07T09:20:19Z",
+  "updated": "2026-07-08T08:04:47Z",
   "signals": [
     {
       "title": "Achieving operational excellence with AI",
       "source": "MIT Technology Review",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -18,7 +18,7 @@
     {
       "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
       "source": "The Register AI",
-      "time": "70d ago",
+      "time": "71d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
       "source": "The Register AI",
-      "time": "72d ago",
+      "time": "73d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#work",
@@ -46,39 +46,11 @@
     {
       "title": "Apple Extends Private Cloud Compute to Google Cloud for the First Time",
       "source": "InfoQ AI",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Technology",
       "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. Sovereign deployment: air-gapped and local edge models leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
       "am_link": "https://activemirror.ai/#deployment",
       "am_link_text": "Sovereign deployment: air-gapped and local edge models",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "The GPU Hunger Games, E3W’s Safety Crisis & More",
-      "source": "Inc42",
-      "time": "1d ago",
-      "category": "Technology",
-      "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. 7-layer governance stack with Ed25519 signing leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "Why India’s AI Boom Is Running On A Waiting List",
-      "source": "Inc42",
-      "time": "1d ago",
-      "category": "Technology",
-      "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. 7-layer governance stack with Ed25519 signing leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
       "scores": {
         "Relevance": 20,
         "Urgency": 30,
@@ -93,6 +65,20 @@
       "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Active Mirror product suite addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
       "am_link": "https://activemirror.ai/#products",
       "am_link_text": "Active Mirror product suite",
+      "scores": {
+        "Relevance": 18,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Targeted consultation on safeguarding the EU’s data sovereignty",
+      "source": "EU Digital Policy",
+      "time": "54m ago",
+      "category": "Infrastructure",
+      "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
+      "am_link": "https://activemirror.ai/#deployment",
+      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
       "scores": {
         "Relevance": 18,
         "Urgency": 30,
@@ -116,7 +102,7 @@
     {
       "title": "Presentation: Designing AI Platforms for Reliability: Tools for Certainty, Agents for Discovery",
       "source": "InfoQ AI",
-      "time": "1h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Active Mirror product suite, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#products",
@@ -130,11 +116,25 @@
     {
       "title": "InfoQ Opens AI Security & Privacy Engineering Cohort for Regulated Industries",
       "source": "InfoQ AI",
-      "time": "21h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
       "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Factoring RSA Keys with Many Zeros",
+      "source": "Schneier on Security",
+      "time": "8d ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
       "scores": {
         "Relevance": 16,
         "Urgency": 30,
