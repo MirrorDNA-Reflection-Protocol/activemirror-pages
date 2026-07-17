@@ -1,10 +1,10 @@
 {
-  "updated": "2026-07-16T07:52:10Z",
+  "updated": "2026-07-17T07:49:25Z",
   "signals": [
     {
       "title": "Presentation: Postgres for Production Agents: Your Relational Foundation for Enterprise AI",
       "source": "InfoQ AI",
-      "time": "18h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -18,7 +18,7 @@
     {
       "title": "South Africa yanks AI policy after AI-assisted drafting invents citations",
       "source": "The Register AI",
-      "time": "79d ago",
+      "time": "80d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -30,23 +30,9 @@
       }
     },
     {
-      "title": "Ex-AWS legend explains what enterprises need to make AI actually work",
-      "source": "The Register AI",
-      "time": "81d ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Enterprise case studies: evidence-gated AI provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#work",
-      "am_link_text": "Enterprise case studies: evidence-gated AI",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
       "title": "Presentation: Chaos Engineering GPU Clusters",
       "source": "InfoQ AI",
-      "time": "5d ago",
+      "time": "6d ago",
       "category": "Technology",
       "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. Beacon: compliance monitoring and alerting leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
       "am_link": "https://beacon.activemirror.ai",
@@ -58,9 +44,23 @@
       }
     },
     {
+      "title": "The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs",
+      "source": "VentureBeat AI",
+      "time": "12h ago",
+      "category": "Technology",
+      "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. Enterprise case studies: evidence-gated AI leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
       "title": "Commission Opinion on the assessment of the Code of Practice on Transparency of AI-generated content",
       "source": "EU Digital Policy",
-      "time": "7d ago",
+      "time": "8d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -74,7 +74,7 @@
     {
       "title": "The Path to Sovereign Data: Challenges and Priorities in Local-First Computing",
       "source": "InfoQ AI",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Infrastructure",
       "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
       "am_link": "https://activemirror.ai/#deployment",
@@ -88,7 +88,7 @@
     {
       "title": "Targeted consultation on safeguarding the EU’s data sovereignty",
       "source": "EU Digital Policy",
-      "time": "8d ago",
+      "time": "9d ago",
       "category": "Infrastructure",
       "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
       "am_link": "https://activemirror.ai/#deployment",
@@ -100,23 +100,9 @@
       }
     },
     {
-      "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models",
-      "source": "TechCrunch AI",
-      "time": "18h ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#work",
-      "am_link_text": "Enterprise case studies: evidence-gated AI",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
-    {
       "title": "Slack Introduces Agent Driven End-to-End Testing to Improve Resilience in UI Test Automation",
       "source": "InfoQ AI",
-      "time": "5d ago",
+      "time": "6d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -128,13 +114,27 @@
       }
     },
     {
-      "title": "Agentic orchestration: Enterprise AI organizations have a deployment problem, not a platform problem â and most are calling chatbots agents",
+      "title": "The AI context gap: Enterprise AI organizations have a trust problem, not a retrieval problem â and most are still building the fix",
       "source": "VentureBeat AI",
-      "time": "9h ago",
+      "time": "14h ago",
       "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Sovereign deployment: air-gapped and local edge models, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 43
+      }
+    },
+    {
+      "title": "The agent evaluation gap: Enterprise AI organizations have a reality-alignment problem, not a coverage problem â and most are shipping to production anyway",
+      "source": "VentureBeat AI",
+      "time": "15h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
       "scores": {
         "Relevance": 16,
         "Urgency": 30,
