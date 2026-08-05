@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-04T08:14:16Z",
+  "updated": "2026-08-05T08:12:47Z",
   "signals": [
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -18,7 +18,7 @@
     {
       "title": "Commission publishes guidelines on transparency obligations for providers and deployers of certain AI systems",
       "source": "EU Digital Policy",
-      "time": "15d ago",
+      "time": "16d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
       "source": "EU Digital Policy",
-      "time": "15d ago",
+      "time": "16d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -44,23 +44,9 @@
       }
     },
     {
-      "title": "Anthropic Brings Claude Inference To India As Sovereign AI Race Heats Up",
-      "source": "Inc42",
-      "time": "19h ago",
-      "category": "Infrastructure",
-      "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
-      "scores": {
-        "Relevance": 18,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
-    {
-      "title": "HubSpot Redesigns JITA Authorization with Rule Engine Architecture",
-      "source": "InfoQ AI",
-      "time": "18h ago",
+      "title": "Open-weight AI models are catching up to the frontier. The safety gap remains.",
+      "source": "TechCrunch AI",
+      "time": "12h ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -72,23 +58,9 @@
       }
     },
     {
-      "title": "Article: An Evolutionary Architecture Pattern for Managing AI’s Pace of Change",
+      "title": "Platform Engineering Maturity Emerges as a Key Differentiator for Enterprise AI Success",
       "source": "InfoQ AI",
-      "time": "7d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "After Verloop, Mukesh Bansal-Led NuPlay Eyes Another Acquisition In 12 Months",
-      "source": "Inc42",
-      "time": "16h ago",
+      "time": "20h ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -100,43 +72,43 @@
       }
     },
     {
-      "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
-      "source": "The Hacker News",
-      "time": "2d ago",
+      "title": "HubSpot Redesigns JITA Authorization with Rule Engine Architecture",
+      "source": "InfoQ AI",
+      "time": "1d ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Meta And WhatsApp’s Moderation Machines Have A Transparency Problem",
+      "source": "Inc42",
+      "time": "33m ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
       "am_link_text": "7-layer governance stack with Ed25519 signing",
       "scores": {
         "Relevance": 16,
-        "Urgency": 50,
+        "Urgency": 30,
         "SEO": 25
       }
     },
     {
-      "title": "Measuring LLMs’ Ability to Perform Cryptanalysis",
-      "source": "Schneier on Security",
-      "time": "6d ago",
-      "category": "Security",
-      "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
-      "am_link": "https://id.activemirror.ai",
-      "am_link_text": "MirrorSeed: Ed25519 cryptographic identity",
-      "scores": {
-        "Relevance": 15,
-        "Urgency": 50,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "Claude AI Just Cracked a Post-Quantum Test Scheme and Found a Faster 7-Round AES Attack",
+      "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
       "source": "The Hacker News",
-      "time": "6d ago",
+      "time": "3d ago",
       "category": "Security",
-      "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorBrain: local-first inference engine provides the signing infrastructure that post-hoc monitoring cannot replicate.",
-      "am_link": "https://brain.activemirror.ai",
-      "am_link_text": "MirrorBrain: local-first inference engine",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
       "scores": {
-        "Relevance": 15,
+        "Relevance": 16,
         "Urgency": 50,
         "SEO": 25
       }
