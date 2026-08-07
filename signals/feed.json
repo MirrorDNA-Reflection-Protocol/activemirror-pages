@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T08:12:00Z",
+  "updated": "2026-08-07T06:57:16Z",
   "signals": [
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
@@ -44,9 +44,9 @@
       }
     },
     {
-      "title": "Open-weight AI models are catching up to the frontier. The safety gap remains.",
-      "source": "TechCrunch AI",
-      "time": "1d ago",
+      "title": "Azure API Management Adds Dedicated AI Gateway Tier, Governing Models and MCP Tools",
+      "source": "InfoQ AI",
+      "time": "22m ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -60,7 +60,7 @@
     {
       "title": "Platform Engineering Maturity Emerges as a Key Differentiator for Enterprise AI Success",
       "source": "InfoQ AI",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -74,7 +74,7 @@
     {
       "title": "HubSpot Redesigns JITA Authorization with Rule Engine Architecture",
       "source": "InfoQ AI",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -88,7 +88,7 @@
     {
       "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
       "source": "The Hacker News",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
