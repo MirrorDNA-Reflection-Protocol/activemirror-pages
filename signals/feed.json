@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-08T06:30:40Z",
+  "updated": "2026-08-09T06:34:59Z",
   "signals": [
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "7d ago",
+      "time": "8d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -18,7 +18,7 @@
     {
       "title": "Commission publishes guidelines on transparency obligations for providers and deployers of certain AI systems",
       "source": "EU Digital Policy",
-      "time": "18d ago",
+      "time": "19d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
       "source": "EU Digital Policy",
-      "time": "18d ago",
+      "time": "19d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -46,7 +46,7 @@
     {
       "title": "Azure API Management Adds Dedicated AI Gateway Tier, Governing Models and MCP Tools",
       "source": "InfoQ AI",
-      "time": "23h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -60,7 +60,7 @@
     {
       "title": "Platform Engineering Maturity Emerges as a Key Differentiator for Enterprise AI Success",
       "source": "InfoQ AI",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -69,20 +69,6 @@
         "Relevance": 16,
         "Urgency": 30,
         "SEO": 43
-      }
-    },
-    {
-      "title": "HubSpot Redesigns JITA Authorization with Rule Engine Architecture",
-      "source": "InfoQ AI",
-      "time": "4d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#compliance",
-      "am_link_text": "How MirrorGate enforces compliance by construction",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 25
       }
     }
   ]
