@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-10T07:05:32Z",
+  "updated": "2026-08-11T06:43:24Z",
   "signals": [
     {
       "title": "The AI safety test is becoming a safety risk",
       "source": "TechCrunch AI",
-      "time": "16h ago",
+      "time": "1d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -32,7 +32,7 @@
     {
       "title": "Commission publishes guidelines on transparency obligations for providers and deployers of certain AI systems",
       "source": "EU Digital Policy",
-      "time": "20d ago",
+      "time": "21d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -60,7 +60,7 @@
     {
       "title": "Azure API Management Adds Dedicated AI Gateway Tier, Governing Models and MCP Tools",
       "source": "InfoQ AI",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -72,17 +72,31 @@
       }
     },
     {
-      "title": "Platform Engineering Maturity Emerges as a Key Differentiator for Enterprise AI Success",
-      "source": "InfoQ AI",
-      "time": "5d ago",
+      "title": "Cars24 Launches Enterprise AI Company Deployment Inc, Invests $5 Mn",
+      "source": "Inc42",
+      "time": "19h ago",
       "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#work",
-      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Sovereign deployment: air-gapped and local edge models, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#deployment",
+      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
       "scores": {
         "Relevance": 16,
         "Urgency": 30,
         "SEO": 43
+      }
+    },
+    {
+      "title": "Python Now Has a Post-Quantum Encryption Library",
+      "source": "Schneier on Security",
+      "time": "19h ago",
+      "category": "Security",
+      "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. Sovereign deployment: air-gapped and local edge models provides the signing infrastructure that post-hoc monitoring cannot replicate.",
+      "am_link": "https://activemirror.ai/#deployment",
+      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
+      "scores": {
+        "Relevance": 15,
+        "Urgency": 50,
+        "SEO": 25
       }
     }
   ]
