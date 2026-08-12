@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-11T06:43:24Z",
+  "updated": "2026-08-12T07:04:14Z",
   "signals": [
     {
       "title": "The AI safety test is becoming a safety risk",
       "source": "TechCrunch AI",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -18,7 +18,7 @@
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "10d ago",
+      "time": "12d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "Commission publishes guidelines on transparency obligations for providers and deployers of certain AI systems",
       "source": "EU Digital Policy",
-      "time": "21d ago",
+      "time": "22d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -46,7 +46,7 @@
     {
       "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
       "source": "EU Digital Policy",
-      "time": "21d ago",
+      "time": "23d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -58,9 +58,9 @@
       }
     },
     {
-      "title": "Azure API Management Adds Dedicated AI Gateway Tier, Governing Models and MCP Tools",
+      "title": "IBM and Red Hat Expand Lightwell to Strengthen Trust and Governance for AI-Era Open Source",
       "source": "InfoQ AI",
-      "time": "4d ago",
+      "time": "19h ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -72,13 +72,27 @@
       }
     },
     {
-      "title": "Cars24 Launches Enterprise AI Company Deployment Inc, Invests $5 Mn",
-      "source": "Inc42",
-      "time": "19h ago",
+      "title": "Azure API Management Adds Dedicated AI Gateway Tier, Governing Models and MCP Tools",
+      "source": "InfoQ AI",
+      "time": "5d ago",
       "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Sovereign deployment: air-gapped and local edge models, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Enterprise AI Spend Gets A Reality Check",
+      "source": "Inc42",
+      "time": "1h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
       "scores": {
         "Relevance": 16,
         "Urgency": 30,
@@ -88,7 +102,7 @@
     {
       "title": "Python Now Has a Post-Quantum Encryption Library",
       "source": "Schneier on Security",
-      "time": "19h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. Sovereign deployment: air-gapped and local edge models provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://activemirror.ai/#deployment",
@@ -96,6 +110,20 @@
       "scores": {
         "Relevance": 15,
         "Urgency": 50,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Mozilla Revokes Firefox and Thunderbird Linux Signing Key After Key Lands in Private Repo",
+      "source": "The Hacker News",
+      "time": "18h ago",
+      "category": "Security",
+      "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
+      "am_link": "https://id.activemirror.ai",
+      "am_link_text": "MirrorSeed: Ed25519 cryptographic identity",
+      "scores": {
+        "Relevance": 15,
+        "Urgency": 30,
         "SEO": 25
       }
     }
