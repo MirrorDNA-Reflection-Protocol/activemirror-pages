@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-18T06:21:56Z",
+  "updated": "2026-08-19T06:22:45Z",
   "signals": [
     {
       "title": "Major Frontier Model Providers Adopt Watermarking Tech to Comply with EU Regulation",
       "source": "InfoQ AI",
-      "time": "1h ago",
+      "time": "1d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -18,7 +18,7 @@
     {
       "title": "Article: Agentic Fitness Functions: Extending Evolutionary Architecture Beyond Deterministic Rules",
       "source": "InfoQ AI",
-      "time": "19h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "17d ago",
+      "time": "18d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -46,21 +46,7 @@
     {
       "title": "Commission publishes guidelines on transparency obligations for providers and deployers of certain AI systems",
       "source": "EU Digital Policy",
-      "time": "28d ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "Guidelines on transparency obligations for providers and deployers of AI systems",
-      "source": "EU Digital Policy",
-      "time": "28d ago",
+      "time": "29d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -74,7 +60,7 @@
     {
       "title": "Presentation: From Thousands to One: Building LLM-Powered Selection Systems",
       "source": "InfoQ AI",
-      "time": "21h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -86,37 +72,9 @@
       }
     },
     {
-      "title": "RDI Fund Row: Deeptech Investors Seek More Transparency, Independent Oversight",
-      "source": "Inc42",
-      "time": "1d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#compliance",
-      "am_link_text": "How MirrorGate enforces compliance by construction",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "Building a practical path to post-quantum cryptography",
-      "source": "MIT Technology Review",
-      "time": "4d ago",
-      "category": "Security",
-      "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
-      "am_link": "https://id.activemirror.ai",
-      "am_link_text": "MirrorSeed: Ed25519 cryptographic identity",
-      "scores": {
-        "Relevance": 15,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
       "title": "Prompt Injections for Defense",
       "source": "Schneier on Security",
-      "time": "5d ago",
+      "time": "6d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://id.activemirror.ai",
@@ -130,7 +88,7 @@
     {
       "title": "Python Now Has a Post-Quantum Encryption Library",
       "source": "Schneier on Security",
-      "time": "7d ago",
+      "time": "8d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. Sovereign deployment: air-gapped and local edge models provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://activemirror.ai/#deployment",
