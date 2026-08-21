@@ -1,10 +1,10 @@
 {
-  "updated": "2026-08-20T06:23:14Z",
+  "updated": "2026-08-21T06:23:54Z",
   "signals": [
     {
       "title": "Major Frontier Model Providers Adopt Watermarking Tech to Comply with EU Regulation",
       "source": "InfoQ AI",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -18,7 +18,7 @@
     {
       "title": "Article: Agentic Fitness Functions: Extending Evolutionary Architecture Beyond Deterministic Rules",
       "source": "InfoQ AI",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -30,23 +30,9 @@
       }
     },
     {
-      "title": "Meet the startup helping Wall Street put a price on AI compute",
-      "source": "TechCrunch AI",
-      "time": "12h ago",
-      "category": "Technology",
-      "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. Sovereign deployment: air-gapped and local edge models leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "19d ago",
+      "time": "20d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -60,7 +46,7 @@
     {
       "title": "Commission publishes guidelines on transparency obligations for providers and deployers of certain AI systems",
       "source": "EU Digital Policy",
-      "time": "30d ago",
+      "time": "31d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -72,9 +58,23 @@
       }
     },
     {
+      "title": "OpenAI is gaining on Anthropic with business users, new data indicates",
+      "source": "TechCrunch AI",
+      "time": "7h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 43
+      }
+    },
+    {
       "title": "Cognition CEO denies report that SpaceX tried to acquire the startup",
       "source": "TechCrunch AI",
-      "time": "8h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -88,7 +88,7 @@
     {
       "title": "Whatsapp Tests on Device ML for Scam Detection with Privacy Preserving Analytics",
       "source": "InfoQ AI",
-      "time": "16h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Beacon: compliance monitoring and alerting, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://beacon.activemirror.ai",
@@ -102,7 +102,7 @@
     {
       "title": "Presentation: From Thousands to One: Building LLM-Powered Selection Systems",
       "source": "InfoQ AI",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -116,7 +116,7 @@
     {
       "title": "VentureBeat names Rob Strechay as its first Lead Analyst, expanding its enterprise AI research push",
       "source": "VentureBeat AI",
-      "time": "16h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -128,16 +128,16 @@
       }
     },
     {
-      "title": "Prompt Injections for Defense",
-      "source": "Schneier on Security",
-      "time": "7d ago",
+      "title": "Why \"Shady AI\" is Security's Next Big Governance Problem",
+      "source": "The Hacker News",
+      "time": "18h ago",
       "category": "Security",
-      "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
-      "am_link": "https://id.activemirror.ai",
-      "am_link_text": "MirrorSeed: Ed25519 cryptographic identity",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
       "scores": {
-        "Relevance": 15,
-        "Urgency": 50,
+        "Relevance": 16,
+        "Urgency": 30,
         "SEO": 25
       }
     }
