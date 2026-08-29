@@ -1,24 +1,10 @@
 {
-  "updated": "2026-08-28T17:48:32Z",
+  "updated": "2026-08-29T11:53:05Z",
   "signals": [
-    {
-      "title": "Cloudflare Cuts Astro GitHub Issues by 85% with AI Agents",
-      "source": "InfoQ AI",
-      "time": "7d ago",
-      "category": "Technology",
-      "insight": "Multi-agent AI systems introduce accountability gaps that single-model governance cannot address. 7-layer governance stack with Ed25519 signing maintains cryptographic provenance chains across every agent action and delegation.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 28,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
     {
       "title": "Presentation: Can Claude Fix Itself? Using LLMs for Incident Response",
       "source": "InfoQ AI",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Beacon: compliance monitoring and alerting provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://beacon.activemirror.ai",
@@ -46,7 +32,7 @@
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "28d ago",
+      "time": "29d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -60,7 +46,7 @@
     {
       "title": "Gnani.ai Unveils Sovereign AI Stack Artha For Enterprises",
       "source": "Inc42",
-      "time": "1h ago",
+      "time": "19h ago",
       "category": "Infrastructure",
       "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. 7-layer governance stack with Ed25519 signing addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -83,6 +69,20 @@
         "Relevance": 16,
         "Urgency": 30,
         "SEO": 43
+      }
+    },
+    {
+      "title": "Presentation: Architecting the Data Layer for AI Agents: From Transactional Systems to MCP and Semantic Models",
+      "source": "InfoQ AI",
+      "time": "53m ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
       }
     },
     {
