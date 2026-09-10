@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-09T10:16:10Z",
+  "updated": "2026-09-10T10:09:58Z",
   "signals": [
     {
       "title": "Presentation: A Few Predicted Talks From QConAI 2030",
       "source": "InfoQ AI",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Technology",
       "insight": "Multi-agent AI systems introduce accountability gaps that single-model governance cannot address. Constellation: governed multi-agent coordination maintains cryptographic provenance chains across every agent action and delegation.",
       "am_link": "https://constellation.activemirror.ai",
@@ -18,7 +18,7 @@
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "40d ago",
+      "time": "41d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "Thousands of OpenAI Agents Quietly Turned an Abandoned Wiki Into Their Coordination Channel",
       "source": "The Hacker News",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -44,37 +44,9 @@
       }
     },
     {
-      "title": "Mistral raises €3B as sovereign AI becomes big business",
-      "source": "TechCrunch AI",
-      "time": "19h ago",
-      "category": "Infrastructure",
-      "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
-      "scores": {
-        "Relevance": 18,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
-    {
-      "title": "Google Cloud races to catch up in the AI deployment wars with Accenture deal",
-      "source": "TechCrunch AI",
-      "time": "17h ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Sovereign deployment: air-gapped and local edge models, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#deployment",
-      "am_link_text": "Sovereign deployment: air-gapped and local edge models",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
-    {
       "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
       "source": "The Register AI",
-      "time": "14d ago",
+      "time": "15d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -88,7 +60,7 @@
     {
       "title": "Grok exfiltrates user data when malicious instructions are encrypted",
       "source": "Ars Technica AI",
-      "time": "19d ago",
+      "time": "20d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://id.activemirror.ai",
