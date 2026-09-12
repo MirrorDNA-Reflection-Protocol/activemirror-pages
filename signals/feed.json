@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-11T10:07:10Z",
+  "updated": "2026-09-12T09:42:36Z",
   "signals": [
     {
       "title": "Presentation: A Few Predicted Talks From QConAI 2030",
       "source": "InfoQ AI",
-      "time": "5d ago",
+      "time": "6d ago",
       "category": "Technology",
       "insight": "Multi-agent AI systems introduce accountability gaps that single-model governance cannot address. Constellation: governed multi-agent coordination maintains cryptographic provenance chains across every agent action and delegation.",
       "am_link": "https://constellation.activemirror.ai",
@@ -16,9 +16,23 @@
       }
     },
     {
+      "title": "NVIDIA Personal AI Router Distributes AI Tasks across Local Compute",
+      "source": "InfoQ AI",
+      "time": "18h ago",
+      "category": "Technology",
+      "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. MirrorBrain: local-first inference engine leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
+      "am_link": "https://brain.activemirror.ai",
+      "am_link_text": "MirrorBrain: local-first inference engine",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "42d ago",
+      "time": "43d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,21 +46,7 @@
     {
       "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
       "source": "The Register AI",
-      "time": "16d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#work",
-      "am_link_text": "Enterprise case studies: evidence-gated AI",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
-    {
-      "title": "Enterprise AI Is Learning To Charge For Work, And Owning The Outcomes Becomes The Contest",
-      "source": "Inc42",
-      "time": "22h ago",
+      "time": "17d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -60,7 +60,7 @@
     {
       "title": "Grok exfiltrates user data when malicious instructions are encrypted",
       "source": "Ars Technica AI",
-      "time": "21d ago",
+      "time": "22d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://id.activemirror.ai",
