@@ -1,24 +1,10 @@
 {
-  "updated": "2026-09-29T11:42:49Z",
+  "updated": "2026-09-30T11:29:19Z",
   "signals": [
-    {
-      "title": "OpenAI still doesn’t seem to have a handle on all of its rogue AI activity",
-      "source": "TechCrunch AI",
-      "time": "18h ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
     {
       "title": "Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
       "source": "EU Digital Policy",
-      "time": "60d ago",
+      "time": "61d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -30,13 +16,13 @@
       }
     },
     {
-      "title": "Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative",
-      "source": "TechCrunch AI",
-      "time": "18h ago",
+      "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
+      "source": "The Register AI",
+      "time": "35d ago",
       "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
       "scores": {
         "Relevance": 16,
         "Urgency": 30,
@@ -44,9 +30,23 @@
       }
     },
     {
-      "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
-      "source": "The Register AI",
-      "time": "34d ago",
+      "title": "Presentation: Context Is the New Code",
+      "source": "InfoQ AI",
+      "time": "29m ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "The Unglamorous Work Behind Enterprise AI",
+      "source": "Inc42",
+      "time": "5h ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -60,7 +60,7 @@
     {
       "title": "New Attack Against RSA",
       "source": "Schneier on Security",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://id.activemirror.ai",
