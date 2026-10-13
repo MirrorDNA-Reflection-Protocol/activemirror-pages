@@ -1,24 +1,10 @@
 {
-  "updated": "2026-10-12T13:43:40Z",
+  "updated": "2026-10-13T13:04:15Z",
   "signals": [
     {
-      "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
+      "title": "Honeyjar offers AI tools to improve PR and comms at every company",
       "source": "TechCrunch AI",
-      "time": "3d ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 50,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "India’s Cleantech Funding Boom, The AI Safety Drill & More",
-      "source": "Inc42",
-      "time": "11h ago",
+      "time": "21h ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -30,9 +16,23 @@
       }
     },
     {
+      "title": "Microsoft president says UK is best placed to drive AI regulation",
+      "source": "TechCrunch AI",
+      "time": "21h ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 20,
+        "Urgency": 50,
+        "SEO": 43
+      }
+    },
+    {
       "title": "Commission holds special meeting of Scientific panel on frontier AI safety and risks",
       "source": "EU Digital Policy",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Sovereign deployment: air-gapped and local edge models provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#deployment",
@@ -46,7 +46,7 @@
     {
       "title": "The Sixth Voice of the CISO Data Shows Cyber Risk Has Moved Inside the Workflow",
       "source": "The Hacker News",
-      "time": "5d ago",
+      "time": "6d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -60,7 +60,7 @@
     {
       "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
       "source": "The Register AI",
-      "time": "47d ago",
+      "time": "48d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -74,7 +74,7 @@
     {
       "title": "Presentation: Multi-Agent Patterns from Spotify’s AI Powered Advertising Platform",
       "source": "InfoQ AI",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Active Mirror product suite, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#products",
