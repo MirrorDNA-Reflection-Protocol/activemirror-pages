@@ -1,50 +1,36 @@
 {
-  "updated": "2026-10-25T10:17:44Z",
+  "updated": "2026-10-26T11:43:50Z",
   "signals": [
     {
-      "title": "Podcast: The Future of Web Apps: Will AI Agents Generate UIs on the Fly?",
+      "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
       "source": "InfoQ AI",
-      "time": "5d ago",
-      "category": "Infrastructure",
-      "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. 7-layer governance stack with Ed25519 signing addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
-      "am_link": "https://activemirror.ai/#architecture",
-      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "time": "18h ago",
+      "category": "Technology",
+      "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. MirrorBrain: local-first inference engine leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
+      "am_link": "https://brain.activemirror.ai",
+      "am_link_text": "MirrorBrain: local-first inference engine",
       "scores": {
-        "Relevance": 18,
+        "Relevance": 20,
         "Urgency": 30,
         "SEO": 25
       }
     },
     {
-      "title": "Designing an AI serving harness built to last",
-      "source": "MIT Technology Review",
-      "time": "2d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#work",
-      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "title": "India’s draft AI regulations could be out in November, says IT Minister Ashwini Vaishnaw",
+      "source": "Medianama",
+      "time": "3h ago",
+      "category": "Regulation",
+      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
       "scores": {
-        "Relevance": 16,
+        "Relevance": 20,
         "Urgency": 30,
         "SEO": 43
       }
     },
     {
-      "title": "The Foundations of Scalable AI",
-      "source": "MIT Technology Review",
-      "time": "2d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#compliance",
-      "am_link_text": "How MirrorGate enforces compliance by construction",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 30,
-        "SEO": 25
-      }
-    },
-    {
-      "title": "Making the case for context-aware AI",
+      "title": "Designing an AI serving harness built to last",
       "source": "MIT Technology Review",
       "time": "3d ago",
       "category": "Security",
@@ -58,9 +44,37 @@
       }
     },
     {
+      "title": "The Foundations of Scalable AI",
+      "source": "MIT Technology Review",
+      "time": "3d ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "Making the case for context-aware AI",
+      "source": "MIT Technology Review",
+      "time": "4d ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#work",
+      "am_link_text": "Enterprise case studies: evidence-gated AI",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 43
+      }
+    },
+    {
       "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
       "source": "The Register AI",
-      "time": "60d ago",
+      "time": "61d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -74,7 +88,7 @@
     {
       "title": "Lowdown: India’s new telecom sandbox rules are in force. How much of the trials will the public see?",
       "source": "Medianama",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
