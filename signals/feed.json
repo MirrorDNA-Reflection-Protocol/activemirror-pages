@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-27T11:11:04Z",
+  "updated": "2026-10-28T11:44:59Z",
   "signals": [
     {
       "title": "Anthropic officially files for its public debut",
       "source": "TechCrunch AI",
-      "time": "20h ago",
+      "time": "1d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -18,7 +18,7 @@
     {
       "title": "The Download: everyday AI harms and the race to nuclear spaceflight",
       "source": "MIT Technology Review",
-      "time": "22h ago",
+      "time": "1d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; 7-layer governance stack with Ed25519 signing provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -32,7 +32,7 @@
     {
       "title": "The focus on AI safety disasters ignores everyday harms",
       "source": "MIT Technology Review",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; Active Mirror product suite provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#products",
@@ -44,9 +44,9 @@
       }
     },
     {
-      "title": "Google ML Drift Accelerates On-Device AI Inference Across Diverse GPUs",
+      "title": "Google ML Drift Accelerates On-Device AI Inference across Diverse GPUs",
       "source": "InfoQ AI",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Technology",
       "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. MirrorBrain: local-first inference engine leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
       "am_link": "https://brain.activemirror.ai",
@@ -58,23 +58,9 @@
       }
     },
     {
-      "title": "News Publishers Move SC To Challenge The DPDP Act",
+      "title": "[Update] SC Seeks Centre’s Response On News Publishers’ Plea Against DPDP Act",
       "source": "Inc42",
-      "time": "14h ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#compliance",
-      "am_link_text": "How MirrorGate enforces compliance by construction",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
-    {
-      "title": "‘What is the point if the press has to ask for consent?’: News publishers tell SC that DPDP Act could create a pre-censorship regime",
-      "source": "Medianama",
-      "time": "1h ago",
+      "time": "23h ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -88,7 +74,7 @@
     {
       "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
       "source": "The Hacker News",
-      "time": "23h ago",
+      "time": "1d ago",
       "category": "Technology",
       "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. MirrorBrain: local-first inference engine leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
       "am_link": "https://brain.activemirror.ai",
@@ -100,9 +86,23 @@
       }
     },
     {
+      "title": "Who’s really in charge at Anthropic after the IPO?",
+      "source": "TechCrunch AI",
+      "time": "14h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#compliance",
+      "am_link_text": "How MirrorGate enforces compliance by construction",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
       "title": "Designing an AI serving harness built to last",
       "source": "MIT Technology Review",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -116,7 +116,7 @@
     {
       "title": "The Foundations of Scalable AI",
       "source": "MIT Technology Review",
-      "time": "4d ago",
+      "time": "5d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -128,9 +128,9 @@
       }
     },
     {
-      "title": "Making the case for context-aware AI",
-      "source": "MIT Technology Review",
-      "time": "5d ago",
+      "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
+      "source": "The Register AI",
+      "time": "63d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
