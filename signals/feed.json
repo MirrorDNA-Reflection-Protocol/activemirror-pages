@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-30T11:46:41Z",
+  "updated": "2026-10-31T11:20:20Z",
   "signals": [
     {
       "title": "First harmonised standard supporting the AI Act published in the Official Journal",
       "source": "EU Digital Policy",
-      "time": "11d ago",
+      "time": "12d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -18,7 +18,7 @@
     {
       "title": "The Download: AI agent tracking and climate feedback loops",
       "source": "MIT Technology Review",
-      "time": "23h ago",
+      "time": "1d ago",
       "category": "Regulation",
       "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -30,23 +30,9 @@
       }
     },
     {
-      "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
-      "source": "The Hacker News",
-      "time": "3d ago",
-      "category": "Technology",
-      "insight": "AI infrastructure is shifting toward local-first and edge-native architectures. MirrorBrain: local-first inference engine leverages this trend with inference engines that run on commodity hardware without cloud dependencies.",
-      "am_link": "https://brain.activemirror.ai",
-      "am_link_text": "MirrorBrain: local-first inference engine",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 70,
-        "SEO": 25
-      }
-    },
-    {
       "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
       "source": "The Register AI",
-      "time": "65d ago",
+      "time": "66d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -58,9 +44,51 @@
       }
     },
     {
+      "title": "Google Discloses PageBreak AI Security Agent That Found 500+ XSS Bugs",
+      "source": "InfoQ AI",
+      "time": "5h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "DoorDash Cuts Grocery Reorder Latency from 16 to 2 Seconds with AI Agents",
+      "source": "InfoQ AI",
+      "time": "21h ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Active Mirror product suite, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#products",
+      "am_link_text": "Active Mirror product suite",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
+      "title": "eMudhra Has Quit TLS. The Accountability Questions Haven’t",
+      "source": "Inc42",
+      "time": "47m ago",
+      "category": "Security",
+      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
+      "am_link": "https://activemirror.ai/#architecture",
+      "am_link_text": "7-layer governance stack with Ed25519 signing",
+      "scores": {
+        "Relevance": 16,
+        "Urgency": 30,
+        "SEO": 25
+      }
+    },
+    {
       "title": "Commission to investigate how Booking.com combats scams and fraud under the Digital Services Act",
       "source": "EU Digital Policy",
-      "time": "9d ago",
+      "time": "10d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Active Mirror product suite, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#products",
@@ -74,7 +102,7 @@
     {
       "title": "China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility",
       "source": "The Hacker News",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -88,7 +116,7 @@
     {
       "title": "NIST Report Provides Guidelines for Transition to Post-Quantum Cryptography Standards",
       "source": "NIST",
-      "time": "2d ago",
+      "time": "3d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://id.activemirror.ai",
