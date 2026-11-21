@@ -1,24 +1,10 @@
 {
-  "updated": "2026-11-20T14:30:46Z",
+  "updated": "2026-11-21T13:49:13Z",
   "signals": [
-    {
-      "title": "AI Startup Disseqt AI Raises $8 Mn To Scale International Operations",
-      "source": "Inc42",
-      "time": "23h ago",
-      "category": "Regulation",
-      "insight": "This regulatory development directly impacts enterprises deploying AI in regulated sectors. Organizations relying on post-hoc compliance face growing exposure; How MirrorGate enforces compliance by construction provides architectural compliance that satisfies these requirements by construction.",
-      "am_link": "https://activemirror.ai/#compliance",
-      "am_link_text": "How MirrorGate enforces compliance by construction",
-      "scores": {
-        "Relevance": 20,
-        "Urgency": 30,
-        "SEO": 43
-      }
-    },
     {
       "title": "Humyn Labs raises $47 mn to collect training data for physical AI",
       "source": "Medianama",
-      "time": "5h ago",
+      "time": "1d ago",
       "category": "Infrastructure",
       "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
       "am_link": "https://activemirror.ai/#deployment",
@@ -32,7 +18,7 @@
     {
       "title": "Sarvam’s token factory stirs debate on India’s sovereign AI push",
       "source": "Medianama",
-      "time": "1d ago",
+      "time": "2d ago",
       "category": "Infrastructure",
       "insight": "As sovereign AI mandates expand, cloud-dependent architectures face exclusion from institutional and government procurement. Sovereign deployment: air-gapped and local edge models addresses this with zero-network-egress deployment models that keep data and inference within sovereign boundaries.",
       "am_link": "https://activemirror.ai/#deployment",
@@ -46,7 +32,7 @@
     {
       "title": "McKinsey says enterprise AI is finally 'on the road to ROI'",
       "source": "The Register AI",
-      "time": "86d ago",
+      "time": "87d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Enterprise case studies: evidence-gated AI, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#work",
@@ -60,7 +46,7 @@
     {
       "title": "Google Donates Agent Substrate and gVisor to the CNCF to Secure AI Agents at Scale",
       "source": "InfoQ AI",
-      "time": "2h ago",
+      "time": "1d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by How MirrorGate enforces compliance by construction, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#compliance",
@@ -74,7 +60,7 @@
     {
       "title": "Uber’s Legal AI Agent Cuts Contract Review Time by 20% with Rules and RAG",
       "source": "InfoQ AI",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -86,23 +72,9 @@
       }
     },
     {
-      "title": "Commission to investigate how Booking.com combats scams and fraud under the Digital Services Act",
-      "source": "EU Digital Policy",
-      "time": "30d ago",
-      "category": "Security",
-      "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by Active Mirror product suite, are emerging as the baseline requirement for regulated deployments.",
-      "am_link": "https://activemirror.ai/#products",
-      "am_link_text": "Active Mirror product suite",
-      "scores": {
-        "Relevance": 16,
-        "Urgency": 50,
-        "SEO": 25
-      }
-    },
-    {
       "title": "Apple Tightens macOS App Permissions to Limit Data Access Amid AI Agent Security Risks",
       "source": "The Hacker News",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Security",
       "insight": "Enterprise AI governance gaps continue to widen as deployment outpaces compliance infrastructure. Deterministic audit trails and cryptographic evidence chains, as provided by 7-layer governance stack with Ed25519 signing, are emerging as the baseline requirement for regulated deployments.",
       "am_link": "https://activemirror.ai/#architecture",
@@ -116,7 +88,7 @@
     {
       "title": "NIST Report Provides Guidelines for Transition to Post-Quantum Cryptography Standards",
       "source": "NIST",
-      "time": "24d ago",
+      "time": "25d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://id.activemirror.ai",
@@ -130,7 +102,7 @@
     {
       "title": "Formal Verification of the Signal Protocol Using AI",
       "source": "Schneier on Security",
-      "time": "3d ago",
+      "time": "4d ago",
       "category": "Security",
       "insight": "Cryptographic assurance for AI decision trails is moving from best-practice to regulatory requirement. MirrorSeed: Ed25519 cryptographic identity provides the signing infrastructure that post-hoc monitoring cannot replicate.",
       "am_link": "https://id.activemirror.ai",
